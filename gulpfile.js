@@ -302,6 +302,16 @@ exports.default = series(
     serve
 );
 
+
+/* ============================== */
+/*  BUILD
+/* ============================== */
+
+/* ========================================================================================== */
+/*  This task sequentially runs a series of tasks, without launching a local server or
+/*  watching for file changes.
+/* ========================================================================================== */
+
 exports.build = series(
     html,
     css,
