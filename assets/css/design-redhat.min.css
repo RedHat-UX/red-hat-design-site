@@ -1,0 +1,10 @@
+/* ========================================================================================== */
+/*  Project: Studio - Web
+/*  Author: Digital Business
+/*  Date: Sun Sep 19 2021 02:02:45 GMT-0400 (Eastern Daylight Time)
+/*  
+/*  Copyright © 2021 Red Hat, Inc.
+/*  https://www.redhat.com
+/* ========================================================================================== */
+
+.navigation ul{margin-bottom:0;padding-left:0;list-style:none}.navigation li{border-bottom:1px solid #e7e7e7}.navigation li:first-of-type{border-top:1px solid #e7e7e7}.navigation a{padding:12px 32px 8px;display:block;color:#e00}@media (min-width:992px){.navigation li{display:inline-block;border-right:1px solid #e7e7e7;border-bottom:none}.navigation li:first-of-type{border-top:none;border-left:1px solid #e7e7e7}}

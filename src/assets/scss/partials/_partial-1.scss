@@ -1,0 +1,32 @@
+.navigation {
+    ul {
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+
+    li {
+        border-bottom: 1px solid $gray-300;
+
+        @media (min-width: breakpoint-min(lg)) {
+            display: inline-block;
+            border-right: 1px solid $gray-300;
+            border-bottom: none;
+        }
+
+        &:first-of-type {
+            border-top: 1px solid $gray-300;
+
+            @media (min-width: breakpoint-min(lg)) {
+                border-top: none;
+                border-left: 1px solid $gray-300;
+            }
+        }
+    }
+
+    a {
+        padding: 12px 32px 8px;
+        display: block;
+        color: $red;
+    }
+}
