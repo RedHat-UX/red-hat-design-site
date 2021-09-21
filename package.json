@@ -1,83 +1,71 @@
 {
-    "title": "WebDMS",
+    "title": "Studio - Web",
     "author": {
         "name": "Digital Business",
         "company": "Red Hat, Inc.",
         "url": "https://www.redhat.com"
     },
-    "homepage": "https://gitlab.corp.redhat.com/uxdd/webdms",
+    "homepage": "https://gitlab.corp.redhat.com/uxdd/studio-web",
     "repository": {
         "type": "git",
-        "url": "git@gitlab.corp.redhat.com:uxdd/webdms.git"
+        "url": "git@gitlab.corp.redhat.com:uxdd/studio-web.git"
     },
     "license": "MIT",
     "paths": {
         "repo": {
-            "root": "./"
+            "root": "./",
+            "css": "assets/css/",
+            "img": "assets/img/",
+            "js": "assets/js/"
         },
         "src": {
             "root": "src/",
-            "core": {
-                "scss": "src/assets/scss/",
-                "js": "src/assets/js/"
-            },
-            "projects": "src/projects/"
-        },
-        "dev": {
-            "root": "./dev/",
-            "projects": "dev/projects/",
-            "assets": "dev/assets/",
-            "css": "dev/assets/css/",
-            "img": "dev/assets/img/",
-            "js": "dev/assets/js/"
-        },
-        "dist": {
-            "root": "dist/",
-            "projects": "dist/projects/",
-            "assets": "dist/assets/",
-            "css": "dist/assets/css/",
-            "img": "dist/assets/img/",
-            "js": "dist/assets/js/"
+            "scss": "src/assets/scss/",
+            "img": "src/assets/img/",
+            "js": "src/assets/js/"
         }
     },
     "dependencies": {
-        "bootstrap": "^4.3.1"
+        "bootstrap": "^4.6.0"
     },
     "devDependencies": {
-        "browser-sync": "^2.26.7",
-        "del": "^5.1.0",
-        "fs": "0.0.2",
+        "browser-sync": "^2.27.4",
+        "del": "^6.0.0",
+        "fs": "^0.0.2",
         "gulp": "^4.0.2",
-        "gulp-autoprefixer": "^7.0.1",
+        "gulp-autoprefixer": "^8.0.0",
         "gulp-cache-bust": "^1.4.1",
         "gulp-clean-css": "^4.3.0",
         "gulp-concat": "^2.6.1",
-        "gulp-csscomb": "^3.1.0",
+        "gulp-dart-sass": "^1.0.2",
         "gulp-directory-sync": "^1.2.4",
-        "gulp-environments": "^1.0.0",
-        "gulp-file-include": "^2.1.1",
+        "gulp-environments": "^1.0.1",
+        "gulp-file-include": "^2.3.0",
         "gulp-flatten": "^0.4.0",
         "gulp-group-css-media-queries": "^1.2.0",
         "gulp-header": "^2.0.9",
         "gulp-if-env": "^0.1.0",
         "gulp-imagemin": "^7.1.0",
         "gulp-inject": "^5.0.5",
-        "gulp-load-plugins": "^2.0.3",
-        "gulp-notify": "^3.0.0",
+        "gulp-jsbeautifier": "^3.0.1",
+        "gulp-jsonminify": "^1.1.0",
+        "gulp-load-plugins": "^2.0.7",
+        "gulp-notify": "^4.0.0",
         "gulp-plumber": "^1.1.0",
-        "gulp-prompt": "^1.2.0",
         "gulp-rename": "^2.0.0",
-        "gulp-replace": "^1.0.0",
-        "gulp-rsync": "^0.0.8",
-        "gulp-sass": "^4.0.2",
+        "gulp-replace": "^1.1.3",
+        "gulp-rsync": "0.0.9",
         "gulp-shell": "^0.8.0",
-        "gulp-sourcemaps": "^2.6.4",
+        "gulp-sourcemaps": "^3.0.0",
         "gulp-strip-css-comments": "^2.0.0",
-        "gulp-strip-debug": "^3.0.0",
-        "gulp-uglify": "^3.0.0",
-        "imagemin-pngquant": "^8.0.0",
-        "request-promise-native": "^1.0.8",
-        "through2": "^3.0.1"
+        "gulp-strip-debug": "^4.0.0",
+        "gulp-uglify-es": "^2.0.0",
+        "imagemin-pngquant": "^9.0.1",
+        "path": "^0.12.7",
+        "readline-sync": "^1.4.10",
+        "request": "^2.88.2",
+        "request-promise-native": "^1.0.9",
+        "through2": "^4.0.2"
     },
     "browserslist": [
         "last 2 versions"

@@ -1,0 +1,300 @@
+/* ============================== */
+/*  COLORS: DEFAULT
+/* ============================== */
+
+// Black & White
+$black: 							#000;
+$white: 							#fff;
+
+// Gray
+$gray-100: 							#f6f6f6;
+$gray-200: 							#f2f2f2;
+$gray-300: 							#e7e7e7;
+$gray-400: 							#bdbdbd;
+$gray-500: 							#929292;
+$gray-600: 							#646464;
+$gray-700: 							#404040;
+$gray-800: 							#333;
+$gray-900: 							#131313;
+
+// Red
+$red: 								#e00;
+$red-dark: 							#800000;
+
+// Blue
+$blue: 								#0066cc;
+$blue-light:						#73bcf7;
+$blue-dark: 						#004080;
+
+// Teal
+$teal: 								#0c98a0;
+$teal-dark: 						#00586d;
+
+
+/* ============================== */
+/*  COLORS: TYPE
+/* ============================== */
+
+$body-color: 					    $gray-900;
+
+
+/* ============================== */
+/*  COLORS: LINKS
+/* ============================== */
+
+$link-color: 						$blue;
+$link-hover-color: 					$blue-dark;
+$link-hover-decoration: 			none;
+
+
+/* ============================== */
+/*  COLORS: THEME
+/* ============================== */
+
+$theme-colors: (
+    // Black & White
+    'black': 						$black,
+    'white': 						$white,
+
+    // Gray
+    'gray-100': 					$gray-100,
+    'gray-200': 					$gray-200,
+    'gray-300': 					$gray-300,
+    'gray-400': 					$gray-400,
+    'gray-500': 					$gray-500,
+    'gray-600': 					$gray-600,
+    'gray-700': 					$gray-700,
+    'gray-800': 					$gray-800,
+    'gray-900': 					$gray-900,
+
+    // Red
+    'red': 							$red,
+    'red-dark': 					$red-dark,
+
+    // Blue
+    'blue': 						$blue,
+    'blue-light':                   $blue-light,
+    'blue-dark': 					$blue-dark,
+
+    // Teal
+    'teal': 						$teal,
+    'teal-dark': 					$teal-dark,
+
+    // Primary & Secondary
+    'primary': 						$red,
+    'secondary': 					$blue
+);
+
+
+/* ============================== */
+/*  SPACERS
+ *
+ *  These spacers override Bootstrap's defaults, to be multiples of 10px,
+ *  and are primarily used for the margin/padding utilities.
+ *  Remember that redhat.com uses 10px rems
+/* ============================== */
+
+$spacer: 							10px;
+$spacers: (
+    '1': 							($spacer * 1),
+    '2': 							($spacer * 2),
+    '3': 							($spacer * 3),
+    '4': 							($spacer * 4),
+    '5': 							($spacer * 5),
+    '6': 							($spacer * 6),
+    '7': 							($spacer * 7),
+    '8': 							($spacer * 8),
+    '9': 							($spacer * 9),
+    '10': 							($spacer * 10),
+    '11': 							($spacer * 11),
+    '12': 							($spacer * 12)
+);
+
+
+/* ========================================================================================== */
+/*  SIZES
+ *
+/*  These sizes are added to size utilities
+ *  Default values include "auto" and multiples of 25 up to 100
+ *  usage: class="w-50" (width: 50%)
+/* ========================================================================================== */
+
+$sizes: (
+    10: 							10%,
+    33: 							33.3%,
+    66: 							66.6%
+);
+
+
+/* ========================================== */
+/*  GRID
+ *  Do not include BS4 sm breakpoint
+/* ========================================== */
+
+$grid-breakpoints: (
+    xs: 							0,
+    sm: 							576px,
+    md: 							768px,
+    lg: 							992px,
+    xl: 							1200px
+) !default;
+
+$container-max-widths: (
+    //sm: 							540px,
+    md: 							750px,
+    lg: 							970px,
+    xl: 							1170px
+);
+
+
+/* ========================================================================================== */
+/*  TYPE
+ *
+ *  $font-size-base is set to 1.6rem on WEB-DMS because redhat.com uses 10px rem
+ *
+ *  Due to Adobe Target CSS (at.min.css) being used across mulitple sites
+ *  most font sizes are moving to px base. $font-size-base is required to be rems,
+ *  so an additional $var, $font-size-px-base, set in _vars.scss, is being implemented.
+ *  Use of $font-size-base is deprecated 07/2020
+ *
+/* ========================================================================================== */
+
+// Font Family
+$font-family-sans-serif: 'RedHatText', 'Red Hat Text', 'Overpass', Overpass, 'Helvetica Neue', Arial, sans-serif;
+$headings-font-family: 'RedHatDisplay', 'Red Hat Display', 'Overpass', Overpass, 'Helvetica Neue', Arial, sans-serif;
+$font-family-monospace: 'Overpass Mono', Consolas, Monaco, Andale Mono, monospace;
+
+// Font Size (Desktop font sizes are defined in _type.scss.)
+$font-size-base: 					1.6rem;
+$line-height-base:                  1.444;
+$paragraph-margin-bottom:           ($spacer * 2); //20px
+$small-font-size:                   1.4rem;
+
+/*
+*
+* Not currently in use (not responsive). Handled in /src/assets/partials/_type.scss
+*
+$h1-font-size: 						$font-size-base * 2.25;     // 36px,  alpha:    //--pfe-theme--font-size--heading--alpha
+$h2-font-size: 						$font-size-base * 1.75;     // 28px,  beta:     //--pfe-theme--font-size--heading--beta
+$h3-font-size: 						$font-size-base * 1.5;      // 24px,  gamma:    //--pfe-theme--font-size--heading--gamma
+$h4-font-size: 						$font-size-base * 1.25;     // 20px,  delta:    //--pfe-theme--font-size--heading--delta
+$h5-font-size: 						$font-size-base * 1.125;    // 18px,  epsilon:  //--pfe-theme--font-size--heading--epsilon
+$h6-font-size: 						$font-size-base * 1;        // 16px,  zeta:     //--pfe-theme--font-size--heading--zeta
+
+$lead-font-size: 					$font-size-base * 1.25; // 18px
+$small-font-size: 					$font-size-base * 0.875; // 14px
+*
+*/
+
+// Font Weight
+$font-weight-light:                300;
+$font-weight-normal:               400;
+$font-weight-bold:                 700;
+// Bootstrap (_reboot.scss) uses this to set the default
+// `b, strong` tag. Update it to use the same weight as bold.
+$font-weight-bolder:               700;
+
+// Headings
+$headings-font-weight: 				$font-weight-normal;
+$headings-line-height: 				1.3;
+$headings-margin-bottom: 			($spacer * 2); // 20px
+//$headings-color:                    $gray-700;
+
+$hr-border-color: 					$gray-400;
+$hr-border-width: 					1px;
+$hr-margin-y: 						($spacer * 2); // 20px (applied to bottom)
+
+// Button & Input Spacing
+$btn-padding-y:                     ($spacer * 1.6); // 16px
+$btn-padding-x:                     ($spacer * 3.2); // 32px
+$input-btn-padding-y: 				($spacer * 1.6); // 16px
+$input-btn-padding-x: 				($spacer * 3.2); // 32px
+$btn-font-weight:                   $font-weight-bold;
+$btn-focus-width:                   0px;
+
+// Cards
+$card-spacer-x: 					($spacer * 3); // 30px
+$card-spacer-y: 					($spacer * 3); // 30px
+$card-img-overlay-padding: 			($spacer * 3); // 30px
+$card-bg: 							transparent;
+$card-cap-bg: 						transparent;
+$card-border-width: 				0px;
+$card-border-color: 				transparent;
+$card-bottom-margin: 				($spacer * 3); // 30px
+
+// Tabs
+$nav-tabs-border-color: 			$gray-300;
+$nav-tabs-border-width: 			1px;
+$nav-tabs-border-radius: 			0;
+$nav-tabs-link-hover-border-color: 	$gray-400;
+//$nav-tabs-link-active-color: 		$red;
+$nav-tabs-link-active-bg: 			transparent;
+$nav-tabs-link-active-border-color: $red;
+
+// Forms
+$input-padding-x:                   ($spacer * 1.6); // 16px
+$input-padding-y:                   4px;
+$input-height:                      auto;
+$custom-select-indicator-padding:   ($spacer * 1.6); // 16px
+
+
+// Lists
+$list-group-item-padding-y:         $spacer;
+$list-group-item-padding-x:         $spacer;
+
+// Breadcrumbs
+$breadcrumb-divider: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1LjQ1IiBoZWlnaHQ9IjkuNDUiIHZpZXdCb3g9IjAgMCA1LjQ1IDkuNDUiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojNjQ2NDY0O308L3N0eWxlPjwvZGVmcz48ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIj48ZyBpZD0iTGF5ZXJfMS0yIiBkYXRhLW5hbWU9IkxheWVyIDEiPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIuNTYsMEgwTDIuODgsNC43MywwLDkuNDVIMi41Nkw1LjQ1LDQuNzNaIi8+PC9nPjwvZz48L3N2Zz4=);
+
+
+/* ============================== */
+/*  Z-INDEX
+/* ============================== */
+
+$zindex-modal-backdrop:             var(--pfe-theme--zindex--overlay, 97);
+$zindex-modal:                      var(--pfe-theme--zindex--modal, 1001);
+$zindex-navigation:                 var(--pfe-theme--zindex--navigation, 103);
+$zindex-dropdown:                   90;
+$zindex-sticky:                     80;
+$zindex-fixed:                      70;
+$zindex-popover:                    60;
+$zindex-tooltip:                    50;
+
+
+
+/* ============================== */
+/*  OTHER
+/* ============================== */
+
+$border-radius:                     3px;
+$border-radius-lg:                  3px;
+$border-radius-sm:                  3px;
+
+
+$transition-bezier:                 cubic-bezier(0.5, 0, 0.5, 1);
+$transition-fade: 					opacity 700ms cubic-bezier(0.5, 0, 0.5, 1);
+$transition-collapse: 				height 500ms cubic-bezier(0.5, 0, 0.5, 1);
+
+$popover-header-color: 				$white;
+$popover-header-bg: 				$teal-dark;
+$popover-header-padding-y: 			($spacer * 1.8); // 18px
+$popover-header-padding-x: 			($spacer * 1.8); // 18px
+$popover-body-padding-y: 			($spacer * 1.8); // 18px
+$popover-body-padding-x: 			($spacer * 1.8); // 18px
+
+$modal-lg: 							900px;
+
+$carousel-indicator-spacer: 		$spacer; // 10px
+$carousel-indicator-height: 		($spacer * 1.5); // 15px
+$carousel-indicator-width: 			($spacer * 1.5); // 15px
+
+
+
+
+/* ========================================================================================== */
+/*  These turn on/off Bootstrap styling defaults.
+/* ========================================================================================== */
+
+$enable-caret: 						false;
+$enable-gradients: 					false;
+$enable-rounded: 					true;
+$enable-shadows: 					false;

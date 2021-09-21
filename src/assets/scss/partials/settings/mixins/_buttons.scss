@@ -1,0 +1,19 @@
+@mixin focus-border($color) {
+    content: "";
+    border: 1px solid $color;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+    position: absolute;
+    border-radius: 2px;
+}
+
+@mixin outline-focus-state($color) {
+    background: rgba($color, 0.08);
+    color: $color;
+
+    &:before {
+        @include focus-border($color);
+    }
+}

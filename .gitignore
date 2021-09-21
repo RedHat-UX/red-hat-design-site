@@ -6,16 +6,15 @@
 _design/
 dev/
 dist/
+docs/
 images/
-img/
 public/
-studio-dotfiles/
 temp/
 video/
 /index.html
 
 
-## Node
+## NodeJS
 
 *.log
 *.pid

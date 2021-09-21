@@ -1,0 +1,35 @@
+// override the version of this mixin that comes default in bootstrap,
+// allowing for dark colors to get lighter, light colors to get darker
+// to varying degrees
+
+@mixin text-emphasis-variant($parent, $color, $ignore-warning: false) {
+    #{$parent} {
+        color: $color !important;
+    }
+
+    a#{$parent} {
+        @include hover-focus {
+            $r: red($color);
+            $g: green($color);
+            $b: blue($color);
+
+            $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+            @if ($yiq <= 60) {
+                color: lighten($color, 30%) !important;
+            }
+            @else if($yiq <= 110) {
+                color: lighten($color, 15%)!important;
+            }
+            @else if($yiq <= 170) {
+                color: darken($color, 15%) !important;
+            }
+            @else if($yiq >= 220) {
+                color: darken($color, 10%) !important;
+            }
+            @else {
+                color: darken($color, 15%) !important;
+            }
+        }
+    }
+}

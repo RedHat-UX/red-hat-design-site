@@ -1,0 +1,13 @@
+/* ========================================================================================== */
+/*  Calculates the "rem" size, and provides a "px"-based fallback.
+/* ========================================================================================== */
+
+@mixin font-sizing($size) {
+    font-size: $size + px;
+    font-size: calculateRem($size);
+}
+
+@mixin font-sizing-important($size) {
+    font-size: $size + px !important;
+    font-size: calculateRem($size) !important;
+}
