@@ -301,3 +301,10 @@ exports.default = series(
     js,
     serve
 );
+
+exports.build = series(
+    html,
+    css,
+    images,
+    js,
+);
