@@ -5,7 +5,6 @@
 .vscode/
 _design/
 dev/
-dist/
 docs/
 images/
 public/
