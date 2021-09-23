@@ -52,7 +52,7 @@ function html() {
             type: 'timestamp'
         }))
         .pipe(dest([
-            pkg.paths.repo.root
+            pkg.paths.dist.root
         ]))
         .pipe(browserSync.stream());
 }
@@ -103,7 +103,7 @@ function css() {
             package: pkg
         }))
         .pipe(dest([
-            pkg.paths.repo.css
+            pkg.paths.dist.css
         ]))
         .pipe(browserSync.stream());
 }
@@ -123,7 +123,7 @@ function images() {
     ], {
         since: lastRun(images)
     })
-        .pipe($.directorySync(pkg.paths.src.img, pkg.paths.repo.img))
+        .pipe($.directorySync(pkg.paths.src.img, pkg.paths.dist.img))
         .pipe($.imagemin([
             $.imagemin.gifsicle({
                 interlaced: true,
@@ -195,7 +195,7 @@ function images() {
             verbose: true
         }))
         .pipe(dest([
-            pkg.paths.repo.img
+            pkg.paths.dist.img
         ]))
         .pipe(browserSync.stream());
 }
@@ -233,7 +233,7 @@ function js() {
             package: pkg
         }))
         .pipe(dest([
-            pkg.paths.repo.js
+            pkg.paths.dist.js
         ]))
         .pipe(browserSync.stream());
 }
@@ -253,7 +253,7 @@ function serve() {
     // Browsersync
     browserSync.init({
         notify: false,
-        server: pkg.paths.repo.root
+        server: pkg.paths.dist.root
     });
 
     // HTML
@@ -263,7 +263,7 @@ function serve() {
         .on('add', series(html))
         .on('unlink', (filepath) => {
             const srcPath = path.relative(path.resolve(pkg.paths.src.root), filepath);
-            const destPath = path.resolve(pkg.paths.repo.root, srcPath);
+            const destPath = path.resolve(pkg.paths.dist.root, srcPath);
 
             $.del.sync(destPath);
         });
@@ -301,6 +301,16 @@ exports.default = series(
     js,
     serve
 );
+
+
+/* ============================== */
+/*  BUILD
+/* ============================== */
+
+/* ========================================================================================== */
+/*  This task sequentially runs a series of tasks, without launching a local server or
+/*  watching for file changes.
+/* ========================================================================================== */
 
 exports.build = series(
     html,

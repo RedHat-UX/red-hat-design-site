@@ -1,5 +1,5 @@
 @@include('shared/_head.html', {
-    "vendor_css": "/assets/css/design-redhat.min.css",
+    "vendor_css": "//static.redhat.com/libs/redhat/redhat-theme/6/advanced-theme.css",
     "body_classes": "test"
 })
 
@@ -9,16 +9,18 @@
 
 @@include('partials/_hero.html')
 
-@@include('partials/_jump-links.html')
+@@include('partials/_sticky-nav.html')
 
 @@include('partials/_how-we-work.html')
 
 @@include('partials/_design-resources.html')
 
-@@include('partials/_careers.html')
+@@include('partials/_design-jobs.html')
+
+@@include('partials/_footer.html')
 
 <!-- HTML end -->
 
 @@include('shared/_foot.html', {
-    "vendor_js": "/assets/js/design-redhat.min.js"
+    "vendor_js": "//www.redhat.com/sites/all/libraries/webrh/dist/js/webrh.webcomponents.min.js"
 })
