@@ -52,7 +52,7 @@ function html() {
             type: 'timestamp'
         }))
         .pipe(dest([
-            pkg.paths.dist.root
+            pkg.paths.repo.root
         ]))
         .pipe(browserSync.stream());
 }
@@ -103,7 +103,7 @@ function css() {
             package: pkg
         }))
         .pipe(dest([
-            pkg.paths.dist.css
+            pkg.paths.repo.css
         ]))
         .pipe(browserSync.stream());
 }
@@ -123,7 +123,7 @@ function images() {
     ], {
         since: lastRun(images)
     })
-        .pipe($.directorySync(pkg.paths.src.img, pkg.paths.dist.img))
+        .pipe($.directorySync(pkg.paths.src.img, pkg.paths.repo.img))
         .pipe($.imagemin([
             $.imagemin.gifsicle({
                 interlaced: true,
@@ -132,11 +132,7 @@ function images() {
             $.imagemin.mozjpeg({
                 progressive: true
             }),
-            $.imageminPngquant({
-                dithering: 1,
-                quality: [ 0.8, 0.9 ],
-                speed: 1,
-                strip: true
+            $.imagemin.optipng({
             }),
             $.imagemin.svgo({
                 plugins: [
@@ -186,7 +182,7 @@ function images() {
                     { removeViewBox: true },
                     // { removeXMLNS: true },
                     { removeXMLProcInst: true },
-                    { reusePaths: true },
+                    // { reusePaths: true },
                     { sortAttrs: true },
                     // { sortDefsChildren: true }
                 ]
@@ -195,7 +191,7 @@ function images() {
             verbose: true
         }))
         .pipe(dest([
-            pkg.paths.dist.img
+            pkg.paths.repo.img
         ]))
         .pipe(browserSync.stream());
 }
@@ -233,7 +229,7 @@ function js() {
             package: pkg
         }))
         .pipe(dest([
-            pkg.paths.dist.js
+            pkg.paths.repo.js
         ]))
         .pipe(browserSync.stream());
 }
@@ -253,7 +249,7 @@ function serve() {
     // Browsersync
     browserSync.init({
         notify: false,
-        server: pkg.paths.dist.root
+        server: pkg.paths.repo.root
     });
 
     // HTML
@@ -263,7 +259,7 @@ function serve() {
         .on('add', series(html))
         .on('unlink', (filepath) => {
             const srcPath = path.relative(path.resolve(pkg.paths.src.root), filepath);
-            const destPath = path.resolve(pkg.paths.dist.root, srcPath);
+            const destPath = path.resolve(pkg.paths.repo.root, srcPath);
 
             $.del.sync(destPath);
         });
