@@ -220,7 +220,7 @@ function js() {
         .pipe($.flatten({
             includeParents: 0
         }))
-        .pipe($.stripDebug())
+        // .pipe($.stripDebug())
         .pipe($.uglifyEs.default())
         .pipe($.rename({
             suffix: '.min'
