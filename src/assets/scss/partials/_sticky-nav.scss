@@ -5,14 +5,21 @@
         .nav {
             border-color: $white !important;
 
-            a {
+            &-link {
                 margin-top: -3px;
                 border-top: 3px solid transparent;
 
+                &:hover,
                 &.active {
                     border-color: $red;
                 }
             }
+        }
+    }
+
+    .nav {
+        &-link {
+            padding: 26px 0;
         }
     }
 }
