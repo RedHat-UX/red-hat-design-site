@@ -1,10 +1,10 @@
 /* ========================================================================================== */
-/*  Project: Studio - Web
+/*  Project: Red Hat Design Site
 /*  Author: Digital Business
-/*  Date: Mon Sep 27 2021 16:12:23 GMT-0400 (Eastern Daylight Time)
+/*  Date: Mon Sep 27 2021 16:22:14 GMT-0400 (Eastern Daylight Time)
 /*  
 /*  Copyright © 2021 Red Hat, Inc.
-/*  https://www.redhat.com
+/*  https://design.redhat.com
 /* ========================================================================================== */
 
 #sticky-nav.sticky{-webkit-box-shadow:0 0 5px rgba(0,0,0,.5);box-shadow:0 0 5px rgba(0,0,0,.5)}#sticky-nav.sticky .nav{border-color:#fff!important}#sticky-nav.sticky .nav-link{margin-top:-3px;border-top:3px solid transparent}#sticky-nav.sticky .nav-link.active{border-color:#e00}#sticky-nav .nav-link{padding:26px 0}@media (min-width:768px){.hero h1{font-size:90px!important}#how-we-work .row.d-flex{height:1950px;max-height:1950px}#how-we-work .pb-3{-webkit-box-flex:initial;-ms-flex:initial;flex:initial;display:block}}@media (min-width:992px){#how-we-work .row.d-flex{height:1920px;max-height:1920px}}@media (min-width:1200px){#how-we-work .row.d-flex{height:2090px;max-height:2090px}}@media (max-width:767.98px){.hero h1{font-size:48px!important}}
