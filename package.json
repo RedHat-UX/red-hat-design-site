@@ -1,14 +1,14 @@
 {
-    "title": "Studio - Web",
+    "title": "Red Hat Design Site",
     "author": {
         "name": "Digital Business",
         "company": "Red Hat, Inc.",
-        "url": "https://www.redhat.com"
+        "url": "https://design.redhat.com"
     },
-    "homepage": "https://gitlab.corp.redhat.com/uxdd/studio-web",
+    "homepage": "https://github.com/RedHat-UX/red-hat-design-site",
     "repository": {
         "type": "git",
-        "url": "git@gitlab.corp.redhat.com:uxdd/studio-web.git"
+        "url": "git@github.com:RedHat-UX/red-hat-design-site.git"
     },
     "license": "MIT",
     "paths": {
