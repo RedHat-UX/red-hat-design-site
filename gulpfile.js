@@ -232,7 +232,6 @@ function js() {
             pkg.paths.repo.js
         ]))
         .pipe(browserSync.stream());
-
 }
 
 
