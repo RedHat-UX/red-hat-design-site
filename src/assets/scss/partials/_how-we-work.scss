@@ -1,4 +1,10 @@
 #how-we-work {
+    .border-top {
+        @media (min-width: breakpoint-min(md)) {
+            border-top: none !important;
+        }
+    }
+
     .row.d-flex {
         @media (min-width: breakpoint-min(md)) {
             height: 1950px;
