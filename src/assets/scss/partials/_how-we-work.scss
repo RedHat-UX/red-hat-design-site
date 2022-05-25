@@ -7,18 +7,13 @@
 
     .row.d-flex {
         @media (min-width: breakpoint-min(md)) {
-            height: 1950px;
-            max-height: 1950px;
+            height: 2715px;
+            max-height: 2715px;
         }
 
         @media (min-width: breakpoint-min(lg)) {
-            height: 1920px;
-            max-height: 1920px;
-        }
-
-        @media (min-width: breakpoint-min(xl)) {
-            height: 2090px;
-            max-height: 2090px;
+            height: 2500px;
+            max-height: 2500px;
         }
     }
 
