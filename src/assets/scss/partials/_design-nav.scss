@@ -1,6 +1,13 @@
 
 .rh-design {
 
+    li.active-story,
+    li.story:hover{
+        background: $gray-100;
+        border-left: 2px solid $red;
+        padding: 10px 5px;
+    }
+
     &-nav-top {
         position: fixed;
         background: $black;
@@ -55,7 +62,10 @@
                 outline-offset: 2px;
             }
         }
+
+        
     }
+
 
     &-nav-shelf {
         position: fixed;
@@ -69,11 +79,17 @@
         color: $white;
         transition: all 400ms ease-in-out;
 
-        @media (min-width: breakpoint-min(sm)) {
+        @media (min-width: breakpoint-min(md)) {
+            width: 275px;
+
+        }
+
+        @media (min-width: breakpoint-min(xl)) {
             width: 275px;
             left: 0px;
             height: 800px;
         }
+
 
         &.shelf-open {
             left: 0px;
@@ -95,6 +111,11 @@
             background-position: left 100px;
             background-repeat: no-repeat;
             transition: all 400ms ease-in-out;
+
+            &.active-nav{
+                background-color: $gray-100;
+                border-left: 2px solid $red;
+            }
         }
 
         .accordion-toggle,
@@ -104,25 +125,35 @@
             background: transparent;
             border: none;
             box-shadow: none;
-        }
 
+            
+        }
         .accordion-toggle {
-            //font-weight: 700;
 
             &.collapsed {
                 font-weight: 400;
             }
 
+            &.active-nav{
+                background-color: $gray-100;
+                border-left: 2px solid $red;
+            }
+
             &:focus {
                 text-decoration: none;
             }
+
+            &:hover {
+                border: none;
+            }
+
         }
 
-        .accordion-panel.collapsing,
-        .accordion-toggle:hover {
+        .accordion-panel.collapsing{
             border: none;
         }
 
+        
         &-screen {
             position: fixed;
             top: 0;
