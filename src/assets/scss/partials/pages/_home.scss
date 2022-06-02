@@ -1,0 +1,51 @@
+#rh-sticky-nav {
+    &.sticky {
+        box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+        .nav {
+            border-color: $white !important;
+
+            &-link {
+                margin-top: -3px;
+                border-top: 3px solid transparent;
+
+                &.active {
+                    border-color: $red;
+                }
+            }
+        }
+    }
+
+    .nav {
+        &-link {
+            padding: 26px 0;
+        }
+    }
+}
+
+#how-we-work {
+    .border-top {
+        @media (min-width: breakpoint-min(md)) {
+            border-top: none !important;
+        }
+    }
+
+    .row.d-flex {
+        @media (min-width: breakpoint-min(md)) {
+            height: 2715px;
+            max-height: 2715px;
+        }
+
+        @media (min-width: breakpoint-min(lg)) {
+            height: 2500px;
+            max-height: 2500px;
+        }
+    }
+
+    .pb-3 {
+        @media (min-width: breakpoint-min(md)) {
+            flex: initial;
+            display: block;
+        }
+    }
+}
