@@ -21,6 +21,7 @@ const pkg                  = require('./package.json');
 const plumber              = require('gulp-plumber');
 const rename               = require('gulp-rename');
 const sass                 = require('gulp-sass')(require('sass'));
+const shell                = require('gulp-shell');
 const sourcemaps           = require('gulp-sourcemaps');
 const stripCssComments     = require('gulp-strip-css-comments');
 const uglifyEs             = require('gulp-uglify-es');
@@ -295,6 +296,28 @@ function serve() {
 
 
 /* ============================== */
+/*  TUNNEL
+/* ============================== */
+
+/* ========================================================================================== */
+/*
+/* ========================================================================================== */
+
+function tunnel() {
+
+    shell([
+        'npx lt --subdomain <%= package.title %> --port 3000'
+    ]);
+
+    // Browsersync
+    browserSync.init({
+        notify: false,
+        server: pkg.paths.repo.root
+    });
+}
+
+
+/* ============================== */
 /*  DEFAULT
 /* ============================== */
 
@@ -309,6 +332,24 @@ exports.default = series(
     images,
     js,
     serve
+);
+
+
+/* ============================== */
+/*  STAGING
+/* ============================== */
+
+/* ========================================================================================== */
+/*  This task sequentially runs a series of tasks, launches a local server, and creates a
+/*  tunnel URL to act as a staging environment for sharing purposes.
+/* ========================================================================================== */
+
+exports.staging = series(
+    html,
+    css,
+    // images,
+    js,
+    tunnel
 );
 
 
