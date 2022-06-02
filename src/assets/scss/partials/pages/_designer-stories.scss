@@ -3,3 +3,11 @@
         margin: 0 10px;
     }
 }
+
+.back-btn::after {
+    position: left;
+    position: absolute;
+    left: -33px;
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+}
