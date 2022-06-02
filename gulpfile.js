@@ -300,19 +300,18 @@ function serve() {
 /* ============================== */
 
 /* ========================================================================================== */
-/*
+/*  This task launches a local Browsersync server in a browser, and creates a tunnel URL to
+/*  act as a staging environment for sharing purposes.
 /* ========================================================================================== */
 
 function tunnel() {
 
-    shell([
-        'npx lt --subdomain <%= package.title %> --port 3000'
-    ]);
-
     // Browsersync
     browserSync.init({
         notify: false,
-        server: pkg.paths.repo.root
+        open: 'tunnel',
+        server: pkg.paths.repo.root,
+        tunnel: 'red-hat-design-site'
     });
 }
 
@@ -347,7 +346,7 @@ exports.default = series(
 exports.staging = series(
     html,
     css,
-    // images,
+    images,
     js,
     tunnel
 );
