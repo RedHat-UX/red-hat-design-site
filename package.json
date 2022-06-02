@@ -50,7 +50,6 @@
         "gulp-strip-css-comments": "^2.0.0",
         "gulp-strip-debug": "^4.0.0",
         "gulp-uglify-es": "^3.0.0",
-        "localtunnel": "^2.0.2",
         "optipng-bin": "^9.0.0",
         "path": "^0.12.7",
         "sass": "^1.51.0"
