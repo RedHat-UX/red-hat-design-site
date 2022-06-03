@@ -58,6 +58,26 @@ $(document).ready(function(){
 
     $(document).on('ready', function() {
 
+/* ============================== */
+/*  SET ACTIVE ON NAV
+/* ============================== */
+
+        var CurrentUrl= document.URL;
+        console.log('current URL: ' + CurrentUrl);
+        var CurrentUrlEnd = CurrentUrl.split('/').filter(Boolean).pop();
+        console.log('current URL end: ' +  CurrentUrlEnd);
+
+        $( ".design-nav-item a" ).each(function() {
+            var ThisUrl = $(this).attr('href');
+            console.log('This URL: ' + ThisUrl);
+            var ThisUrlEnd = ThisUrl.split('/').filter(Boolean).pop();
+            console.log('end: ' + ThisUrlEnd);
+            if(CurrentUrl.includes(ThisUrlEnd)){
+                console.log('active');
+                $(this).addClass('active');
+            }
+        });
+
 
 /* ============================== */
 /*  STICKY NAV - ON SCROLL

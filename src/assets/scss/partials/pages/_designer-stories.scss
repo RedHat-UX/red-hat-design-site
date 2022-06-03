@@ -11,3 +11,20 @@
     transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
 }
+
+@media (max-width: breakpoint-min(sm)){
+	.designer-img{
+		width: 30%;
+	}
+
+	.designer-question{
+		font-size: 30px !important;
+	}
+}
+
+@media (max-width: breakpoint-min(xl)){
+	.hero-img{
+		width: 100%;
+	}
+}
+
