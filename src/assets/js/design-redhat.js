@@ -72,6 +72,8 @@ $(document).ready(function(){
             console.log('This URL: ' + ThisUrl);
             var ThisUrlEnd = ThisUrl.split('/').filter(Boolean).pop();
             console.log('end: ' + ThisUrlEnd);
+
+
             if(CurrentUrl.includes(ThisUrlEnd)){
                 console.log('active');
                 $(this).addClass('active');

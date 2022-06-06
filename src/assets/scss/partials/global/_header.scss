@@ -1,18 +1,12 @@
 
 .rh-design {
 
-
-    a{
-
-        li.story.active,
-        li.story:hover{
-        background: $gray-100;
-        border-left: 2px solid $red;
-        }
-
+    li.story a{
+        padding-left: 4px;
     }
-    li.story.active,
-    li.story:hover{
+
+    li.story a.active{
+    //li.story:hover{
         background: $gray-100;
         border-left: 2px solid $red;
     }
@@ -121,16 +115,23 @@
             background-repeat: no-repeat;
             transition: all 400ms ease-in-out;
 
-            &.active{
+            a.active{
                 background-color: $gray-100;
                 border-left: 2px solid $red;
+                padding-right: 86px;
+            }
+
+            a:hover{
+                background-color: $gray-100;
+                border-left: 2px solid $red;
+                padding-right: 86px;
             }
         }
 
-        .nav-button:hover{
-            background-color: $gray-100;
-            border-left: 2px solid $red;
-        }
+        //.nav-button a:hover{
+         //   background-color: $gray-100;
+         //   border-left: 2px solid $red;
+       // }
 
         .accordion-toggle,
         .accordion-toggle.collapsed,
