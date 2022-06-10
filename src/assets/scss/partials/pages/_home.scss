@@ -49,3 +49,18 @@
         }
     }
 }
+
+.design-job-middle-card{
+
+    @media (max-width: breakpoint-max(md)){
+        padding: 40px 0;
+        border-bottom: 1px solid $gray-300;
+        border-top: 1px solid $gray-300;
+    }
+    
+
+    @media (min-width: breakpoint-min(lg)){
+         border-left: 1px solid $gray-300;
+         border-right: 1px solid $gray-300;
+    }
+}
