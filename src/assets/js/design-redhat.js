@@ -74,9 +74,14 @@ $(document).ready(function(){
             console.log('end: ' + ThisUrlEnd);
 
 
-            if(CurrentUrl.includes(ThisUrlEnd)){
+            if(CurrentUrlEnd.includes(ThisUrlEnd)){
                 console.log('active');
                 $(this).addClass('active');
+                if(CurrentUrl.includes('designer-stories')){
+                    $('#stories-btn').removeClass('collapsed');
+                    $('.accordion-panel').addClass('show');
+                    document.getElementById('stories-btn').setAttribute('aria-expanded', 'true');
+                }
             }
         });
 

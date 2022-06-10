@@ -48,7 +48,7 @@
         <link rel="stylesheet" href="//www.redhat.com/ux/webdms/css/styles.min.css">
 
         <!-- Project -->
-        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1654548200822">
+        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1654876173583">
 
         <!-- SCRIPTS -->
         <!-- Libraries -->
@@ -90,13 +90,12 @@
     <div class="nav-container pb-4">
         <div id="rhDesignNav" class="accordion">
             <div class="nav-group-wrapper nav-button design-nav-item mt-2">
-                <a href="/" class="pl-4 py-2">
+                <a href="http://localhost:3000/" class="pl-4 py-2">
                     Design at Red Hat
                 </a>
             </div>
-
             <div class="nav-group-wrapper">
-                <button href="#" class="accordion-toggle collapsed nav-button py-2 pl-4 mt-2" data-toggle="collapse" data-target="#stories">
+                <button href="#" id="stories-btn" class="accordion-toggle collapsed nav-button py-2 pl-4 mt-2" data-toggle="collapse" data-target="#stories">
                     <p>Designer stories</p>
                 </button>
                 <div id="stories" class="accordion-panel collapse pr-0" data-parent="#rhDesignNav">
@@ -110,31 +109,31 @@
                         </li>
 
                         <li class="mb-2 story design-nav-item">
-                            <a href="#" title="Ann Nguyen" class="py-1 pr-10">Ann Nguyen&nbsp;</a>
+                            <a href="/designer-stories/ann-nguyen.html" title="Ann Nguyen" class="py-1 pr-10">Ann Nguyen&nbsp;</a>
                         </li>
 
                         <li class="mb-2 story design-nav-item">
-                            <a href="#" title="Chae Bin Park" class="py-1">Chae Bin Park</a>
+                            <a href="/designer-stories/chae-bin-park.html" title="Chae Bin Park" class="py-1">Chae Bin Park</a>
                         </li>
 
                         <li class="mb-2 story design-nav-item">
-                            <a href="#" title="Kevin Hatchoua" class="py-1 pr-7">Kevin Hatchoua</a>
+                            <a href="/designer-stories/kevin-hatchoua.html" title="Kevin Hatchoua" class="py-1 pr-7">Kevin Hatchoua</a>
                         </li>
 
                         <li class="mb-2 story design-nav-item">
-                            <a href="#" title="Krystal Moore" class="py-1">Krystal Moore</a>
+                            <a href="/designer-stories/krystal-moore.html" title="Krystal Moore" class="py-1">Krystal Moore</a>
                         </li>
 
                         <li class="mb-2 story design-nav-item">
-                            <a href="#" title="Liz Wood" class="py-1 pr-12">Liz Wood&nbsp;</a>
+                            <a href="/designer-stories/liz-wool.html" title="Liz Wood" class="py-1 pr-12">Liz Wood&nbsp;</a>
                         </li>
 
                         <li class="mb-2 story design-nav-item">
-                            <a href="#" title="Michael Celedonia" class="py-1 pr-5">Michael Celedonia</a>
+                            <a href="/designer-stories/michael-celedonia.html" title="Michael Celedonia" class="py-1 pr-5">Michael Celedonia</a>
                         </li>
 
                         <li class="mb-2 story design-nav-item">
-                            <a href="#" title="Fadzly Sayarasi" class="py-1 pr-7">Fadzly Sayarasi</a>
+                            <a href="/designer-stories/fadzly-sayarasi.html" title="Fadzly Sayarasi" class="py-1 pr-7">Fadzly Sayarasi</a>
                         </li>
                     </ol>
                 </div>
@@ -150,7 +149,7 @@
 
 <div class="mb-6">&nbsp;</div>
 
-<section class="hero dms-band pt-4">
+<section class="hero dms-band">
 
     <div class="container">
         <div class="row">
@@ -196,7 +195,7 @@
 
         <div class="col-12 col-xl-10 offset-xl-2">
             <div class="row d-flex flex-md-column flex-md-wrap align-content-start justify-content-start">
-                <div class="col-12 col-md-6 col-lg-7 pb-3">
+                <div class="col-12 col-md-6 col-lg-7 pb-3 pl-0">
                     <div class="card">
                         <div class="card-body pt-0 pl-0 pb-0 pr-md-3">
                             <p class="mb-3 font-size-20 font-size-md-24">Open design is built on collaboration.</p>
@@ -215,9 +214,9 @@
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-7 pb-3">
-                    <h3 class="text-red xl font-weight-light">How do you think diverse voices and perspectives make the design process stronger?</h3>
+                    <h3 class="text-red font-size-36 font-weight-light">How do you think diverse voices and perspectives make the design process stronger?</h3>
 
-                    <div class="card mb-0 p-4 border-left border-red">
+                    <div class="card mb-0 p-4 border-left border-red rounded-0">
                         <img class="svg quote mb-3" src="/assets/img/svg/icon-quote.svg" alt="Quote icon">
 
                         <p class="mb-3 font-size-24">Your willingness to collaborate in your design process, should be equally matched by your inviting of diverse voices and perspectives to this same process. This inherently invites different voices and perspectives to not only collaborate but critique your work.</p>
@@ -302,9 +301,9 @@
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-5 pb-3">
-                    <h3 class="text-red xl font-weight-light">What makes designing at Red Hat unique?</h3>
+                    <h3 class="text-red font-size-36 font-weight-light">What makes designing at Red Hat unique?</h3>
 
-                    <div class="card mb-0 p-4 border-left border-red">
+                    <div class="card mb-0 p-4 border-left border-red rounded-0">
                         <img class="svg quote mb-3" src="/assets/img/svg/icon-quote.svg" alt="Quote icon">
 
                         <p class="mb-3 font-size-24">Finding patterns and creating consistency throughout the platform is uniquely challenging.</p>
@@ -324,7 +323,7 @@
                 </div>
             </div>
 
-            <div class="text-center pb-8">
+            <div class="text-center pb-8 mt-n2 mt-xl-n3">
                 <pfe-cta priority="secondary">
                     <a href="//www.redhat.com">Read more designer stories</a>
                 </pfe-cta>
@@ -351,7 +350,7 @@
                     <h2 pfe-content-set--header>Brand standards</h2>
 
                     <pfe-content-set--panel class="col-12 col-md-11 col-xl-7 mt-xl-n12 pr-0 float-right">
-                        <img class="img-fluid mb-2" src="/assets/img/pages/home/img-brand-standards-584x384.png" alt="Brand standards image">
+                        <img class="img-fluid mb-2" src="/assets/img/pages/home/img-brand-standards-409x269.png" alt="Brand standards image">
 
                         <h2>Red Hat Brand Standards</h2>
 
@@ -363,7 +362,7 @@
                     <h2 pfe-content-set--header>Digital design system</h2>
 
                     <pfe-content-set--panel class="col-12 col-md-11 col-xl-7 mt-xl-n12 pr-0 float-right">
-                        <img class="img-fluid mb-1" src="/assets/img/pages/home/img-digital-design-system-592x389.png" alt="Digital design system image">
+                        <img class="img-fluid mb-1" src="/assets/img/pages/home/img-digital-design-system-409x269.png" alt="Digital design system image">
 
                         <h2>Red Hat Digital Design System</h2>
 
@@ -375,7 +374,7 @@
                     <h2 pfe-content-set--header>Product design system</h2>
 
                     <pfe-content-set--panel class="col-12 col-md-11 col-xl-7 mt-xl-n12 pr-0 float-right">
-                        <img class="img-fluid mb-2" src="/assets/img/pages/home/img-product-design-system-588x376.png" alt="Product design system image">
+                        <img class="img-fluid mb-2" src="/assets/img/pages/home/img-product-design-system-409x269.png" alt="Product design system image">
 
                         <h2>PatternFly Product Design System</h2>
 
@@ -387,12 +386,11 @@
                     <h2 pfe-content-set--header>Open Studio Community</h2>
 
                     <pfe-content-set--panel class="col-12 col-md-11 col-xl-7 mt-xl-n12 pr-0 float-right">
-                        <img class="img-fluid mb-md-n2" src="/assets/img/pages/home/img-open-studio-community-606x419.png" alt="Open Studio Community image">
+                        <img class="img-fluid mb-md-n2" src="/assets/img/pages/home/img-open-studio-community-409x283.png" alt="Open Studio Community image">
 
                         <h2>Open Studio Community</h2>
 
                         <p>A collaborative rooted in open source, our Open Studio Community is a group of all creatives inside (and some outside) of Red Hat—sharing, teaching, and creating together.</p>
-
                         <p class="mb-0"><a class="btn btn-link" href="//www.redhat.com/en/about/open-studio" title="Visit our community">Visit our community</a></p>
                     </pfe-content-set--panel>
                 </pfe-content-set>
@@ -407,8 +405,7 @@
             <div class="col-12 col-xl-10 offset-xl-2">
                 <div class="pt-4 pt-md-8 border-top border-red"></div>
             </div>
-
-            <div class="col-12 col-sm-8 col-lg-6 offset-xl-2 mx-md-auto text-md-center">
+            <div class="col-12 col-sm-8 col-lg-6 offset-md-2 offset-lg-3 offset-xl-4 text-md-center">
                 <h3 class="section-label text-red">Design jobs</h3>
 
                 <h1>Open design needs many voices. Join us.</h1>
@@ -416,9 +413,9 @@
         </div>
         <div class="col-xl-10 offset-xl-2">
         <div class="row mt-3">
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 border">
-                    <div class="card-header pb-0 text-center">
+            <div class="col-12 col-md-6 col-lg-4 px-xl-0">
+                <div class="card h-100">
+                    <div class="card-header text-center pb-xl-4">
                         <img class="svg" src="/assets/img/svg/thumb-brand-creative.svg" alt="Brand and creative thumbnail">
                     </div>
 
@@ -432,9 +429,9 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0">
-                <div class="card h-100 border">
-                    <div class="card-header pb-0 text-center">
+            <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0 px-xl-0">
+                <div class="card h-100">
+                    <div class="card-header pb-1 text-center">
                         <img class="svg" src="/assets/img/svg/thumb-digital-design.svg" alt="Digital design thumbnail">
                     </div>
 
@@ -448,9 +445,9 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 mt-3 mt-lg-0">
-                <div class="card h-100 border">
-                    <div class="card-header pb-0 text-center">
+            <div class="col-12 col-md-6 col-lg-4 mt-3 mt-lg-0 px-xl-0">
+                <div class="card h-100">
+                    <div class="card-header pb-0 pb-xl-1 text-center">
                         <img class="svg" src="/assets/img/svg/thumb-product-design.svg" alt="Product design thumbnail">
                     </div>
 
@@ -524,7 +521,7 @@
         <script src="//www.redhat.com/ux/webdms/js/scripts.min.js"></script>
 
         <!-- Project -->
-        <script src="/assets/js/design-redhat.min.js?t=1654548200822"></script>
+        <script src="/assets/js/design-redhat.min.js?t=1654876173583"></script>
 
 <!-- SCRIPTS end -->
 

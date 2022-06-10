@@ -6,7 +6,6 @@
     }
 
     li.story a.active{
-    //li.story:hover{
         background: $gray-100;
         border-left: 2px solid $red;
     }
@@ -82,7 +81,7 @@
         color: $white;
         transition: all 400ms ease-in-out;
 
-        @media (min-width: breakpoint-min(md)) {
+        @media (min-width: breakpoint-min(sm)) {
             width: 275px;
 
         }
@@ -128,10 +127,6 @@
             }
         }
 
-        //.nav-button a:hover{
-         //   background-color: $gray-100;
-         //   border-left: 2px solid $red;
-       // }
 
         .accordion-toggle,
         .accordion-toggle.collapsed,
@@ -149,6 +144,10 @@
         }
 
         .accordion-toggle {
+
+            @media (max-width: breakpoint-min(sm)){
+                width: 50% !important;
+            }
 
             &.collapsed {
                 font-weight: 400;
