@@ -6,13 +6,13 @@
     }
 
     li.story a.active{
-        background: $gray-100;
+        background-color: $gray-100;
         border-left: 2px solid $red;
     }
 
     &-nav-top {
         position: fixed;
-        background: $black;
+        background-color: $black;
         width: 100%;
         z-index: $zindex-navigation;
     }
@@ -34,7 +34,7 @@
             .menu-bar {
                 width: 30px;
                 height: 3px;
-                background: #fff;
+                background-color: #fff;
                 display: block;
                 margin: 8px 6px;
                 transition: all 400ms ease-in-out;

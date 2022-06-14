@@ -1,15 +1,20 @@
 (function($){
 
 /* ============================== */
+/*  DOCUMENT READY
+/* ============================== */
+
+    $(document).on('ready', function() {
+
+/* ============================== */
 /*  MENU
 /* ============================== */
 
-$(document).ready(function(){
     var $screen = $("<div class='rh-design-nav-shelf-screen'></div>").appendTo("body"),
         $nav_shelf = $(".rh-design-nav-shelf"),
         $toggle_wrapper = $('.rh-design-nav-toggle-wrapper'),
         $toggle = $toggle_wrapper.find('.btn-toggle');
-    
+
     initNav();
     
     function openNav(panel){
@@ -46,36 +51,23 @@ $(document).ready(function(){
             e.preventDefault();
             return $nav_shelf.hasClass("shelf-open") ? closeNav() : openNav($(this).data("toggle-panel"));
         });
+
+
     }
-    
-    //openNav();
-});
 
-
-/* ============================== */
-/*  DOCUMENT READY
-/* ============================== */
-
-    $(document).on('ready', function() {
 
 /* ============================== */
 /*  SET ACTIVE ON NAV
 /* ============================== */
 
         var CurrentUrl= document.URL;
-        console.log('current URL: ' + CurrentUrl);
         var CurrentUrlEnd = CurrentUrl.split('/').filter(Boolean).pop();
-        console.log('current URL end: ' +  CurrentUrlEnd);
 
         $( ".design-nav-item a" ).each(function() {
             var ThisUrl = $(this).attr('href');
-            console.log('This URL: ' + ThisUrl);
             var ThisUrlEnd = ThisUrl.split('/').filter(Boolean).pop();
-            console.log('end: ' + ThisUrlEnd);
-
 
             if(CurrentUrlEnd.includes(ThisUrlEnd)){
-                console.log('active');
                 $(this).addClass('active');
                 if(CurrentUrl.includes('designer-stories')){
                     $('#stories-btn').removeClass('collapsed');
