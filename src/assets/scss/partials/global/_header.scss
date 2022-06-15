@@ -144,8 +144,8 @@
 
         .accordion-toggle {
 
-            @media (max-width: breakpoint-min(md)){
-                width: 50% !important;
+            @media (max-width: breakpoint-min(sm)){
+                width: 70% !important;
             }
 
             &.collapsed {

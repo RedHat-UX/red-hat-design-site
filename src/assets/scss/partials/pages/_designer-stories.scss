@@ -29,6 +29,7 @@
 }
 
 .designer-img{
-	border: 5px solid $white;
+	outline: 5px solid $white;
+	outline-offset: -1px;
 }
 
