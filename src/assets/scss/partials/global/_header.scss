@@ -81,12 +81,12 @@
         color: $white;
         transition: all 400ms ease-in-out;
 
-        @media (min-width: breakpoint-min(sm)) {
+        @media (min-width: breakpoint-min(md)) {
             width: 275px;
 
         }
 
-        @media (min-width: breakpoint-min(xl)) {
+        @media (min-width: 1298px) {
             width: 275px;
             left: 0px;
             height: 800px;
@@ -100,7 +100,6 @@
         button,
         a:not(.btn) {
             color: $black;
-            font-family: "Overpass Mono", $font-family-sans-serif;
         }
 
         .nav-container {
@@ -145,7 +144,7 @@
 
         .accordion-toggle {
 
-            @media (max-width: breakpoint-min(sm)){
+            @media (max-width: breakpoint-min(md)){
                 width: 50% !important;
             }
 
