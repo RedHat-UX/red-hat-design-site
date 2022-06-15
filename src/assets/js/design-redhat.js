@@ -6,6 +6,7 @@
 
     $(document).on('ready', function() {
 
+
 /* ============================== */
 /*  MENU
 /* ============================== */
@@ -15,8 +16,6 @@
         $toggle_wrapper = $('.rh-design-nav-toggle-wrapper'),
         $toggle = $toggle_wrapper.find('.btn-toggle');
 
-    initNav();
-    
     function openNav(panel){
         if (panel != undefined && $(panel).length > 0) {
             $(panel).collapse('show');
@@ -27,7 +26,7 @@
         $screen.addClass("shelf-open");
         $("body").css("overflow","hidden");
     }
-    
+
     function closeNav(){
         $screen.removeClass("shelf-open");
         $('.btn-toggle').removeClass("active");
@@ -35,25 +34,25 @@
         $nav_shelf.removeClass("shelf-open");
         $("body").css("overflow","auto");
     }
-    
+
     function initNav(){
         $(".accordion-panel").on("show.bs.collapse", function(){
             var $wrapper = $(this).parent(".nav-group-wrapper");
             $wrapper.css("backgroundPosition","left 0px");
         });
-        
+
         $(".accordion-panel").on("hide.bs.collapse", function(){
             var $wrapper = $(this).parent(".nav-group-wrapper");
             $wrapper.css("backgroundPosition","left 100px");
         });
-        
+
         $("[data-toggle='nav-shelf']").on("click", function(e){
             e.preventDefault();
             return $nav_shelf.hasClass("shelf-open") ? closeNav() : openNav($(this).data("toggle-panel"));
         });
-
-
     }
+
+    initNav();
 
 
 /* ============================== */
