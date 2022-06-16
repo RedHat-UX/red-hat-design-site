@@ -29,6 +29,11 @@
 }
 
 .designer-img{
-	border: 5px solid $white;
+	outline: 8px solid $white;
+	outline-offset: -1px;
+	-webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -khtml-border-radius: 50%;
 }
 
