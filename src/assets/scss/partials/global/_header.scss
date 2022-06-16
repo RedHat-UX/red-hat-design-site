@@ -10,6 +10,10 @@
         border-left: 2px solid $red;
     }
 
+    .overview{
+        padding-right: 157px;
+    }
+
     &-nav-top {
         position: fixed;
         background-color: $black;
@@ -116,13 +120,11 @@
             a.active{
                 background-color: $gray-100;
                 border-left: 2px solid $red;
-                padding-right: 157px;
             }
 
             a:hover{
                 background-color: $gray-100;
                 border-left: 2px solid $red;
-                padding-right: 157px;
             }
         }
 
