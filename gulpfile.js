@@ -4,13 +4,27 @@
 
 // Dependencies
 const { src, dest, lastRun, watch, series } = require('gulp');
-const $ = require('gulp-load-plugins') ({
-    pattern: ['*'],
-    scope: ['devDependencies']
-});
-const browserSync = require('browser-sync').create();
-const path = require('path');
-const pkg = require('./package.json');
+const autoprefixer         = require('gulp-autoprefixer');
+const browserSync          = require('browser-sync').create();
+const cacheBust            = require('gulp-cache-bust');
+const cleanCss             = require('gulp-clean-css');
+const del                  = require('del');
+const directorySync        = require('gulp-directory-sync');
+const fileInclude          = require('gulp-file-include');
+const flatten              = require('gulp-flatten');
+const groupCssMediaQueries = require('gulp-group-css-media-queries');
+const header               = require('gulp-header');
+const imagemin             = require('gulp-imagemin');
+const notify               = require('gulp-notify');
+const path                 = require('path');
+const pkg                  = require('./package.json');
+const plumber              = require('gulp-plumber');
+const rename               = require('gulp-rename');
+const sass                 = require('gulp-sass')(require('sass'));
+const shell                = require('gulp-shell');
+const sourcemaps           = require('gulp-sourcemaps');
+const stripCssComments     = require('gulp-strip-css-comments');
+const uglifyEs             = require('gulp-uglify-es');
 
 
 /* ============================== */
@@ -44,11 +58,11 @@ function html() {
         '!' + pkg.paths.src.root + 'partials/**/*.html',
         '!' + pkg.paths.src.root + 'shared/*.html'
     ])
-        .pipe($.fileInclude({
+        .pipe(fileInclude({
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe($.cacheBust({
+        .pipe(cacheBust({
             type: 'timestamp'
         }))
         .pipe(dest([
@@ -73,33 +87,33 @@ function css() {
     return src([
         pkg.paths.src.scss + '**/*.scss'
     ])
-        .pipe($.plumber({
-            errorHandler: $.notify.onError('Error: <%= error.message %>')
+        .pipe(plumber({
+            errorHandler: notify.onError('Error: <%= error.message %>')
         }))
-        // .pipe($.sourcemaps.init())
-        .pipe($.dartSass())
-        .pipe($.stripCssComments({
+        // .pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(stripCssComments({
             preserve: false
         }))
-        .pipe($.autoprefixer({
+        .pipe(autoprefixer({
             cascade: false
         }))
-        .pipe($.groupCssMediaQueries())
-        // .pipe($.sourcemaps.write('./'))
-        .pipe($.flatten({
+        .pipe(groupCssMediaQueries())
+        // .pipe(sourcemaps.write('./'))
+        .pipe(flatten({
             includeParents: 0
         }))
-        .pipe($.cleanCss({
+        .pipe(cleanCss({
             level: {
                 2: {
                     restructureRules: true
                 }
             }
         }))
-        .pipe($.rename({
+        .pipe(rename({
             suffix: '.min'
         }))
-        .pipe($.header(banner, {
+        .pipe(header(banner, {
             package: pkg
         }))
         .pipe(dest([
@@ -123,18 +137,18 @@ function images() {
     ], {
         since: lastRun(images)
     })
-        .pipe($.directorySync(pkg.paths.src.img, pkg.paths.repo.img))
-        .pipe($.imagemin([
-            $.imagemin.gifsicle({
+        .pipe(directorySync(pkg.paths.src.img, pkg.paths.repo.img))
+        .pipe(imagemin([
+            imagemin.gifsicle({
                 interlaced: true,
                 optimizationLevel: 3
             }),
-            $.imagemin.mozjpeg({
+            imagemin.mozjpeg({
                 progressive: true
             }),
-            $.imagemin.optipng({
+            imagemin.optipng({
             }),
-            // $.imagemin.svgo({
+            // imagemin.svgo({
             //     plugins: [
             //         // { addAttributesToSVGElement: true },
             //         // { addClassesToSVGElement: true },
@@ -214,18 +228,18 @@ function js() {
     ], {
         since: lastRun(js)
     })
-        .pipe($.plumber({
-            errorHandler: $.notify.onError('Error: <%= error.message %>')
+        .pipe(plumber({
+            errorHandler: notify.onError('Error: <%= error.message %>')
         }))
-        .pipe($.flatten({
+        .pipe(flatten({
             includeParents: 0
         }))
-        // .pipe($.stripDebug())
-        .pipe($.uglifyEs.default())
-        .pipe($.rename({
+        // .pipe(stripDebug())
+        .pipe(uglifyEs.default())
+        .pipe(rename({
             suffix: '.min'
         }))
-        .pipe($.header(banner, {
+        .pipe(header(banner, {
             package: pkg
         }))
         .pipe(dest([
@@ -261,7 +275,7 @@ function serve() {
             const srcPath = path.relative(path.resolve(pkg.paths.src.root), filepath);
             const destPath = path.resolve(pkg.paths.repo.root, srcPath);
 
-            $.del.sync(destPath);
+            del.sync(destPath);
         });
 
     // CSS
@@ -282,6 +296,27 @@ function serve() {
 
 
 /* ============================== */
+/*  TUNNEL
+/* ============================== */
+
+/* ========================================================================================== */
+/*  This task launches a local Browsersync server in a browser, and creates a tunnel URL to
+/*  act as a staging environment for sharing purposes.
+/* ========================================================================================== */
+
+function tunnel() {
+
+    // Browsersync
+    browserSync.init({
+        notify: false,
+        open: 'tunnel',
+        server: pkg.paths.repo.root,
+        tunnel: 'red-hat-design-site'
+    });
+}
+
+
+/* ============================== */
 /*  DEFAULT
 /* ============================== */
 
@@ -296,6 +331,24 @@ exports.default = series(
     images,
     js,
     serve
+);
+
+
+/* ============================== */
+/*  STAGING
+/* ============================== */
+
+/* ========================================================================================== */
+/*  This task sequentially runs a series of tasks, launches a local server, and creates a
+/*  tunnel URL to act as a staging environment for sharing purposes.
+/* ========================================================================================== */
+
+exports.staging = series(
+    html,
+    css,
+    images,
+    js,
+    tunnel
 );
 
 

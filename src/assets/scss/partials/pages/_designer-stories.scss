@@ -1,0 +1,34 @@
+.designer-cards {
+    @media (max-width: breakpoint-min(sm)) {
+        margin: 0 10px;
+    }
+}
+
+.back-btn::after {
+    position: left;
+    position: absolute;
+    left: -33px;
+    transform: scaleX(-1);
+}
+
+@media (max-width: breakpoint-min(sm)){
+	.designer-img{
+		width: 30%;
+	}
+
+	.designer-question{
+		font-size: 30px !important;
+	}
+}
+
+@media (max-width: breakpoint-min(xl)){
+	.hero-img{
+		width: 100%;
+	}
+}
+
+.designer-img{
+	border: 8px solid $white;
+    border-radius: 50%;
+}
+

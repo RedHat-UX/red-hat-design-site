@@ -2,19 +2,23 @@
 /*  SETTINGS
 /* ============================== */
 
-@import "src/assets/scss/partials/settings/vars-bootstrap";
+@import "partials/utilities/vars-bootstrap";
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
-@import "src/assets/scss/partials/settings/functions";
-@import "src/assets/scss/partials/settings/mixins";
-@import "src/assets/scss/partials/settings/vars";
+@import "partials/utilities/functions";
+@import "partials/utilities/mixins";
+@import "partials/utilities/vars";
 
 
 /* ============================== */
 /*  PROJECT
 /* ============================== */
 
-@import "partials/hero";
-@import "partials/sticky-nav";
-@import "partials/how-we-work";
+// Global
+@import "partials/global/header";
+@import "partials/global/hero";
+
+// Pages
+@import "partials/pages/home";
+@import "partials/pages/designer-stories";
