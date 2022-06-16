@@ -26,7 +26,6 @@
         justify-content: flex-end;
 
         .btn-toggle {
-            display: -ms-inline-flexbox;
             display: inline-flex;
             align-items: center;
             padding: 0px 5px;
@@ -80,7 +79,6 @@
         left: -100%;
         z-index: $zindex-modal; //1001
         width: 100%;
-        //height: 100%;
         background-color: $white;
         color: $white;
         transition: all 400ms ease-in-out;
@@ -133,7 +131,7 @@
         .accordion-toggle.collapsed,
         .accordion-panel.show,
         .accordion-panel.collapsing.showing {
-            background: transparent;
+            background-color: transparent;
             border: none;
             box-shadow: none;
 
