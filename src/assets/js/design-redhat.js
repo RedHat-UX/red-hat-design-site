@@ -62,10 +62,12 @@
 
         var CurrentUrl= document.URL;
         var CurrentUrlEnd = CurrentUrl.split('/').filter(Boolean).pop();
+        console.log('current URL END: ' + CurrentUrlEnd);
 
         $( ".design-nav-item a" ).each(function() {
             var ThisUrl = $(this).attr('href');
             var ThisUrlEnd = ThisUrl.split('/').filter(Boolean).pop();
+            console.log(console.log('this URL END: ' + ThisUrlEnd);
 
             if(CurrentUrlEnd.includes(ThisUrlEnd)){
                 $(this).addClass('active');
