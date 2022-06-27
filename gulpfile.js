@@ -66,7 +66,7 @@ function html() {
             type: 'timestamp'
         }))
         .pipe(dest([
-            pkg.paths.dist.root
+            pkg.paths.docs.root
         ]))
         .pipe(browserSync.stream());
 }
@@ -117,7 +117,7 @@ function css() {
             package: pkg
         }))
         .pipe(dest([
-            pkg.paths.dist.css
+            pkg.paths.docs.css
         ]))
         .pipe(browserSync.stream());
 }
@@ -137,7 +137,7 @@ function images() {
     ], {
         since: lastRun(images)
     })
-        .pipe(directorySync(pkg.paths.src.img, pkg.paths.dist.img))
+        .pipe(directorySync(pkg.paths.src.img, pkg.paths.docs.img))
         .pipe(imagemin([
             imagemin.gifsicle({
                 interlaced: true,
@@ -205,7 +205,7 @@ function images() {
             verbose: true
         }))
         .pipe(dest([
-            pkg.paths.dist.img
+            pkg.paths.docs.img
         ]))
         .pipe(browserSync.stream());
 }
@@ -243,7 +243,7 @@ function js() {
             package: pkg
         }))
         .pipe(dest([
-            pkg.paths.dist.js
+            pkg.paths.docs.js
         ]))
         .pipe(browserSync.stream());
 }
@@ -263,7 +263,7 @@ function serve() {
     // Browsersync
     browserSync.init({
         notify: false,
-        server: pkg.paths.dist.root
+        server: pkg.paths.docs.root
     });
 
     // HTML
@@ -273,7 +273,7 @@ function serve() {
         .on('add', series(html))
         .on('unlink', (filepath) => {
             const srcPath = path.relative(path.resolve(pkg.paths.src.root), filepath);
-            const destPath = path.resolve(pkg.paths.dist.root, srcPath);
+            const destPath = path.resolve(pkg.paths.docs.root, srcPath);
 
             del.sync(destPath);
         });

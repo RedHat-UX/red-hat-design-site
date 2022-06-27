@@ -21,11 +21,11 @@
             "img": "src/assets/img/",
             "js": "src/assets/js/"
         },
-        "dist": {
-            "root": "dist/",
-            "css": "dist/assets/css/",
-            "img": "dist/assets/img/",
-            "js": "dist/assets/js/"
+        "docs": {
+            "root": "docs/",
+            "css": "docs/assets/css/",
+            "img": "docs/assets/img/",
+            "js": "docs/assets/js/"
         }
     },
     "dependencies": {
