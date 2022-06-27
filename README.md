@@ -54,7 +54,7 @@ npm ci
 $ gulp
 ```
 
-- Builds the `src` project files to the `dist` folder, launches a local [Browsersync](https://browsersync.io) server in a browser, watches for file changes, and reloads the page when changes are detected.
+- Builds the `src` files to the `docs` folder, launches a local [Browsersync](https://browsersync.io) server in a browser, watches for file changes, and reloads the page when changes are detected.
 
 ## Production
 
