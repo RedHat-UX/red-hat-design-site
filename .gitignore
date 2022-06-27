@@ -5,9 +5,9 @@
 .vscode/
 _design/
 dev/
+dist/
 docs/
 images/
-public/
 temp/
 video/
 
