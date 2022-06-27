@@ -48,7 +48,7 @@
         <link rel="stylesheet" href="//www.redhat.com/ux/webdms/css/styles.min.css">
 
         <!-- Project -->
-        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1655912551787">
+        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1656351877718">
 
         <!-- SCRIPTS -->
         <!-- Libraries -->
@@ -88,59 +88,61 @@
 
 <div class="dms-band rh-design-nav-shelf py-0 border-right">
     <div class="nav-container pb-4">
-        <div id="rhDesignNav" class="accordion">
-            <div class="nav-group-wrapper nav-button design-nav-item mt-2">
-                <a href="/" class="pl-4 py-2 overview">
+        <div id="rhDesignNav" class="accordion pb-0">
+            <div class="nav-group-wrapper nav-button design-nav-item">
+                <a href="/" class="overview py-2 pl-4 d-block">
                    Overview
                 </a>
             </div>
 
             <div class="nav-group-wrapper">
-                <button id="stories-btn" class="accordion-toggle collapsed nav-button py-2 pl-4 mt-2" data-toggle="collapse" data-target="#stories">
+                <button id="stories-btn" class="nav-button accordion-toggle collapsed py-2 pl-4" data-toggle="collapse" data-target="#stories">
                     <p>Designer stories</p>
                 </button>
 
                 <div id="stories" class="accordion-panel collapse pr-0" data-parent="#rhDesignNav">
-                    <ol class="mb-0 pl-2 pb-1 pt-1">
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories" title="All stories" class="py-1 pl-2 pr-10">All stories&nbsp;</a>
+                    <ul class="mb-0 pl-2 pb-0 list-unstyled">
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories" title="All stories">All stories&nbsp;</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/allona-wilkerson.html" title="Allona Wilkerson" class="py-1 pl-2 pr-5">Allona Wilkerson</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/allona-wilkerson.html" title="Allona Wilkerson">Allona Wilkerson</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/ann-nguyen.html" title="Ann Nguyen" class="py-1 pl-2 pr-8">Ann Nguyen&nbsp;</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/ann-nguyen.html" title="Ann Nguyen">Ann Nguyen&nbsp;</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/chae-bin-park.html" title="Chae Bin Park" class="py-1 pl-2 pr-7">Chae Bin Park</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/chae-bin-park.html" title="Chae Bin Park">Chae Bin Park</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/fadzly-sayarasi.html" title="Fadzly Sayarasi" class="py-1 pl-2 pr-6">Fadzly Sayarasi</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/fadzly-sayarasi.html" title="Fadzly Sayarasi">Fadzly Sayarasi</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/kevin-hatchoua.html" title="Kevin Hatchoua" class="py-1 pl-2 pr-6">Kevin Hatchoua</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/kevin-hatchoua.html" title="Kevin Hatchoua">Kevin Hatchoua</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/krystal-moore.html" title="Krystal Moore" class="py-1 pl-2 pr-7">Krystal Moore</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/krystal-moore.html" title="Krystal Moore">Krystal Moore</a>
                         </li>
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/liz-wood.html" title="Liz Wood" class="py-1 pl-2 pr-11">Liz Wood</a>
+
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/liz-wood.html" title="Liz Wood">Liz Wood</a>
                         </li>
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/michael-celedonia.html" title="Michael Celedonia" class="py-1 pl-2 pr-3">Michael Celedonia</a>
+
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/michael-celedonia.html" title="Michael Celedonia">Michael Celedonia</a>
                         </li>
-                    </ol>
+                    </ul>
                 </div>
             </div>
 
-            <div class="nav-group-wrapper nav-button design-nav-item my-2">
-                <a href="/release-notes" title="Release notes" class="pl-4 pr-12 py-2">Release&nbsp;notes</a>
+            <div class="nav-group-wrapper nav-button design-nav-item">
+                <a class="py-2 pl-4 d-block" href="/release-notes" title="Release notes">Release&nbsp;notes</a>
             </div>
         </div>
     </div>
@@ -151,21 +153,21 @@
 <section class="hero dms-band pt-0">
     <div class="row">
         <div class="col-12 col-xl-10 offset-xl-3 px-0">
-            <img class="img-fluid hero-img" src="/assets/img/pages/designer-stories/krystal-moore/img-hero.png" alt="Krystal's desk">
+            <img class="img-fluid hero-img" src="/assets/img/pages/designer-stories/michael-celedonia/img-hero.png" alt="Michael's desk">
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-9 offset-lg-2 offset-xl-3 mt-n9">
                 <div class="media align-items-center pt-4 pl-2">
-                    <img class="mr-3 designer-img rounded-circle border-white" src="/assets/img/pages/designer-stories/krystal-moore/img-avatar.png" alt="Krystal Moore photo">
+                    <img class="mr-3 designer-img rounded-circle border-white" src="/assets/img/pages/designer-stories/michael-celedonia/img-avatar.png" alt="Michael Celedonia photo">
 
                     <div class="media-body pt-6">
-                        <h2 class="my-0 my-md-1 font-size-lg-36">Krystal Moore</h2>
+                        <h2 class="my-0 my-md-1 font-size-lg-36">Michael Celedonia</h2>
 
-                        <p class="mb-1">Senior Product Designer / Raleigh, NC</p>
+                        <p class="mb-1">Visual Design Team Lead / Raleigh, NC</p>
 
-                        <p class="font-size-14"><a href="https://www.linkedin.com/in/krystalmoore/" title="LinkedIn">LinkedIn</a></p>
+                        <p class="font-size-14"><a href="//maceledo.com/" title="portfolio">Portfolio</a> / <a href="//www.linkedin.com/in/michael-celedonia-94987166/" title="LinkedIn">LinkedIn</a></p>
                     </div>
                 </div>
             </div>
@@ -182,7 +184,7 @@
                         <h3 class="text-red font-size-32 font-weight-light designer-question">What is your role and what team do you work on?</h3>
                     </div>
                     <div class="col-md-7 offset-md-1">
-                        <p>Senior product designer working on the Customer Experience Design (CXD) team.</p>
+                        <p>I’m a senior visual and interaction designer on the UXD team. I currently lead our team of visual designers who provide support across our product portfolio, and also contribute to our open source design system PatternFly.</p>
                     </div>
                 </div>
                 <div class="row pt-4 pt-md-8">
@@ -190,7 +192,7 @@
                         <h3 class="text-red font-size-32 font-weight-light designer-question">How do you get inspired first thing in the morning?</h3>
                     </div>
                     <div class="col-md-7 offset-md-1">
-                        <p>After a large cup of coffee, ample stretching, and time spent with my partner and animals&mdash;engaging with product teams for strategy calls and feedback sessions fuels my inspiration each and every morning.</p>
+                        <p>Energy is key to my inspiration and productivity, so that means starting my morning with a cup of coffee or green tea.</p>
                     </div>
                 </div>
             </div>
@@ -205,10 +207,10 @@
             <div class="col-12 col-xl-10 offset-xl-2">
                 <div class="row">
                     <div class="col-md-8">
-                        <img class="img-fluid" src="/assets/img/pages/designer-stories/krystal-moore/img-wireframe-sketch-design.png" alt="Customer dashboard ideation">
+                        <img class="img-fluid" src="/assets/img/pages/designer-stories/michael-celedonia/img-patternfly-dark-theme-design.png" alt="PatternFly dark theme">
                     </div>
                     <div class="col-md-4 pt-2 pt-md-0">
-                        <p class="font-size-16"><strong>Customer dashboard ideation</strong><br> Low fidelity concept sketches for the redesign of a tool used by both customers and Red Hat associates on the Customer Portal. The dashboard helps our customers maximize value in their relationship with Red Hat.</p>
+                        <p class="font-size-16"><strong>PatternFly dark theme</strong><br>A testing screen showcasing work converting PatternFly to dark theme.</p>
                     </div>
                 </div>
             </div>
@@ -225,7 +227,7 @@
                         <h3 class="text-red font-size-32 font-weight-light designer-question">What makes designing at Red Hat unique?</h3>
                     </div>
                     <div class="col-md-7 offset-md-1">
-                        <p>Red&nbsp;Hat’s open source principles creates an open and transparent atmosphere where every associate has a voice and can make an impact starting on day one. Designing concrete solutions is very often a combined effort of different voices and perspectives from across the company and around the globe.</p>
+                        <p>We work with a lot of technical complexity regarding product use cases and general branding, so a big part of designing here is unraveling complex ideas into understandable and digestible content and experiences. We’re applying open source principles to the design process, which is something very new and non-traditional to the design industry.</p>
                     </div>
                 </div>
                 <div class="row pt-4 pt-md-8">
@@ -233,7 +235,7 @@
                         <h3 class="text-red font-size-32 font-weight-light designer-question">How are you incorporating open source principles into your designs or design processes?</h3>
                     </div>
                     <div class="col-md-7 offset-md-1">
-                        <p>Working on our design system collaborative gives myself, and other designers, a chance to align on standards and discuss improvements to our component library. Everyone is given the space for creativity to challenge existing components and create new ones to modify or expand our library. Throughout the design process, my files are completely open and accessible to product designers to view or leave comments on at any time, and shared with product teams and stakeholders through feedback sessions and strategy calls.</p>
+                        <p>One of my favorite parts of Red&nbsp;Hat’s open source culture to practice within my own role is the encouragement of meritocracy. Everyone is encouraged to contribute or express their thoughts and ideas, and those thoughts are all heard and considered regardless of seniority. I try to implement this as much as I can within my own projects.</p>
                     </div>
                 </div>
             </div>
@@ -248,11 +250,11 @@
             <div class="col-12 col-xl-10 offset-xl-2">
                 <div class="row">
                     <div class="col-md-2">
-                        <h4 class="font-size-16">Krystal Moore</h4>
+                        <h4 class="font-size-16">Michael Celedonia</h4>
                     </div>
                     <div class="col-md-9 offset-md-1">
                         <img class="svg quote mb-3" src="/assets/img/svg/icon-quote.svg" alt="Quote icon">
-                        <h2 class="xl">Open design can also reinforce a supportive and collaborative relationship with customers by bringing them into the design process through testing and feedback sessions.</h2>
+                        <h2 class="xl">Designing in the open requires taking accountability for your own design decisions while being flexible enough to recognize and pivot to stronger ideas.</h2>
                     </div>
                 </div>
             </div>
@@ -270,7 +272,7 @@
                         <h3 class="text-red font-size-32 font-weight-light designer-question">How do you prioritize collaboration across teams in your design process?</h3>
                     </div>
                     <div class="col-md-7 offset-md-1">
-                        <p>Collaborating with product teams to understand the problem(s) we’re trying to solve, and then maintaining an open and collaborative partnership throughout the design process to continually gather feedback is key. During the research and ideation phase, reviews with peers on the CXD team and other product designers at Red Hat to align on strategy always drives me towards better solutions.</p>
+                        <p>Working closely with our design system PatternFly means pushing for consistency and alignment across our products. We’re always encouraging product teams to check in with other teams who may have already solved their problem or pointing teams towards solutions which have already been implemented. Collaboration is key to ensuring an efficient and consistent experience within and across products.</p>
                     </div>
                 </div>
                 <div class="row pt-4 pt-md-8">
@@ -278,7 +280,7 @@
                         <h3 class="text-red font-size-32 font-weight-light designer-question">How do you think diverse voices and perspectives make the design process stronger?</h3>
                     </div>
                     <div class="col-md-7 offset-md-1">
-                        <p>Every person creates mental models that are based on exposure, life experiences, culture, and society around you. Diverse voices and perspectives challenge our mental models to consider differing views and backgrounds to break down any biases or assumptions we may have for how people will interact with our designs.</p>
+                        <p>Diverse voices strengthen the creative process simply by providing ideas from a perspective that otherwise wouldn’t have been heard. I think our life experiences culminate in the way we approach problem solving, and having a diverse array of perspectives will only further strengthen our processes and solutions.</p>
                     </div>
                 </div>
             </div>
@@ -293,10 +295,10 @@
             <div class="col-12 col-xl-10 offset-xl-2">
                 <div class="row">
                     <div class="col-md-8">
-                        <img class="img-fluid" src="/assets/img/pages/designer-stories/krystal-moore/img-customer-portal-design.png" alt="Customer dashboard prototype">
+                        <img class="img-fluid" src="/assets/img/pages/designer-stories/michael-celedonia/img-topology-design.png" alt="PatternFly topology">
                     </div>
                     <div class="col-md-4 pt-2 pt-md-0">
-                        <p class="font-size-16"><strong>Customer dashboard prototype</strong><br> A snapshot of our high fidelity prototype in a later phase of the design process before going through a final copy review and handing it off to engineering.</p>
+                        <p class="font-size-16"><strong>PatternFly topology</strong><br> A mockup showcasing design solutions for the PatternFly Topology component.</p>
                     </div>
                 </div>
             </div>
@@ -314,7 +316,7 @@
                         <h3 class="text-red font-size-32 font-weight-light designer-question">How does your design work contribute to the creation of helpful and accessible experiences?</h3>
                     </div>
                     <div class="col-md-7 offset-md-1">
-                        <p>As a former engineer and strong advocate for web standards and accessibility, I’m now translating those skills into creating simple designs and interactions that always consider screen reader navigation, while also encouraging education on accessibility best practices and the use of semantic HTML throughout our product teams.</p>
+                        <p>With PatternFly accessibility is never an afterthought. When I’m working on new components or solutions, accessibility is something I try to keep at the forefront of my creative process. By handling many accessibility considerations at the PatternFly component level, we can ensure product teams get a head start on implementing accessible solutions. We’re lucky to have an awesome in-house accessibility expert on the UXD team, Jessie Huff, who is a huge help with ensuring we are designing and implementing accessible solutions across our portfolio.</p>
                         
                     </div>
                 </div>
@@ -323,13 +325,21 @@
                         <h3 class="text-red font-size-32 font-weight-light designer-question">What does open design mean to you?</h3>
                     </div>
                     <div class="col-md-7 offset-md-1">
-                        <p>Open design is about reinforcing transparency throughout the design process to hear as many diverse voices and perspectives as we can to improve our solutions. Open design can also reinforce a supportive and collaborative relationship with customers by bringing them into the design process through testing and feedback sessions.</p>
+                        <p>To me open design means open process and open mind. Designing in the open requires taking accountability for your own design decisions while being flexible enough to recognize and pivot to stronger ideas. I believe this leads to a more thorough design process and more thoughtful solutions.</p>
                     </div>
                 </div>
-                
+                <div class="row pt-4 pt-md-8">
+                    <div class="col-md-4">
+                        <h3 class="text-red font-size-32 font-weight-light designer-question">Any last thoughts?</h3>
+                    </div>
+                    <div class="col-md-7 offset-md-1">
+                        <p>Designing at Red&nbsp;Hat means designing in the open which is a unique and compelling aspect of being a creative professional here. Our design teams are paving the way forward by applying an open source model to the design process, and I am very excited to be a part of that.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
+        
     </div>
 </section>
 
@@ -383,7 +393,7 @@
         <script src="//www.redhat.com/ux/webdms/js/scripts.min.js"></script>
 
         <!-- Project -->
-        <script src="/assets/js/design-redhat.min.js?t=1655912551787"></script>
+        <script src="/assets/js/design-redhat.min.js?t=1656351877718"></script>
 
 <!-- SCRIPTS end -->
 

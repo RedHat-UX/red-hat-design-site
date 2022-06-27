@@ -48,7 +48,7 @@
         <link rel="stylesheet" href="//www.redhat.com/ux/webdms/css/styles.min.css">
 
         <!-- Project -->
-        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1655912551750">
+        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1656351877677">
 
         <!-- SCRIPTS -->
         <!-- Libraries -->
@@ -88,59 +88,61 @@
 
 <div class="dms-band rh-design-nav-shelf py-0 border-right">
     <div class="nav-container pb-4">
-        <div id="rhDesignNav" class="accordion">
-            <div class="nav-group-wrapper nav-button design-nav-item mt-2">
-                <a href="/" class="pl-4 py-2 overview">
+        <div id="rhDesignNav" class="accordion pb-0">
+            <div class="nav-group-wrapper nav-button design-nav-item">
+                <a href="/" class="overview py-2 pl-4 d-block">
                    Overview
                 </a>
             </div>
 
             <div class="nav-group-wrapper">
-                <button id="stories-btn" class="accordion-toggle collapsed nav-button py-2 pl-4 mt-2" data-toggle="collapse" data-target="#stories">
+                <button id="stories-btn" class="nav-button accordion-toggle collapsed py-2 pl-4" data-toggle="collapse" data-target="#stories">
                     <p>Designer stories</p>
                 </button>
 
                 <div id="stories" class="accordion-panel collapse pr-0" data-parent="#rhDesignNav">
-                    <ol class="mb-0 pl-2 pb-1 pt-1">
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories" title="All stories" class="py-1 pl-2 pr-10">All stories&nbsp;</a>
+                    <ul class="mb-0 pl-2 pb-0 list-unstyled">
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories" title="All stories">All stories&nbsp;</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/allona-wilkerson.html" title="Allona Wilkerson" class="py-1 pl-2 pr-5">Allona Wilkerson</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/allona-wilkerson.html" title="Allona Wilkerson">Allona Wilkerson</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/ann-nguyen.html" title="Ann Nguyen" class="py-1 pl-2 pr-8">Ann Nguyen&nbsp;</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/ann-nguyen.html" title="Ann Nguyen">Ann Nguyen&nbsp;</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/chae-bin-park.html" title="Chae Bin Park" class="py-1 pl-2 pr-7">Chae Bin Park</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/chae-bin-park.html" title="Chae Bin Park">Chae Bin Park</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/fadzly-sayarasi.html" title="Fadzly Sayarasi" class="py-1 pl-2 pr-6">Fadzly Sayarasi</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/fadzly-sayarasi.html" title="Fadzly Sayarasi">Fadzly Sayarasi</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/kevin-hatchoua.html" title="Kevin Hatchoua" class="py-1 pl-2 pr-6">Kevin Hatchoua</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/kevin-hatchoua.html" title="Kevin Hatchoua">Kevin Hatchoua</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/krystal-moore.html" title="Krystal Moore" class="py-1 pl-2 pr-7">Krystal Moore</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/krystal-moore.html" title="Krystal Moore">Krystal Moore</a>
                         </li>
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/liz-wood.html" title="Liz Wood" class="py-1 pl-2 pr-11">Liz Wood</a>
+
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/liz-wood.html" title="Liz Wood">Liz Wood</a>
                         </li>
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/michael-celedonia.html" title="Michael Celedonia" class="py-1 pl-2 pr-3">Michael Celedonia</a>
+
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/michael-celedonia.html" title="Michael Celedonia">Michael Celedonia</a>
                         </li>
-                    </ol>
+                    </ul>
                 </div>
             </div>
 
-            <div class="nav-group-wrapper nav-button design-nav-item my-2">
-                <a href="/release-notes" title="Release notes" class="pl-4 pr-12 py-2">Release&nbsp;notes</a>
+            <div class="nav-group-wrapper nav-button design-nav-item">
+                <a class="py-2 pl-4 d-block" href="/release-notes" title="Release notes">Release&nbsp;notes</a>
             </div>
         </div>
     </div>
@@ -151,21 +153,21 @@
 <section class="hero dms-band pt-0">
     <div class="row">
         <div class="col-12 col-xl-10 offset-xl-3 px-0">
-            <img class="img-fluid hero-img" src="/assets/img/pages/designer-stories/chae-bin-park/img-hero.png" alt="Chae Bin's desk">
+            <img class="img-fluid hero-img" src="/assets/img/pages/designer-stories/kevin-hatchoua/img-hero.png" alt="Kevin's desk">
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-9 offset-lg-2 offset-xl-3 mt-n9">
                 <div class="media align-items-center pt-4 pl-2">
-                    <img class="mr-3 designer-img rounded-circle border-white" src="/assets/img/pages/designer-stories/chae-bin-park/img-avatar.png" alt="Chae Bin Park photo">
+                    <img class="mr-3 designer-img rounded-circle border-white" src="/assets/img/pages/designer-stories/kevin-hatchoua/img-avatar.png" alt="Kevin Hatchoua photo">
 
                     <div class="media-body pt-6">
-                        <h2 class="my-0 my-md-1 font-size-lg-36">Chae Bin Park</h2>
+                        <h2 class="my-0 my-md-1 font-size-lg-36">Kevin Hatchoua</h2>
 
-                        <p class="mb-1">Associate UX Designer / Atlanta, GA</p>
+                        <p class="mb-1">Senior UX Designer / Marlborough, MA</p>
 
-                        <p class="font-size-14"><a href="https://www.chaebin.design/" title="portfolio">Portfolio</a> </p>
+                        <p class="font-size-14"><a href="//kevinhatchoua.com/" title="portfolio">Portfolio</a> / <a href="//www.linkedin.com/in/kevinhatchoua/" title="LinkedIn">LinkedIn</a></p>
                     </div>
                 </div>
             </div>
@@ -182,7 +184,7 @@
                         <h3 class="text-red font-size-32 font-weight-light designer-question">What is your role and what team do you work on?</h3>
                     </div>
                     <div class="col-md-7 offset-md-1">
-                        <p>I’m an Associate UX Designer on the UX Studio / Digital UX team.</p>
+                        <p>I am a senior user experience designer with UXD and my work spans across our hybrid cloud ecosystem. Primarily, I work on the OpenShift and Console/platform teams. However, by the nature of my work around the discover, try and buy experience of the user journey; I get involved with various other teams and workstreams.</p>
                     </div>
                 </div>
                 <div class="row pt-4 pt-md-8">
@@ -190,7 +192,7 @@
                         <h3 class="text-red font-size-32 font-weight-light designer-question">How do you get inspired first thing in the morning?</h3>
                     </div>
                     <div class="col-md-7 offset-md-1">
-                        <p>I get my Spotify app running and listen to music! I’ve found that high-energy pop music really helps get me into a creative mood.</p>
+                        <p>There are almost too many things that inspire me whether work-related or things in my personal life. But if I had to pin point, I think its the excitement I get to pick up where I left off. As a UX designer, my ultimate goal is solve problems.</p>
                     </div>
                 </div>
             </div>
@@ -205,10 +207,11 @@
             <div class="col-12 col-xl-10 offset-xl-2">
                 <div class="row">
                     <div class="col-md-8">
-                        <img class="img-fluid" src="/assets/img/pages/designer-stories/chae-bin-park/img-summit-design.png" alt="Red Hat Summit 2022">
+                        <img class="img-fluid" src="/assets/img/pages/designer-stories/kevin-hatchoua/img-kube-design.png" alt="Kube By Example">
                     </div>
                     <div class="col-md-4 pt-2 pt-md-0">
-                        <p class="font-size-16"><strong>Red Hat Summit 2022</strong><br>This page is the go-to stop for people seeking more information about the premier open source event. Each year the team works hard on defining a distinct theme, and this page is one of the places where ease of accessibility of information and theming must work together well.</p>
+                        <p class="font-size-16"><strong>Kube By Example</strong><br>
+                        <span class="font-italic">Kube By Example</span>, otherwise known as KBE, delivers what we believe to be the broadest and most informative Kubernetes tutorials, news, and community interaction available; the site is designed so that you can learn by example. Each lesson emphasizes an absorb by doing approach enriching your Kubernetes operator or developer understanding by allowing you to practice skills as they are explored and explained.</p>
                     </div>
                 </div>
             </div>
@@ -225,7 +228,7 @@
                         <h3 class="text-red font-size-32 font-weight-light designer-question">What makes designing at Red Hat unique?</h3>
                     </div>
                     <div class="col-md-7 offset-md-1">
-                        <p>There is a visible effort being made towards transparency throughout the design process &mdash; whether this is encouragement to share work early and often with colleagues &mdash; or simply providing the open-minded and supportive environment to be able to freely discuss the things people are passionate about, and I think that’s pretty special.</p>
+                        <p>We are open! Whether it’s our code or our designs, Red&nbsp;Hat truly embodies what it means to be transparent and user-centric. It’s inspiring to work for a software company that is experience-driven at the core.</p>
                     </div>
                 </div>
                 <div class="row pt-4 pt-md-8">
@@ -233,7 +236,7 @@
                         <h3 class="text-red font-size-32 font-weight-light designer-question">How are you incorporating open source principles into your designs or design processes?</h3>
                     </div>
                     <div class="col-md-7 offset-md-1">
-                        <p>Sharing work early and often is one way &mdash; another is that anyone on the team can drop in and take a look at or leave feedback on my work. When I’m working with other designers, it’s a co-creative effort where all of us are working synergistically to combine the best of our ideas into a single cohesive design. There’s just the right balance of individual and team ownership.</p>
+                        <p>Our designs are influenced by both the upstream and downstream community. From our design system, to our processes, frameworks and code repos, everything is open and accessible to the public. We keep a tight feedback loop which includes, regularly connecting and hearing from customers and stakeholders to inform, validate and shape the products they use.</p>
                     </div>
                 </div>
             </div>
@@ -248,11 +251,11 @@
             <div class="col-12 col-xl-10 offset-xl-2">
                 <div class="row">
                     <div class="col-md-2">
-                        <h4 class="font-size-16">Chae Bin Park</h4>
+                        <h4 class="font-size-16">Kevin Hatchoua</h4>
                     </div>
                     <div class="col-md-9 offset-md-1">
                         <img class="svg quote mb-3" src="/assets/img/svg/icon-quote.svg" alt="Quote icon">
-                        <h2 class="xl">The design process is ugly, and raw, and experimental sometimes. And that’s okay! It’s about being able to embrace that to create beautiful and delightful experiences in the end.</h2>
+                        <h2 class="xl">It’s a core belief of mine that bringing together a diverse group of people and perspective leads to faster and better innovation. It empowers us to deliver inclusive and accessible solutions for all our users.</h2>
                     </div>
                 </div>
             </div>
@@ -270,7 +273,7 @@
                         <h3 class="text-red font-size-32 font-weight-light designer-question">How do you prioritize collaboration across teams in your design process?</h3>
                     </div>
                     <div class="col-md-7 offset-md-1">
-                        <p>At Red Hat, you quickly learn that you can’t do one job completely by yourself. As a designer, I am often communicating, either in groups or 1:1s, with other roles and teams at different points of the design process.</p>
+                        <p>The important thing to do first is to level set and establish common goals across teams. One of the ways we approach this at Red&nbsp;Hat is through yearly OKRs. These are measurable goals that are defined and set collaboratively across teams and individuals. They create alignment and enable us to track and prioritize workstreams cross-functionally; this makes it easier to collaborate where we can and stand apart where we should.</p>
                     </div>
                 </div>
                 <div class="row pt-4 pt-md-8">
@@ -278,7 +281,7 @@
                         <h3 class="text-red font-size-32 font-weight-light designer-question">How do you think diverse voices and perspectives make the design process stronger?</h3>
                     </div>
                     <div class="col-md-7 offset-md-1">
-                        <p>I think good design and designer sensibility comes from the richness of our lived experiences. If you’ve got a group of people with a variety of different interests, experiences, and thoughts you have so much more to work with and build off of &mdash; diversity is at the core of strengthening the spirit of creativity in this way.</p>
+                        <p>Diversity and inclusion is very much engrained in how we work across our organization, regardless of team or project. It’s a core belief of mine that bringing together a diverse group of people and perspective leads to faster and better innovation. It empowers us to deliver inclusive and accessible solutions for all our users.</p>
                     </div>
                 </div>
             </div>
@@ -293,10 +296,10 @@
             <div class="col-12 col-xl-10 offset-xl-2">
                 <div class="row">
                     <div class="col-md-8">
-                        <img class="img-fluid" src="/assets/img/pages/designer-stories/chae-bin-park/img-source-design.png" alt="The Source redesign">
+                        <img class="img-fluid" src="/assets/img/pages/designer-stories/kevin-hatchoua/img-console-redhat-design.png" alt="console.redhat.com">
                     </div>
                     <div class="col-md-4 pt-2 pt-md-0">
-                        <p class="font-size-16"><strong>The Source redesign</strong><br> The Source is Red Hat’s internal collaboration space for associates. This redesign aimed to rethink different elements of the homepage by prioritizing personalized information and important news.</p>
+                        <p class="font-size-16"><strong>console.redhat.com</strong><br>Improving the Getting started and onboarding experience for all users who use Console. Working with other designers to redefine the console platform navigation, information architecture, and the logical grouping of content.</p>
                     </div>
                 </div>
             </div>
@@ -314,7 +317,7 @@
                         <h3 class="text-red font-size-32 font-weight-light designer-question">How does your design work contribute to the creation of helpful and accessible experiences?</h3>
                     </div>
                     <div class="col-md-7 offset-md-1">
-                        <p>Red Hat’s digital presence is, like the company’s mission, open to anyone that can find their way to it. One of the most important aspects of my job is illuminating that path for more people. For example, thousands of people attend Summit every year, but it’s up to us to design the tools for people to make the most of their attendance and be confident that they’re going to find what they need.</p>
+                        <p>Users are at the core of the design process. When designing I think it’s important to look at the end-to-end user journey from discovery, to learning, to adopting and understanding how the pieces come together. Regardless of which phase the user is at, our designs incorporate learning tools of various modality and fully accessible content. This helps ensure a seamless and consistent experience across products.</p>
                     </div>
                 </div>
                 <div class="row pt-4 pt-md-8">
@@ -322,7 +325,7 @@
                         <h3 class="text-red font-size-32 font-weight-light designer-question">What does open design mean to you?</h3>
                     </div>
                     <div class="col-md-7 offset-md-1">
-                        <p>Open design is about letting go of the fear of doing things perfectly the first time. The design process is ugly, and raw, and experimental sometimes. And that’s okay! It’s about being able to embrace that to create beautiful and delightful experiences in the end.</p>
+                        <p>Co-creation and transparency. Where the stakeholders, project teams and users all contribute to the design and development process.</p>
                     </div>
                 </div>
                 
@@ -382,7 +385,7 @@
         <script src="//www.redhat.com/ux/webdms/js/scripts.min.js"></script>
 
         <!-- Project -->
-        <script src="/assets/js/design-redhat.min.js?t=1655912551750"></script>
+        <script src="/assets/js/design-redhat.min.js?t=1656351877677"></script>
 
 <!-- SCRIPTS end -->
 

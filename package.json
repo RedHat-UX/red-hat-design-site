@@ -13,16 +13,19 @@
     "license": "MIT",
     "paths": {
         "repo": {
-            "root": "./",
-            "css": "assets/css/",
-            "img": "assets/img/",
-            "js": "assets/js/"
+            "root": "./"
         },
         "src": {
             "root": "src/",
             "scss": "src/assets/scss/",
             "img": "src/assets/img/",
             "js": "src/assets/js/"
+        },
+        "docs": {
+            "root": "docs/",
+            "css": "docs/assets/css/",
+            "img": "docs/assets/img/",
+            "js": "docs/assets/js/"
         }
     },
     "dependencies": {
