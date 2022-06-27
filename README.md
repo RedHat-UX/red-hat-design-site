@@ -62,4 +62,4 @@ $ gulp
 $ gulp build
 ```
 
-- Initiates the build stream without launching a local server in a browser.
+- Initiates the build stream, without launching a local server in a browser.
