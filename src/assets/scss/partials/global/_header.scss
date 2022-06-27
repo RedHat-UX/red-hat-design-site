@@ -1,16 +1,20 @@
-
 .rh-design {
+    li.story {
+        &:last-of-type {
+            margin-bottom: 0 !important;
+        }
+    }
 
-    li.story a{
+    li.story a {
         padding-left: 4px;
     }
 
-    li.story a.active{
+    li.story a.active {
         background-color: $gray-100;
         border-left: 2px solid $red;
     }
 
-    .overview{
+    .overview {
         padding-right: 157px;
     }
 
@@ -68,7 +72,7 @@
             }
         }
 
-        
+
     }
 
 
@@ -91,7 +95,7 @@
         @media (min-width: 1298px) {
             width: 275px;
             left: 0px;
-            height: 800px;
+            height: 100%;
         }
 
 
@@ -115,12 +119,12 @@
             background-repeat: no-repeat;
             transition: all 400ms ease-in-out;
 
-            a.active{
+            a.active {
                 background-color: $gray-100;
                 border-left: 2px solid $red;
             }
 
-            a:hover{
+            a:hover {
                 background-color: $gray-100;
                 border-left: 2px solid $red;
             }
@@ -135,16 +139,16 @@
             border: none;
             box-shadow: none;
 
-            &.nav-button:hover{
+            &.nav-button:hover {
                 background-color: $gray-100;
                 border-left: 2px solid $red;
             }
-            
+
         }
 
         .accordion-toggle {
 
-            @media (max-width: breakpoint-min(sm)){
+            @media (max-width: breakpoint-min(sm)) {
                 width: 60% !important;
             }
 
@@ -152,7 +156,7 @@
                 font-weight: 400;
             }
 
-            &.active{
+            &.active {
                 background-color: $gray-100;
                 border-left: 2px solid $red;
             }
@@ -167,11 +171,11 @@
 
         }
 
-        .accordion-panel.collapsing{
+        .accordion-panel.collapsing {
             border: none;
         }
 
-        
+
         &-screen {
             position: fixed;
             top: 0;

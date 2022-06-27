@@ -48,7 +48,7 @@
         <link rel="stylesheet" href="//www.redhat.com/ux/webdms/css/styles.min.css">
 
         <!-- Project -->
-        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1656349924411">
+        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1656351877663">
 
         <!-- SCRIPTS -->
         <!-- Libraries -->
@@ -88,59 +88,61 @@
 
 <div class="dms-band rh-design-nav-shelf py-0 border-right">
     <div class="nav-container pb-4">
-        <div id="rhDesignNav" class="accordion">
-            <div class="nav-group-wrapper nav-button design-nav-item mt-2">
-                <a href="/" class="pl-4 py-2 overview">
+        <div id="rhDesignNav" class="accordion pb-0">
+            <div class="nav-group-wrapper nav-button design-nav-item">
+                <a href="/" class="overview py-2 pl-4 d-block">
                    Overview
                 </a>
             </div>
 
             <div class="nav-group-wrapper">
-                <button id="stories-btn" class="accordion-toggle collapsed nav-button py-2 pl-4 mt-2" data-toggle="collapse" data-target="#stories">
+                <button id="stories-btn" class="nav-button accordion-toggle collapsed py-2 pl-4" data-toggle="collapse" data-target="#stories">
                     <p>Designer stories</p>
                 </button>
 
                 <div id="stories" class="accordion-panel collapse pr-0" data-parent="#rhDesignNav">
-                    <ol class="mb-0 pl-2 pb-1 pt-1">
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories" title="All stories" class="py-1 pl-2 pr-10">All stories&nbsp;</a>
+                    <ul class="mb-0 pl-2 pb-0 list-unstyled">
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories" title="All stories">All stories&nbsp;</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/allona-wilkerson.html" title="Allona Wilkerson" class="py-1 pl-2 pr-5">Allona Wilkerson</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/allona-wilkerson.html" title="Allona Wilkerson">Allona Wilkerson</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/ann-nguyen.html" title="Ann Nguyen" class="py-1 pl-2 pr-8">Ann Nguyen&nbsp;</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/ann-nguyen.html" title="Ann Nguyen">Ann Nguyen&nbsp;</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/chae-bin-park.html" title="Chae Bin Park" class="py-1 pl-2 pr-7">Chae Bin Park</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/chae-bin-park.html" title="Chae Bin Park">Chae Bin Park</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/fadzly-sayarasi.html" title="Fadzly Sayarasi" class="py-1 pl-2 pr-6">Fadzly Sayarasi</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/fadzly-sayarasi.html" title="Fadzly Sayarasi">Fadzly Sayarasi</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/kevin-hatchoua.html" title="Kevin Hatchoua" class="py-1 pl-2 pr-6">Kevin Hatchoua</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/kevin-hatchoua.html" title="Kevin Hatchoua">Kevin Hatchoua</a>
                         </li>
 
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/krystal-moore.html" title="Krystal Moore" class="py-1 pl-2 pr-7">Krystal Moore</a>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/krystal-moore.html" title="Krystal Moore">Krystal Moore</a>
                         </li>
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/liz-wood.html" title="Liz Wood" class="py-1 pl-2 pr-11">Liz Wood</a>
+
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/liz-wood.html" title="Liz Wood">Liz Wood</a>
                         </li>
-                        <li class="mb-2 story design-nav-item">
-                            <a href="/designer-stories/michael-celedonia.html" title="Michael Celedonia" class="py-1 pl-2 pr-3">Michael Celedonia</a>
+
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/michael-celedonia.html" title="Michael Celedonia">Michael Celedonia</a>
                         </li>
-                    </ol>
+                    </ul>
                 </div>
             </div>
 
-            <div class="nav-group-wrapper nav-button design-nav-item my-2">
-                <a href="/release-notes" title="Release notes" class="pl-4 pr-12 py-2">Release&nbsp;notes</a>
+            <div class="nav-group-wrapper nav-button design-nav-item">
+                <a class="py-2 pl-4 d-block" href="/release-notes" title="Release notes">Release&nbsp;notes</a>
             </div>
         </div>
     </div>
@@ -528,7 +530,7 @@
         <script src="//www.redhat.com/ux/webdms/js/scripts.min.js"></script>
 
         <!-- Project -->
-        <script src="/assets/js/design-redhat.min.js?t=1656349924411"></script>
+        <script src="/assets/js/design-redhat.min.js?t=1656351877663"></script>
 
 <!-- SCRIPTS end -->
 
