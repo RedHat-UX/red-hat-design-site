@@ -29,6 +29,10 @@
         display: flex;
         justify-content: flex-end;
 
+        @media (min-width: 1300px){
+            display: none; 
+        }
+
         .btn-toggle {
             display: inline-flex;
             align-items: center;

@@ -10,8 +10,8 @@
 # Current versions
 
 - **NVM:** _0.39.1_
-- **Node:** _17.8.0_
-- **NPM:** _8.5.5_
+- **Node:** _18.4.0_
+- **NPM:** _8.12.1_
 - **Gulp CLI:** _2.3.0_
 
 # Getting started
