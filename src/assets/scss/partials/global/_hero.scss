@@ -1,11 +1,21 @@
 .hero {
-    h1 {
+    .home-h1 {
         @media (max-width: breakpoint-max(sm)) {
             font-size: 48px !important;
         }
 
         @media (min-width: breakpoint-min(md)) {
-            font-size: 90px !important;
+            font-size: 82px !important;
+        }
+    }
+
+    .interior-h1 {
+        @media (max-width: breakpoint-max(sm)) {
+            font-size: 48px !important;
+        }
+
+        @media (min-width: breakpoint-min(md)) {
+            font-size: 60px !important;
         }
     }
 }

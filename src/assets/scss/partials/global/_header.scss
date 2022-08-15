@@ -29,7 +29,7 @@
         display: flex;
         justify-content: flex-end;
 
-        @media (min-width: 1300px){
+        @media (min-width: 1400px){
             display: none; 
         }
 
@@ -96,7 +96,7 @@
 
         }
 
-        @media (min-width: 1298px) {
+        @media (min-width: 1400px) {
             width: 275px;
             left: 0px;
             height: 100%;
@@ -114,7 +114,6 @@
 
         .nav-container {
             height: 100%;
-            overflow-y: scroll;
         }
 
         .nav-group-wrapper {
