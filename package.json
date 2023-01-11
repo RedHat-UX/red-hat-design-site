@@ -12,10 +12,12 @@
     },
     "contributors": [
         {
-            "name": "Ocean Matthews"
+            "name": "Ocean Matthews",
+            "email": "ocean@redhat.com"
         },
         {
-            "name": "Ryan Altvater"
+            "name": "Ryan Altvater",
+            "email": "raltvate@redhat.com"
         }
     ],
     "repository": {
