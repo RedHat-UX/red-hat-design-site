@@ -1,6 +1,6 @@
-/* ============================== */
-/*  COLORS: DEFAULT
-/* ============================== */
+// ========================================================================== //
+//  COLORS: DEFAULT
+// ========================================================================== //
 
 // Black & White
 $black: 							#000;
@@ -31,25 +31,25 @@ $teal: 								#0c98a0;
 $teal-dark: 						#00586d;
 
 
-/* ============================== */
-/*  COLORS: TYPE
-/* ============================== */
+// ========================================================================== //
+//  COLORS: TYPE
+// ========================================================================== //
 
 $body-color: 					    $gray-900;
 
 
-/* ============================== */
-/*  COLORS: LINKS
-/* ============================== */
+// ========================================================================== //
+//  COLORS: LINKS
+// ========================================================================== //
 
 $link-color: 						$blue;
 $link-hover-color: 					$blue-dark;
 $link-hover-decoration: 			none;
 
 
-/* ============================== */
-/*  COLORS: THEME
-/* ============================== */
+// ========================================================================== //
+//  COLORS: THEME
+// ========================================================================== //
 
 $theme-colors: (
     // Black & White
@@ -86,13 +86,13 @@ $theme-colors: (
 );
 
 
-/* ============================== */
-/*  SPACERS
- *
- *  These spacers override Bootstrap's defaults, to be multiples of 10px,
- *  and are primarily used for the margin/padding utilities.
- *  Remember that redhat.com uses 10px rems
-/* ============================== */
+// ========================================================================== //
+//  SPACERS
+//
+//  These spacers override Bootstrap's defaults, to be multiples of 10px,
+//  and are primarily used for the margin/padding utilities.
+//  Remember that redhat.com uses 10px rems
+// ========================================================================== //
 
 $spacer: 							10px;
 $spacers: (
@@ -111,13 +111,13 @@ $spacers: (
 );
 
 
-/* ========================================================================================== */
-/*  SIZES
- *
-/*  These sizes are added to size utilities
- *  Default values include "auto" and multiples of 25 up to 100
- *  usage: class="w-50" (width: 50%)
-/* ========================================================================================== */
+// ========================================================================== //
+//  SIZES
+//
+//  These sizes are added to size utilities
+//  Default values include "auto" and multiples of 25 up to 100
+//  usage: class="w-50" (width: 50%)
+// ========================================================================== //
 
 $sizes: (
     10: 							10%,
@@ -126,10 +126,11 @@ $sizes: (
 );
 
 
-/* ========================================== */
-/*  GRID
- *  Do not include BS4 sm breakpoint
-/* ========================================== */
+// ========================================================================== //
+//  GRID
+//
+//  Do not include BS4 sm breakpoint
+// ========================================================================== //
 
 $grid-breakpoints: (
     xs: 							0,
@@ -147,17 +148,16 @@ $container-max-widths: (
 );
 
 
-/* ========================================================================================== */
-/*  TYPE
- *
- *  $font-size-base is set to 1.6rem on WEB-DMS because redhat.com uses 10px rem
- *
- *  Due to Adobe Target CSS (at.min.css) being used across mulitple sites
- *  most font sizes are moving to px base. $font-size-base is required to be rems,
- *  so an additional $var, $font-size-px-base, set in _vars.scss, is being implemented.
- *  Use of $font-size-base is deprecated 07/2020
- *
-/* ========================================================================================== */
+// ========================================================================== //
+//  TYPE
+//
+//  $font-size-base is set to 1.6rem on WEB-DMS because redhat.com uses 10px rem
+//
+//  Due to Adobe Target CSS (at.min.css) being used across mulitple sites
+//  most font sizes are moving to px base. $font-size-base is required to be rems,
+//  so an additional $var, $font-size-px-base, set in _vars.scss, is being implemented.
+//  Use of $font-size-base is deprecated 07/2020
+// ========================================================================== //
 
 // Font Family
 $font-family-sans-serif: 'RedHatText', 'Red Hat Text', 'Overpass', Overpass, 'Helvetica Neue', Arial, sans-serif;
@@ -246,9 +246,9 @@ $list-group-item-padding-x:         $spacer;
 $breadcrumb-divider: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1LjQ1IiBoZWlnaHQ9IjkuNDUiIHZpZXdCb3g9IjAgMCA1LjQ1IDkuNDUiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojNjQ2NDY0O308L3N0eWxlPjwvZGVmcz48ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIj48ZyBpZD0iTGF5ZXJfMS0yIiBkYXRhLW5hbWU9IkxheWVyIDEiPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIuNTYsMEgwTDIuODgsNC43MywwLDkuNDVIMi41Nkw1LjQ1LDQuNzNaIi8+PC9nPjwvZz48L3N2Zz4=);
 
 
-/* ============================== */
-/*  Z-INDEX
-/* ============================== */
+// ========================================================================== //
+//  Z-INDEX
+// ========================================================================== //
 
 $zindex-modal-backdrop:             var(--pfe-theme--zindex--overlay, 97);
 $zindex-modal:                      var(--pfe-theme--zindex--modal, 1001);
@@ -261,9 +261,9 @@ $zindex-tooltip:                    50;
 
 
 
-/* ============================== */
-/*  OTHER
-/* ============================== */
+// ========================================================================== //
+//  OTHER
+// ========================================================================== //
 
 $border-radius:                     3px;
 $border-radius-lg:                  3px;
@@ -290,9 +290,9 @@ $carousel-indicator-width: 			($spacer * 1.5); // 15px
 
 
 
-/* ========================================================================================== */
-/*  These turn on/off Bootstrap styling defaults.
-/* ========================================================================================== */
+// ========================================================================== //
+//  These turn on/off Bootstrap styling defaults.
+// ========================================================================== //
 
 $enable-caret: 						false;
 $enable-gradients: 					false;

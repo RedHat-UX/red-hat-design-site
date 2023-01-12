@@ -1,6 +1,6 @@
-/* ============================== */
-/*  CONSTANTS
-/* ============================== */
+// ========================================================================== //
+//  CONSTANTS
+// ========================================================================== //
 
 // Dependencies
 const { src, dest, lastRun, watch, series } = require('gulp');
@@ -27,30 +27,30 @@ const stripCssComments     = require('gulp-strip-css-comments');
 const uglifyEs             = require('gulp-uglify-es');
 
 
-/* ============================== */
-/*  BANNER
-/* ============================== */
+// ========================================================================== //
+//  BANNER
+// ========================================================================== //
 
 const banner = [
-    '/* ========================================================================================== */\n' +
+    '/* ================================================================================ */\n' +
     '/*  Project: <%= package.title %>\n' +
     '/*  Author: <%= package.author.name %>\n' +
     '/*  Date: ' + new Date() + '\n' +
     '/*  \n' +
     '/*  Copyright © ' + new Date().getFullYear() + ' <%= package.author.company %>\n' +
     '/*  <%= package.author.url %>\n' +
-    '/* ========================================================================================== */\n\n'
+    '/* ================================================================================ */\n\n'
 ].join('\n');
 
 
-/* ============================== */
-/*  HTML
-/* ============================== */
+// ========================================================================== //
+//  HTML
+// ========================================================================== //
 
-/* ========================================================================================== */
-/*  This task compiles source HTML files, places the files in the destination path, and
-/*  reloads the page.
-/* ========================================================================================== */
+// ========================================================================== //
+//  This task compiles source HTML files, places the files in the
+//  destination path, and reloads the page.
+// ========================================================================== //
 
 function html() {
     return src([
@@ -72,16 +72,16 @@ function html() {
 }
 
 
-/* ============================== */
-/*  CSS
-/* ============================== */
+// ========================================================================== //
+//  CSS
+// ========================================================================== //
 
-/* ========================================================================================== */
-/*  This task compiles source SCSS files, strips comments, adds vendor prefixes, combines
-/*  media queries, minifies, appends ".min" to the filenames before the extension, places
-/*  the files in the destination path, and reloads the page. If an error occurs, the
-/*  "plumber" pipe prevents the stream from breaking and displays the error via popup.
-/* ========================================================================================== */
+// ========================================================================== //
+//  This task compiles source SCSS files, strips comments, adds vendor prefixes, combines
+//  media queries, minifies, appends ".min" to the filenames before the extension, places
+//  the files in the destination path, and reloads the page. If an error occurs, the
+//  "plumber" pipe prevents the stream from breaking and displays the error via popup.
+// ========================================================================== //
 
 function css() {
     return src([
@@ -123,13 +123,13 @@ function css() {
 }
 
 
-/* ============================== */
-/*  IMAGES
-/* ============================== */
+// ========================================================================== //
+//  IMAGES
+// ========================================================================== //
 
-/* ========================================================================================== */
-/*  This task optimizes source image files, and places the files in the destination path.
-/* ========================================================================================== */
+// ========================================================================== //
+//  This task optimizes source image files, and places the files in the destination path.
+// ========================================================================== //
 
 function images() {
     return src([
@@ -211,16 +211,16 @@ function images() {
 }
 
 
-/* ============================== */
-/*  JS
-/* ============================== */
+// ========================================================================== //
+//  JS
+// ========================================================================== //
 
-/* ========================================================================================== */
-/*  This task strips console, alert, and debugger statements from source JS files, minifies,
-/*  appends ".min" to the filenames before the extension, places the files in the
-/*  destination path, and reloads the page. If an error occurs, the "plumber" pipe prevents
-/*  the stream from breaking and displays the error via popup.
-/* ========================================================================================== */
+// ========================================================================== //
+//  This task strips console, alert, and debugger statements from source JS files, minifies,
+//  appends ".min" to the filenames before the extension, places the files in the
+//  destination path, and reloads the page. If an error occurs, the "plumber" pipe prevents
+//  the stream from breaking and displays the error via popup.
+// ========================================================================== //
 
 function js() {
     return src([
@@ -249,14 +249,14 @@ function js() {
 }
 
 
-/* ============================== */
-/*  SERVE
-/* ============================== */
+// ========================================================================== //
+//  SERVE
+// ========================================================================== //
 
-/* ========================================================================================== */
-/*  This task launches a local Browsersync server in a browser, watches for file changes,
-/*  and runs the respective task when changes are detected.
-/* ========================================================================================== */
+// ========================================================================== //
+//  This task launches a local Browsersync server in a browser, watches for file changes,
+//  and runs the respective task when changes are detected.
+// ========================================================================== //
 
 function serve() {
 
@@ -295,14 +295,14 @@ function serve() {
 }
 
 
-/* ============================== */
-/*  DEFAULT
-/* ============================== */
+// ========================================================================== //
+//  DEFAULT
+// ========================================================================== //
 
-/* ========================================================================================== */
-/*  This task sequentially runs a series of tasks for local development, launches a local
-/*  server, watches for file changes, and reloads the page when changes are detected.
-/* ========================================================================================== */
+// ========================================================================== //
+//  This task sequentially runs a series of tasks for local development, launches a local
+//  server, watches for file changes, and reloads the page when changes are detected.
+// ========================================================================== //
 
 exports.default = series(
     html,
@@ -313,14 +313,14 @@ exports.default = series(
 );
 
 
-/* ============================== */
-/*  BUILD
-/* ============================== */
+// ========================================================================== //
+//  BUILD
+// ========================================================================== //
 
-/* ========================================================================================== */
-/*  This task sequentially runs a series of tasks, without launching a local server or
-/*  watching for file changes.
-/* ========================================================================================== */
+// ========================================================================== //
+//  This task sequentially runs a series of tasks, without launching a local server or
+//  watching for file changes.
+// ========================================================================== //
 
 exports.build = series(
     html,
