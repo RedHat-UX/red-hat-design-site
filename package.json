@@ -1,16 +1,61 @@
 {
-    "title": "Red Hat Design Site",
+    "name": "red-hat-design-site",
+    "version": "",
+    "title": "Red Hat - Design Site",
+    "description": "A showcase of Red Hat's creative experiences, using open source principles.",
+    "homepage": "https://github.com/RedHat-UX/red-hat-design-site",
+    "license": "ISC",
     "author": {
-        "name": "Digital Business",
+        "name": "Digital Experience",
         "company": "Red Hat, Inc.",
         "url": "https://design.redhat.com"
     },
-    "homepage": "https://github.com/RedHat-UX/red-hat-design-site",
+    "contributors": [
+        {
+            "name": "Ocean Matthews",
+            "email": "ocean@redhat.com"
+        },
+        {
+            "name": "Ryan Altvater",
+            "email": "raltvate@redhat.com"
+        }
+    ],
     "repository": {
         "type": "git",
         "url": "git@github.com:RedHat-UX/red-hat-design-site.git"
     },
-    "license": "MIT",
+    "dependencies": {
+        "bootstrap": "4.6.1"
+    },
+    "devDependencies": {
+        "browser-sync": "2.27.10",
+        "del": "6.1.1",
+        "gulp": "4.0.2",
+        "gulp-autoprefixer": "8.0.0",
+        "gulp-cache-bust": "1.4.1",
+        "gulp-clean-css": "4.3.0",
+        "gulp-directory-sync": "1.2.4",
+        "gulp-file-include": "2.3.0",
+        "gulp-flatten": "0.4.0",
+        "gulp-group-css-media-queries": "1.2.0",
+        "gulp-header": "2.0.9",
+        "gulp-imagemin": "7.1.0",
+        "gulp-notify": "4.0.0",
+        "gulp-plumber": "1.1.0",
+        "gulp-rename": "2.0.0",
+        "gulp-sass": "5.1.0",
+        "gulp-shell": "0.8.0",
+        "gulp-sourcemaps": "3.0.0",
+        "gulp-strip-css-comments": "2.0.0",
+        "gulp-strip-debug": "4.0.0",
+        "gulp-uglify-es": "3.0.0",
+        "optipng-bin": "9.0.0",
+        "path": "0.12.7",
+        "sass": "1.53.0"
+    },
+    "browserslist": [
+        "last 2 versions"
+    ],
     "paths": {
         "repo": {
             "root": "./"
@@ -27,37 +72,5 @@
             "img": "docs/assets/img/",
             "js": "docs/assets/js/"
         }
-    },
-    "dependencies": {
-        "bootstrap": "^4.6.0"
-    },
-    "devDependencies": {
-        "browser-sync": "^2.27.10",
-        "del": "^6.1.1",
-        "gulp": "^4.0.2",
-        "gulp-autoprefixer": "^8.0.0",
-        "gulp-cache-bust": "^1.4.1",
-        "gulp-clean-css": "^4.3.0",
-        "gulp-directory-sync": "^1.2.4",
-        "gulp-file-include": "^2.3.0",
-        "gulp-flatten": "^0.4.0",
-        "gulp-group-css-media-queries": "^1.2.0",
-        "gulp-header": "^2.0.9",
-        "gulp-imagemin": "^7.1.0",
-        "gulp-notify": "^4.0.0",
-        "gulp-plumber": "^1.1.0",
-        "gulp-rename": "^2.0.0",
-        "gulp-sass": "^5.1.0",
-        "gulp-shell": "^0.8.0",
-        "gulp-sourcemaps": "^3.0.0",
-        "gulp-strip-css-comments": "^2.0.0",
-        "gulp-strip-debug": "^4.0.0",
-        "gulp-uglify-es": "^3.0.0",
-        "optipng-bin": "^9.0.0",
-        "path": "^0.12.7",
-        "sass": "^1.53.0"
-    },
-    "browserslist": [
-        "last 2 versions"
-    ]
+    }
 }

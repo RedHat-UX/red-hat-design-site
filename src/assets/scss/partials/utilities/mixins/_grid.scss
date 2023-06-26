@@ -1,13 +1,12 @@
-/* ============================================================ */
-/*  Create a series of .grid-NxN classes
- *
- *  Example use:
- *
- *  grid-1x4
- *  grid-md-12x12
- *  grid-lg-10x10
- *
-/* ============================================================ */
+// ========================================================================== //
+//  Create a series of .grid-NxN classes
+//
+//  Example use:
+//
+//  grid-1x4
+//  grid-md-12x12
+//  grid-lg-10x10
+// ========================================================================== //
 
 @mixin make-grids($infix,$min:1,$max:12) {
     @for $r from $min through $max {
@@ -27,25 +26,25 @@
 }
 
 @mixin make-grid-cells($infix,$min:1,$max:12){
-	@for $i from $min through $max {
-		.cell-row#{$infix}-#{$i} {
-			grid-row-start: $i;
-			-ms-grid-row: $i * 2 - 1;
+    @for $i from $min through $max {
+        .cell-row#{$infix}-#{$i} {
+            grid-row-start: $i;
+            -ms-grid-row: $i * 2 - 1;
         }
 
-		.cell-height#{$infix}-#{$i} {
-			grid-row-end: span $i;
-			-ms-grid-row-span: ($i - 1) * 2 + 1;
+        .cell-height#{$infix}-#{$i} {
+            grid-row-end: span $i;
+            -ms-grid-row-span: ($i - 1) * 2 + 1;
         }
 
-		.cell-col#{$infix}-#{$i} {
-			grid-column-start: $i;
-			-ms-grid-column: $i * 2 - 1;
+        .cell-col#{$infix}-#{$i} {
+            grid-column-start: $i;
+            -ms-grid-column: $i * 2 - 1;
         }
 
-		.cell-width#{$infix}-#{$i} {
-			grid-column-end: span $i;
-			-ms-grid-column-span: ($i - 1) * 2 + 1;
-		}
-	}
+        .cell-width#{$infix}-#{$i} {
+            grid-column-end: span $i;
+            -ms-grid-column-span: ($i - 1) * 2 + 1;
+        }
+    }
 }
