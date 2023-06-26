@@ -82,7 +82,7 @@
 
     &-nav-shelf {
         position: fixed;
-        top: 88px;
+        top: 95px;
         bottom: 0px;
         left: -100%;
         z-index: $zindex-modal; //1001
@@ -110,6 +110,7 @@
         button,
         a:not(.btn) {
             color: $black;
+            border-left: 2px solid $white;
         }
 
         .nav-container {
@@ -139,7 +140,9 @@
         .accordion-panel.show,
         .accordion-panel.collapsing.showing {
             background-color: transparent;
-            border: none;
+            border-top: none;
+            border-bottom: none;
+            border-left: 2px solid $white;
             box-shadow: none;
 
             &.nav-button:hover {
@@ -157,6 +160,7 @@
 
             &.collapsed {
                 font-weight: 400;
+                border-left: 2px solid $white;
             }
 
             &.active {
