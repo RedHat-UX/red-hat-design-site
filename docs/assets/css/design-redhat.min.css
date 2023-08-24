@@ -1,7 +1,7 @@
 /* ================================================================================ */
 /*  Project: Red Hat - Design Site
 /*  Author: Digital Experience
-/*  Date: Mon Jun 26 2023 13:22:46 GMT-0400 (Eastern Daylight Time)
+/*  Date: Thu Aug 24 2023 12:51:47 GMT-0400 (Eastern Daylight Time)
 /*  
 /*  Copyright © 2023 Red Hat, Inc.
 /*  https://design.redhat.com
