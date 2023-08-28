@@ -11,6 +11,7 @@
             triggerAttribute = filterTrigger.getAttribute('data-filter');
             if (triggerAttribute === filter){
                 filterTrigger.classList.add("active");
+                console.log("filter");
             }else{
                 filterTrigger.classList.remove("active");
             }
