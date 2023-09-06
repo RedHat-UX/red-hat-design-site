@@ -52,11 +52,15 @@
         background-color: $white;
         color: $blue;
         border-radius: 50rem;
-        padding: 6px 20px;
+        padding: 4px 6px;
         font-size: 16px;
         font-weight: bold;
         margin-bottom: 16px;
         border: 1px solid $blue;
+
+        @media (min-width: breakpoint-min(lg)){
+            padding: 6px 20px;
+        }
 
         &.active, &:hover {
             background-color: $blue;
