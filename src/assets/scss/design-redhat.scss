@@ -45,6 +45,27 @@ $light-red: #FEEDED;
         stroke-dashoffset: 0;
     }
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        margin-top: -15px;
+    }
+    to {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 .offset-xxl-2 {
     @media all and (min-width: 1400px) {
         margin-left: 16.66666667%;
@@ -675,5 +696,14 @@ $light-red: #FEEDED;
 .expanded-block {
     button {
         background-color: unset;
+    }
+}
+
+
+.expanded-block__content {
+    opacity: 0;
+    animation: fadeOut .3s ease-in forwards;
+    &.active {
+        animation: fadeIn .3s $cb forwards;
     }
 }

@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 scrollPosition = window.scrollY;
                 window.scrollTo({ top: 0, behavior: 'auto' });
                 targetSection.classList.remove('d-none');
+                targetSection.querySelector(".expanded-block__content").classList.add("active");
                 document.getElementById("default-blocks").classList.add("d-none");
                 document.getElementById("design-principles-hero").classList.add("d-none");
                 previousActiveElement = document.activeElement;
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (targetSection) {
             if (!targetSection.classList.contains('d-none')) {
                 targetSection.classList.add('d-none');
+                targetSection.querySelector(".expanded-block__content").classList.remove("active");
                 document.getElementById("default-blocks").classList.remove("d-none");
                 document.getElementById("design-principles-hero").classList.remove("d-none");
                 window.scrollTo(0, scrollPosition);
@@ -59,12 +61,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-
-
-
-
-
-
-
-
