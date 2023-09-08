@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let scrollPosition = 0;
     let previousActiveElement = null;
     const dpBlocks = document.querySelectorAll('.dp-blocks__block');
+
+    // function to expand a section / block
     function handleExpand(block) {
         const sectionId = block.getAttribute('aria-controls');
         const targetSection = document.getElementById(sectionId);
@@ -12,15 +14,17 @@ document.addEventListener('DOMContentLoaded', function() {
             if (targetSection.classList.contains('d-none')) {
                 scrollPosition = window.scrollY;
                 window.scrollTo({ top: 0, behavior: 'auto' });
-                targetSection.classList.remove('d-none');
-                targetSection.querySelector(".expanded-block__content").classList.add("active");
                 document.getElementById("default-blocks").classList.add("d-none");
                 document.getElementById("design-principles-hero").classList.add("d-none");
+                targetSection.classList.remove('d-none');
+                targetSection.querySelector(".expanded-block__content").classList.add("active");
                 previousActiveElement = document.activeElement;
             }
             block.setAttribute('aria-expanded', true);
         }
     }
+
+    // function to close a section / block
     function handleClose(targetSection) {
         if (targetSection) {
             if (!targetSection.classList.contains('d-none')) {
@@ -38,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
+    
+    // event listeners
     dpBlocks.forEach((block) => {
         block.addEventListener('click', () => {
             handleExpand(block);
