@@ -145,3 +145,10 @@
 .designer-profile-image {
     width: 129px;
 }
+#designers {
+    opacity: 0;
+    transition: .3s opacity ease-in-out;
+    &.active {
+        opacity: 1;
+    }
+}

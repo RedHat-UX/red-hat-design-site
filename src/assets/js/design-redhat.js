@@ -60,26 +60,26 @@
 //  SET ACTIVE ON NAV
 // ========================================================================== //
 
-        var CurrentUrl = new URL(document.URL).pathname;
-        var CurrentUrlEnd = CurrentUrl.split('/').filter(Boolean).pop();
+        // var CurrentUrl = new URL(document.URL).pathname;
+        // var CurrentUrlEnd = CurrentUrl.split('/').filter(Boolean).pop();
 
-        if (CurrentUrlEnd !== undefined) {
-            $( ".design-nav-item a" ).each(function() {
-                var ThisUrl = $(this).attr('href');
-                var ThisUrlEnd = ThisUrl.split('/').filter(Boolean).pop();
+        // if (CurrentUrlEnd !== undefined) {
+        //     $( ".design-nav-item a" ).each(function() {
+        //         var ThisUrl = $(this).attr('href');
+        //         var ThisUrlEnd = ThisUrl.split('/').filter(Boolean).pop();
 
-                if(CurrentUrlEnd.includes(ThisUrlEnd)){
-                    $(this).addClass('active');
-                    if(CurrentUrl.includes('designer-stories')){
-                        $('#stories-btn').removeClass('collapsed');
-                        $('.accordion-panel').addClass('show');
-                        document.getElementById('stories-btn').setAttribute('aria-expanded', 'true');
-                    }
-                }
-            });
-        } else {
-            $('.overview').addClass('active');
-        }
+        //         if(CurrentUrlEnd.includes(ThisUrlEnd)){
+        //             $(this).addClass('active');
+        //             if(CurrentUrl.includes('designer-stories')){
+        //                 $('#stories-btn').removeClass('collapsed');
+        //                 $('.accordion-panel').addClass('show');
+        //                 document.getElementById('stories-btn').setAttribute('aria-expanded', 'true');
+        //             }
+        //         }
+        //     });
+        // } else {
+        //     $('.overview').addClass('active');
+        // }
 
 
 // ========================================================================== //
@@ -140,44 +140,53 @@
 (function(){
     let cardWrappers, cards, filterTriggers;
 
-    function filterStories(e){
-        
-        let currTrigger = e.target;
-        let filter = currTrigger.getAttribute('data-filter') || "all";
-
-        //Add or remove active class to nav pills and nav links 
-        for(const filterTrigger of filterTriggers){
-            triggerAttribute = filterTrigger.getAttribute('data-filter');
-            if (triggerAttribute === filter){
+    function filterStories(filter) {
+        // Add or remove active class to nav pills and nav links 
+        for (const filterTrigger of filterTriggers) {
+            const triggerAttribute = filterTrigger.getAttribute('data-filter');
+            if (triggerAttribute === filter) {
                 filterTrigger.classList.add("active");
-            }else{
+            } else {
                 filterTrigger.classList.remove("active");
             }
         }
-        
-        //Add or remove active class to sorted cards based on filter
-        for(const cardWrapper of cardWrappers) {
-            if(cardWrapper.classList.contains(filter) || filter === "all") {
+
+        // Add or remove active class to sorted cards based on filter
+        for (const cardWrapper of cardWrappers) {
+            if (cardWrapper.classList.contains(filter) || filter === "all") {
                 cardWrapper.classList.add("active");
             } else {
                 cardWrapper.classList.remove("active");
             }
         }
-
     }
 
-    function init(){
+    function init() {
         filterTriggers = document.querySelectorAll('.nav-discipline-filter a.nav-link');
 
         cardWrappers = document.querySelectorAll('.designer-list-view .card-wrapper');
         cards = document.querySelectorAll('.designer-list-view .card');
 
         for (const filterTrigger of filterTriggers) {
-            filterTrigger.addEventListener('click', filterStories);
+            filterTrigger.addEventListener('click', function (e) {
+                const currTrigger = e.target;
+                const filter = currTrigger.getAttribute('data-filter') || "all";
+                filterStories(filter);
+            });
+        }
+
+        document.getElementById("designers").classList.add("active");
+
+        // Check if URL parameter exists on page load
+        const urlParams = new URLSearchParams(window.location.search);
+        const filterCategoryInURL = urlParams.get('category');
+        if (filterCategoryInURL) {
+            filterStories(filterCategoryInURL);
         }
     }
 
     document.addEventListener('DOMContentLoaded', init);
+
 
 
 })();
