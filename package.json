@@ -25,7 +25,8 @@
         "url": "git@github.com:RedHat-UX/red-hat-design-site.git"
     },
     "dependencies": {
-        "bootstrap": "4.6.1"
+        "bootstrap": "4.6.1",
+        "mozjpeg": "^8.0.0"
     },
     "devDependencies": {
         "browser-sync": "2.27.10",

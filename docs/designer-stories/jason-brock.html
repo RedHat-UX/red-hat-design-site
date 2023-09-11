@@ -1,0 +1,437 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="cleartype" content="on">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- TITLE start -->
+
+        <title>Design at Red Hat</title>
+
+<!-- TITLE end -->
+
+<!-- DESCRIPTION start -->
+
+        <meta name="description" content="Design at Red Hat is created in the same way we create our technology—using open source principles as the foundation. Learn how we design collaboratively to make better experiences for real people.">
+
+<!-- DESCRIPTION end -->
+
+<!-- SOCIAL start -->
+
+        <meta property="og:title" content="Design at Red Hat">
+        <meta property="og:site_name" content="Design at Red Hat">
+        <meta property="og:url" content="design.redhat.com">
+        <meta property="og:description" content="Design at Red Hat is created in the same way we create our technology—using open source principles as the foundation. Learn how we design collaboratively to make better experiences for real people.">
+        <meta property="og:type" content="Website">
+        <meta property="og:image" content="https://redhat-ux.github.io/red-hat-design-site/assets/img/global/social-og-design-dot-1200x675.png">
+
+<!-- SOCIAL end -->
+
+<!-- ICONS start -->
+
+        <link rel="shortcut icon" href="//www.redhat.com/themes/custom/rhdc/favicon.ico">
+
+<!-- ICONS end -->
+
+<!-- ASSETS start -->
+
+    
+
+        <!-- FONTS -->
+        <link rel="stylesheet" href="//static.redhat.com/libs/redhat/redhat-font/latest/webfonts/red-hat-font.css">
+
+        <!-- CSS -->
+        <!-- Vendors -->
+        <link rel="stylesheet" href="//static.redhat.com/libs/redhat/redhat-theme/6/advanced-theme.css">
+
+        <!-- Studio Web -->
+        <link rel="stylesheet" href="//www.redhat.com/ux/webdms/css/styles.min.css">
+
+        <!-- Project -->
+        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1694457795482">
+
+        <!-- SCRIPTS -->
+        <!-- Libraries -->
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<!-- ASSETS end -->
+
+    </head>
+
+    <body class="rh-design">
+
+<!-- HTML start -->
+
+<header id="top" class="dms-band rh-design-nav-top py-2 bg-black">
+    <div class="text-white">
+        <div class="row d-flex align-items-center">
+            <div class="col-6 pl-4">
+                <a href="/" title="Red Hat Design logo">
+                    <img class="svg" src="/assets/img/svg/logo-rh-design.svg" width="154" height="48" alt="Red Hat Design logo">
+                </a>
+            </div>
+
+            <div class="col-6 rh-design-nav-toggle-wrapper pr-4">
+                <a href="#" class="btn btn-toggle" data-toggle="nav-shelf">
+                    <div class="d-inline-block">
+                        <span class="menu-bar"></span>
+
+                        <span class="menu-bar"></span>
+
+                        <span class="menu-bar"></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="dms-band rh-design-nav-shelf py-0 border-right">
+    <div class="nav-container pb-4">
+        <div id="rhDesignNav" class="accordion pb-0">
+            <div class="nav-group-wrapper nav-button design-nav-item">
+                <a href="/" class="overview py-2 pl-4 d-block">
+                   Overview
+                </a>
+            </div>
+
+            <!-- <div class="nav-group-wrapper nav-button design-nav-item">
+                <a href="/designer-stories" class="py-2 pl-4 d-block">
+                    Designer stories
+                </a>
+            </div> -->
+            <div class="nav-group-wrapper">
+                <button id="stories-btn" class="nav-button accordion-toggle collapsed py-2 pl-4" data-toggle="collapse" data-target="#stories">
+                    <p>Designer stories</p>
+                </button>
+        
+                <div id="stories" class="accordion-panel collapse pr-0" data-parent="#rhDesignNav">
+                    <ul class="mb-0 pl-2 pb-0 list-unstyled">
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=all" title="All stories">All stories&nbsp;</a>
+                        </li>
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=brand" title="Design at Red Hat" data-filter="brand">Brand</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=creative" title="Design at Red Hat">Creative direction</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=digital" title="Design at Red Hat">Digital</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=leadership" title="Design at Red Hat">Leadership</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=product" title="Design at Red Hat">Product</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=systems" title="Design at Red Hat">Systems</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=ux" title="Design at Red Hat">UX</a>
+                        </li>
+        
+        
+        
+                        <!--<li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/aaron-williamson.html" title="Aaron Williamson">Aaron Williamson</a>
+                        </li>
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/abigael-donahue.html" title="Abigael Donahue">Abigael Donahue</a>
+                        </li>
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/allona-wilkerson.html" title="Allona Wilkerson">Allona Wilkerson</a>
+                        </li>
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/ann-nguyen.html" title="Ann Nguyen">Ann Nguyen&nbsp;</a>
+                        </li>
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/chae-bin-park.html" title="Chae Bin Park">Chae Bin Park</a>
+                        </li>
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/jason-brock.html" title="Jason Brock">Jason Brock</a>
+                        </li>
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/jeremy-perry.html" title="Jeremy Perry">Jeremy Perry</a>
+                        </li>
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/jessica-cox.html" title="Jessica Cox">Jessica Cox</a>
+                        </li>
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/kevin-hatchoua.html" title="Kevin Hatchoua">Kevin Hatchoua</a>
+                        </li>
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/krystal-moore.html" title="Krystal Moore">Krystal Moore</a>
+                        </li>
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/libby-levi.html" title="Libby Levi">Libby Levi</a>
+                        </li>
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/liz-wood.html" title="Liz Wood">Liz Wood</a>
+                        </li>
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/rob-chappell.html" title="Rob Chappell">Rob Chappell</a>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-group-wrapper nav-button design-nav-item">
+                <a href="/design-principles" class="py-2 pl-4 d-block">
+                   Design principles
+                </a>
+            </div>
+            <div class="nav-group-wrapper nav-button design-nav-item">
+                <a class="py-2 pl-4 d-block" href="/release-notes" title="Release notes">Release&nbsp;notes</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mb-6">&nbsp;</div>
+
+
+<section class="hero dms-band pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-xl-10 offset-xl-2 px-0">
+            <img class="img-fluid hero-img" src="/assets/img/pages/designer-stories/jason-brock/img-hero.png" alt="Jason's desk">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-9 offset-lg-2 offset-xl-3 mt-n9">
+                <div class="media align-items-center pt-4 pl-2">
+                    <img class="mr-3 designer-img rounded-circle border-white" src="/assets/img/pages/designer-stories/jason-brock/img-avatar.png" alt="Jason Brock photo">
+
+                    <div class="media-body pt-6">
+                        <h2 class="my-0 my-md-1 font-size-lg-36">Jason Brock</h2>
+
+                        <p class="mb-1">Manager, Digital Experience Design / Austin, TX</p>
+
+                        <!-- <p class="font-size-14"><a href="//www.allonawilkerson.com/" title="portfolio">Portfolio</a> / <a href="//www.linkedin.com/in/allona-wilkerson-0a0638111/" title="LinkedIn">LinkedIn</a></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="designer-content dms-band pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="text-red font-size-32 font-weight-light designer-question">What is your role and what team do you work on?</h3>
+                    </div>
+                    <div class="col-md-7 offset-md-1">
+                        <p>I manage the Design side of Digital Experience Design Engineering. Our team is responsible for improving and creating digital experiences for customers seeking answer and support and for those associates who interact with our customers.</p>
+                    </div>
+                </div>
+                <div class="row pt-4 pt-md-8">
+                    <div class="col-md-4">
+                        <h3 class="text-red font-size-32 font-weight-light designer-question">How do you get inspired first thing in the morning?</h3>
+                    </div>
+                    <div class="col-md-7 offset-md-1">
+                        <p>A double-shot of espresso from a moka pot with 4 oz of oat milk.</p>
+
+                        <p>I wish I could say that I wake up every morning abound with inspiration, but I don’t - and I don’t think that most people do. I chose to become a designer because I like making things, but it turns out I also like fixing them. As creatives we have a chance to repair things that are broken and to make new things to replace the irreparable. I find inspiration when I see something that could be improved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="pt-4 pt-md-8 border-bottom border-red"></div>
+            </div>
+        </div>
+        <div class="row pt-4 pt-md-8">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="text-red font-size-32 font-weight-light designer-question">What makes leading a design team at Red&nbsp;Hat unique?</h3>
+                    </div>
+                    <div class="col-md-7 offset-md-1">
+                        <p>Design teams at Red&nbsp;Hat have more shared accountability for the business outcomes than designers in other companies, and certainly more than those in the Agency world. The communication and organizational structures that we’ve chosen in CEE encourage an inclusive approach to decision making — PMs, Engineers, DevOps, and QA participate in our design processes and decisions. With so many brilliant contributors sharing their expertise, we’ve adopted a servant leadership approach to team management. It allows me to focus my energy on the part of the job that I really love: cultivating a culture of sustainable growth and psychological safety.</p>
+                    </div>
+                </div>
+                <div class="row pt-4 pt-md-8">
+                    <div class="col-md-4">
+                        <h3 class="text-red font-size-32 font-weight-light designer-question">How are you incorporating open source principles into your designs or design processes?</h3>
+                    </div>
+                    <div class="col-md-7 offset-md-1">
+                        <p>Our collective group of PMs, Engineers, and Designers follows a workstream model that invites any contributors and stakeholders to weigh in at various appropriate stops along a project’s journey. Everything goes through a system of checks and balances to ensure that multiple eyes see our work, multiple voices are heard in every phase of design, and multiple approvals are required before any big changes are made.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="pt-4 pt-md-6 border-bottom border-red"></div>
+            </div>
+        </div>
+
+        <div class="row pt-8">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="row">
+                    <div class="col-md-2">
+                        <h4 class="font-size-16">Jason Brock</h4>
+                    </div>
+                    <div class="col-md-9 offset-md-1">
+                        <img class="svg quote mb-3" src="/assets/img/svg/icon-quote.svg" alt="Quote icon">
+                        <h2 class="xl">It’s normal for designers to shoot for the moon and for engineers to want to deliver things quickly and efficiently. The natural tension between those perspectives is what drives innovation.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="pt-4 pt-md-6 border-bottom border-red"></div>
+            </div>
+        </div>
+
+        <div class="row pt-4 pt-md-8">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="text-red font-size-32 font-weight-light designer-question">How do you prioritize collaboration across teams in your design process?</h3>
+                    </div>
+                    <div class="col-md-7 offset-md-1">
+                        <p>The relationship between our Design Engineering team and our Product and Portfolio team is critical for successful collaboration across all of our disciplines. In our space, Design is just one section of a large orchestra and we get to work with some of the best conductors in the business.</p>
+                    </div>
+                </div>
+                <div class="row pt-4 pt-md-8">
+                    <div class="col-md-4">
+                        <h3 class="text-red font-size-32 font-weight-light designer-question">How do you think diverse voices and perspectives make the design process stronger?</h3>
+                    </div>
+                    <div class="col-md-7 offset-md-1">
+                        <p>When you bring people together from various disciplines, backgrounds, and departments to weigh in on a business problem, there needs to be plenty of space for courteous dissent. It’s normal for designers to shoot for the moon and for engineers to want to deliver things quickly and efficiently. The natural tension between those perspectives is what drives innovation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="pt-4 pt-md-6 border-bottom border-red"></div>
+            </div>
+        </div>
+
+        <div class="row pt-4 pt-md-8">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="text-red font-size-32 font-weight-light designer-question">How does your design work contribute to the creation of helpful and accessible experiences?</h3>
+                    </div>
+                    <div class="col-md-7 offset-md-1">
+                        <p>Our team is working very closely with all members of the DPO and both Design System teams (RHDDS and PatternFly) to build better alignment for the future. Both teams are dedicated to rigorous accessibility standards and their UI components are designed with accessibility in mind. The Customer Portal is in a fairly unique spot where we have to consume the output of both systems, so it’s important to our success that these systems approach accessibility and design in similar ways.</p>
+                    </div>
+                </div>
+                <div class="row pt-4 pt-md-8">
+                    <div class="col-md-4">
+                        <h3 class="text-red font-size-32 font-weight-light designer-question">What does open design mean to you?</h3>
+                    </div>
+                    <div class="col-md-7 offset-md-1">
+                        <p>Open means a willingness to listen. At the end of the day, our design teams have a responsibility to do the best design work that we can, but sometimes other solutions are more elegant, or more simple, or even just more affordable. We have to be open to the ideas of non-designers so that we never let perfect become the enemy of good.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!--<div class="row">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="pt-4 pt-md-6 border-bottom border-red"></div>
+            </div>
+        </div>-->
+
+        <!--<div class="row pt-8">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="row">
+                    <div class="col-md-5 text-center text-md-left">
+                        <p class="small text-gray-600 mb-0">Go back</p>
+                        <p><a class="btn btn-link back-btn" href="/designer-stories.html" title="Designer stories">Back to Designer stories</a></p>
+                    </div>
+                    <div class="col-md-3 offset-md-4 text-center text-md-left pl-md-3 pl-xl-8">
+                        <p class="small text-gray-600 mb-0">Next interview</p>
+                        <p><a class="btn btn-link" href="ann-nguyen.html" title="Designer stories">Ann Nguyen</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+</section>
+
+<footer class="py-1 bg-gray-900">
+    <div class="container">
+        <div class="col-xl-10 offset-xl-2">
+            <div class="row align-items-lg-center">
+                <div class="col-12 col-md-3 col-lg-2 mb-3 mb-md-0">
+                    <img class="svg" src="//www.redhat.com/profiles/rh/themes/redhatdotcom/img/logo.svg" width="138" alt="Red Hat logo">
+                </div>
+
+                <div class="col-12 col-md-7 col-lg-8 mb-2 mb-md-0 d-lg-flex font-size-12 text-gray-500">
+                    <p class="mt-md-1 mt-lg-0 mr-3 mb-1 mb-lg-0">&copy; <span class="copyright-year"></span> Red Hat, Inc.</p>
+
+                    <ul class="mb-md-0 d-flex flex-wrap list-unstyled">
+                        <li class="mr-2 mb-1 mb-lg-0">
+                            <a class="text-gray-500 text-underline" href="//www.redhat.com/en/about/privacy-policy" title="Privacy statement">Privacy statement</a>
+                        </li>
+
+                        <li class="mr-2 mb-1 mb-lg-0">
+                            <a class="text-gray-500 text-underline" href="//www.redhat.com/en/about/terms-use" title="Terms of use">Terms of use</a>
+                        </li>
+
+                        <li class="mr-2 mb-1 mb-lg-0">
+                            <a class="text-gray-500 text-underline" href="//www.redhat.com/en/about/all-policies-guidelines" title="All policies and guidelines">All policies and guidelines</a>
+                        </li>
+
+                        <li>
+                            <a class="text-gray-500 text-underline" href="//www.redhat.com/en/about/digital-accessibility" title="Digital accessibility">Digital accessibility</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-2 text-md-right">
+                    <img class="svg" src="//www.redhat.com/cms/managed-files/Logo-Red_Hat-Summit-A-Standard-RGB-02_0.svg" width="72" alt="Red Hat Summit logo">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer> 
+
+
+<!-- HTML end -->
+
+<!-- SCRIPTS start -->
+
+        <!-- Vendors -->
+        <script src="//www.redhat.com/sites/all/libraries/webrh/dist/js/webrh.webcomponents.min.js"></script>
+        <script src="//www.redhat.com/ux/webdms/js/vendors/jquery.waypoints.min.js"></script>
+        <!-- Studio Web -->
+        <script src="//www.redhat.com/ux/webdms/js/scripts.min.js"></script>
+        <!-- Project -->
+        <script src="@@app?t=1694457795482"></script>
+
+<!-- SCRIPTS end -->
+
+    </body>
+</html>
