@@ -37,6 +37,8 @@
 
 <!-- ASSETS start -->
 
+    
+
         <!-- FONTS -->
         <link rel="stylesheet" href="//static.redhat.com/libs/redhat/redhat-font/latest/webfonts/red-hat-font.css">
 
@@ -48,7 +50,7 @@
         <link rel="stylesheet" href="//www.redhat.com/ux/webdms/css/styles.min.css">
 
         <!-- Project -->
-        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1687802519923">
+        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1694457795503">
 
         <!-- SCRIPTS -->
         <!-- Libraries -->
@@ -95,52 +97,105 @@
                 </a>
             </div>
 
+            <!-- <div class="nav-group-wrapper nav-button design-nav-item">
+                <a href="/designer-stories" class="py-2 pl-4 d-block">
+                    Designer stories
+                </a>
+            </div> -->
             <div class="nav-group-wrapper">
                 <button id="stories-btn" class="nav-button accordion-toggle collapsed py-2 pl-4" data-toggle="collapse" data-target="#stories">
                     <p>Designer stories</p>
                 </button>
-
+        
                 <div id="stories" class="accordion-panel collapse pr-0" data-parent="#rhDesignNav">
                     <ul class="mb-0 pl-2 pb-0 list-unstyled">
                         <li class="story design-nav-item">
-                            <a class="py-1 pl-2 d-block" href="/designer-stories" title="All stories">All stories&nbsp;</a>
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=all" title="All stories">All stories&nbsp;</a>
                         </li>
-
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=brand" title="Design at Red Hat" data-filter="brand">Brand</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=creative" title="Design at Red Hat">Creative direction</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=digital" title="Design at Red Hat">Digital</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=leadership" title="Design at Red Hat">Leadership</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=product" title="Design at Red Hat">Product</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=systems" title="Design at Red Hat">Systems</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=ux" title="Design at Red Hat">UX</a>
+                        </li>
+        
+        
+        
+                        <!--<li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/aaron-williamson.html" title="Aaron Williamson">Aaron Williamson</a>
+                        </li>
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/abigael-donahue.html" title="Abigael Donahue">Abigael Donahue</a>
+                        </li>
+        
                         <li class="story design-nav-item">
                             <a class="py-1 pl-2 d-block" href="/designer-stories/allona-wilkerson.html" title="Allona Wilkerson">Allona Wilkerson</a>
                         </li>
-
+        
                         <li class="story design-nav-item">
                             <a class="py-1 pl-2 d-block" href="/designer-stories/ann-nguyen.html" title="Ann Nguyen">Ann Nguyen&nbsp;</a>
                         </li>
-
+        
                         <li class="story design-nav-item">
                             <a class="py-1 pl-2 d-block" href="/designer-stories/chae-bin-park.html" title="Chae Bin Park">Chae Bin Park</a>
                         </li>
-
+        
                         <li class="story design-nav-item">
-                            <a class="py-1 pl-2 d-block" href="/designer-stories/fadzly-sayarasi.html" title="Fadzly Sayarasi">Fadzly Sayarasi</a>
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/jason-brock.html" title="Jason Brock">Jason Brock</a>
                         </li>
-
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/jeremy-perry.html" title="Jeremy Perry">Jeremy Perry</a>
+                        </li>
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/jessica-cox.html" title="Jessica Cox">Jessica Cox</a>
+                        </li>
+        
                         <li class="story design-nav-item">
                             <a class="py-1 pl-2 d-block" href="/designer-stories/kevin-hatchoua.html" title="Kevin Hatchoua">Kevin Hatchoua</a>
                         </li>
-
+        
                         <li class="story design-nav-item">
                             <a class="py-1 pl-2 d-block" href="/designer-stories/krystal-moore.html" title="Krystal Moore">Krystal Moore</a>
                         </li>
-
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/libby-levi.html" title="Libby Levi">Libby Levi</a>
+                        </li>
+        
                         <li class="story design-nav-item">
                             <a class="py-1 pl-2 d-block" href="/designer-stories/liz-wood.html" title="Liz Wood">Liz Wood</a>
                         </li>
-
+        
                         <li class="story design-nav-item">
-                            <a class="py-1 pl-2 d-block" href="/designer-stories/michael-celedonia.html" title="Michael Celedonia">Michael Celedonia</a>
-                        </li>
+                            <a class="py-1 pl-2 d-block" href="/designer-stories/rob-chappell.html" title="Rob Chappell">Rob Chappell</a>
+                        </li>-->
                     </ul>
                 </div>
             </div>
-
+            <div class="nav-group-wrapper nav-button design-nav-item">
+                <a href="/design-principles" class="py-2 pl-4 d-block">
+                   Design principles
+                </a>
+            </div>
             <div class="nav-group-wrapper nav-button design-nav-item">
                 <a class="py-2 pl-4 d-block" href="/release-notes" title="Release notes">Release&nbsp;notes</a>
             </div>
@@ -156,7 +211,7 @@
         <div class="row">
             <div class="col-12 col-sm-9 col-md-10 col-lg-8 offset-xl-2">
                 <h3 class="section-label mb-1 mb-md-0 text-red">Release notes</h3>
-                <h1 class="mb-3 interior-h1">Continuous innovation</h1>
+                <h1 class="mb-3 interior-h1">Open design is a constant work in progress</h1>
             </div>
         </div>
     </div>
@@ -166,7 +221,40 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-xl-10 offset-xl-2">
-                <div class="row">
+                <div class="row pt-6 pt-md-8">
+                    <div class="col">
+                        <h3 class="mb-1">Release v3.0</h3>
+                        <p class="text-gray-600 small">Released: September 2023</p>
+                    </div>
+                </div>
+
+                <div class="row pt-4">
+                    <div class="col-md-7">
+                        <h4>Notes</h4>
+                        <p>This update introduces Red&nbsp;Hat's design principles to expound on our open design philosophy as a concrete way of working. It also expands our highlight on open design to include leaders of design teams across Red Hat. The update brings in 7 interviews as individual pages, a new way to get to designer stories by discipline, and the navigational structure to support these new pages. </p>
+                        <h4 class="pt-2 pt-md-3">Impact</h4>
+                        <p>We have released a core aspect of Red&nbsp;Hat's design methodology in keeping with our open source nature. And visitors can see design teams and design leadership as part of the open design culture and understand the effect they have on our work at Red&nbsp;Hat.</p>
+                    </div>
+                    <div class="col-md-5 pt-4 pt-md-0">
+                        <h4>Added</h4>
+                        <ul class="list-unstyled">
+                            <li class="border-left border-red py-1 pl-2 mb-1">Design principles overview page</li>
+                            <li class="border-left border-red py-1 pl-2 mb-1">8 design principle pages</li>
+                            <li class="border-left border-red py-1 pl-2 mb-1">7 designer stories pages</li>
+                        </ul>
+
+                        <h4 class="pt-4 pt-md-8">Updated</h4>
+                        <ul class="list-unstyled">
+                            <li class="border-left border-red py-1 pl-2 mb-1">Updated home page content including links to designer profiles</li>
+                            <li class="border-left border-red py-1 pl-2 mb-1">Updated designer stories page with filtering component</li>
+                            <li class="border-left border-red py-1 pl-2 mb-1">These release notes</li>
+                        </ul>
+                    </div>
+                </div>
+               
+               <div class="pt-4 pt-md-8 border-bottom border-red"></div>
+
+                <div class="row pt-6 pt-md-8">
                     <div class="col">
                         <h3 class="mb-1">Release v2.0</h3>
                         <p class="text-gray-600 small">Released: June 2022</p>
@@ -175,23 +263,23 @@
                 <div class="row pt-4">
                     <div class="col-md-7">
                         <h4>Notes</h4>
-                        <p>This update highlights designers across Red Hat from varied disciplines to get a realistic and in depth perspective on open design. The update features 8 individual designer interviews as individual pages, a design profiles overview page, and the navigational structure to support these new pages. </p>
+                        <p>We launched 8 pages featuring interviews from some of our designers at Red Hat. Introducing a new series called <strong>Designer stories</strong>. </p>
                         <h4 class="pt-2 pt-md-3">Impact</h4>
-                        <p>Highlights designers as individuals and emphasizes the importance of an open design culture and the effect it has on our work at Red&nbsp;Hat.</p>
+                        <p>Visitors can read impactful stories about why designers love doing design, why they love working at Red Hat, and other things.</p>
                     </div>
                     <div class="col-md-5 pt-4 pt-md-0">
                         <h4>Added</h4>
                         <ul class="list-unstyled">
-                            <li class="border-left border-red py-1 pl-2 mb-1">Design profiles overview page</li>
-                            <li class="border-left border-red py-1 pl-2 mb-1">8 designer profile pages </li>
-                            <li class="border-left border-red py-1 pl-2 mb-1">Release notes page</li>
-                            <li class="border-left border-red py-1 pl-2">Nav structure</li>
+                            <li class="border-left border-red py-1 pl-2 mb-1">Added 8 new Designer stories pages to navigation</li>
+                            <li class="border-left border-red py-1 pl-2 mb-1">Added 3 Designer stories pages to home page grid </li>
+                            <li class="border-left border-red py-1 pl-2 mb-1">Added a Release notes page</li>
                         </ul>
 
                         <h4 class="pt-4 pt-md-8">Updated</h4>
                         <ul class="border-left border-red list-unstyled pl-2">
-                            <li>Updated home page content and links to designer profiles</li>
+                            <li>Updated home page content including links to designer profiles</li>
                         </ul>
+                        
                     </div>
                 </div>
 
@@ -214,14 +302,26 @@
                 <div class="row pt-4">
                     <div class="col-md-7">
                         <h4>Notes</h4>
-                        <p><a href="/" title="Design.redhat">Design.redhat.com</a> is a new, central location for design and designers at Red&nbsp;Hat. We hope this is a useful resource for our internal design teams, across all disciplines and teams, as well as a tool to introduce the design world at large to our open design approach.</p>
+                        <p>We’re excited to announce that we’ve launched a new resource for design at
+                        Red&nbsp;Hat. <a href="/" title="Design at Red Hat">design.redhat.com</a> is a new, central location for design and designers at Red Hat. We hope this is a useful resource for our internal design teams, across all disciplines and teams, as well as a tool to introduce the design world at large to our open design approach.</p>
+
+                        <p>The process of creating design.redhat.com started this spring with a design thinking workshop focused on developing a single philosophy statement that all resonated with all of our design teams. The result of that workshop is below, and formed the core of the new page:</p>
+
+                        <p>Open design is built on collaboration.
+                        It’s a conversation between diverse voices. It’s about listening to what our community needs, taking that feedback, and creating systems that work together, across teams and contexts. Open design creates helpful and accessible experiences for real people.</p>
+
+
+                        <p>From there, we looked at how our peer organizations talk about the role of design and then pulled together a team from all our primary design organizations to work together on the new site.</p>
+
+                        <p>We’re really happy with what we came up with, but in the true spirit of open design, we know this is just the beginning. We have the first draft live, but we need your feedback to make it better and determine where it goes next.</p>
+
                         <h4 class="pt-2 pt-md-3">Impact</h4>
-                        <p>Highlights the practice of design at Red&nbsp;Hat in all its forms, makes a bold and public statement on the importance of open, collaborative design practices, collects the resources you need to do your job in one place, and serves as an effective recruiting tool for new members of our teams. </p>
+                        <p>We hope that the result highlights the practice of design at Red Hat in all its forms, makes a bold and public statement on the importance of open, collaborative design practices, collects the resources you need to do your job in one place, and serves as an effective recruiting tool for new members of our teams.</p>
                     </div>
                     <div class="col-md-5 pt-4 pt-md-0">
                         <h4>Added</h4>
                         <ul class="border-left border-red list-unstyled pl-2">
-                            <li>Main hub page for design at Red&nbsp;Hat including information on how we work, design resources, and design job information.</li>
+                            <li>design.redhat.com launched!</li>
                         </ul>
                     </div>
                 </div>
@@ -267,7 +367,8 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> 
+
 
 <!-- HTML end -->
 
@@ -276,12 +377,10 @@
         <!-- Vendors -->
         <script src="//www.redhat.com/sites/all/libraries/webrh/dist/js/webrh.webcomponents.min.js"></script>
         <script src="//www.redhat.com/ux/webdms/js/vendors/jquery.waypoints.min.js"></script>
-
         <!-- Studio Web -->
         <script src="//www.redhat.com/ux/webdms/js/scripts.min.js"></script>
-
         <!-- Project -->
-        <script src="/assets/js/design-redhat.min.js?t=1687802519923"></script>
+        <script src="@@app?t=1694457795503"></script>
 
 <!-- SCRIPTS end -->
 
