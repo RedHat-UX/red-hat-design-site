@@ -37,7 +37,11 @@
 
 <!-- ASSETS start -->
 
-    
+        <link rel="stylesheet" href="https://static.redhat.com/libs/redhat/redhat-font/4/webfonts/red-hat-font.min.css">
+        <link rel="stylesheet" href="https://static.redhat.com/libs/redhat/redhat-theme/6/advanced-theme.css">
+
+        <!-- uviversal footer style -->
+        <link rel="stylesheet" href="https://www.redhat.com/modules/contrib/red_hat_shared_libs/dist/rhds-elements/modules/rh-footer-lightdom.css">    
 
         <!-- FONTS -->
         <link rel="stylesheet" href="//static.redhat.com/libs/redhat/redhat-font/latest/webfonts/red-hat-font.css">
@@ -50,7 +54,7 @@
         <link rel="stylesheet" href="//www.redhat.com/ux/webdms/css/styles.min.css">
 
         <!-- Project -->
-        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1694614531700">
+        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1697038481122">
 
         <!-- SCRIPTS -->
         <!-- Libraries -->
@@ -393,49 +397,48 @@
     </div>
 </section>
 
-<footer class="py-1 bg-gray-900">
-    <div class="container">
-        <div class="col-xl-10 offset-xl-2">
-            <div class="row align-items-lg-center">
-                <div class="col-12 col-md-3 col-lg-2 mb-3 mb-md-0">
-                    <img class="svg" src="//www.redhat.com/profiles/rh/themes/redhatdotcom/img/logo.svg" width="138" alt="Red Hat logo">
-                </div>
 
-                <div class="col-12 col-md-7 col-lg-8 mb-2 mb-md-0 d-lg-flex font-size-12 text-gray-500">
-                    <p class="mt-md-1 mt-lg-0 mr-3 mb-1 mb-lg-0">&copy; <span class="copyright-year"></span> Red Hat, Inc.</p>
+<footer class="design-footer">
 
-                    <ul class="mb-md-0 d-flex flex-wrap list-unstyled">
-                        <li class="mr-2 mb-1 mb-lg-0">
-                            <a class="text-gray-500 text-underline" href="//www.redhat.com/en/about/privacy-policy" title="Privacy statement">Privacy statement</a>
-                        </li>
+<rh-footer-universal color-palette="darker">
+  <h3 slot="links-primary" data-analytics-text="Red Hat legal and privacy links" hidden="">Red Hat legal and privacy links</h3>
+  <ul slot="links-primary" data-analytics-region="page-footer-bottom-primary">
+    <li><a href="https://redhat.com/en/about/company" data-analytics-category="Footer|Corporate" data-analytics-text="About Red Hat">About Red Hat</a></li>
+    <li><a href="https://redhat.com/en/jobs" data-analytics-category="Footer|Corporate" data-analytics-text="Jobs">Jobs</a></li>
+    <li><a href="https://redhat.com/en/events" data-analytics-category="Footer|Corporate" data-analytics-text="Events">Events</a></li>
+    <li><a href="https://redhat.com/en/about/office-locations" data-analytics-category="Footer|Corporate" data-analytics-text="Locations">Locations</a></li>
+    <li><a href="https://redhat.com/en/contact" data-analytics-category="Footer|Corporate" data-analytics-text="Contact Red Hat">Contact Red Hat</a></li>
+    <li><a href="https://redhat.com/en/blog" data-analytics-category="Footer|Corporate" data-analytics-text="Red Hat Blog">Red Hat Blog</a></li>
+    <li><a href="https://redhat.com/en/about/our-culture/diversity-equity-inclusion" data-analytics-category="Footer|Corporate" data-analytics-text="Diversity equity and inclusion">Diversity, equity, and inclusion</a></li>
+    <li><a href="https://coolstuff.redhat.com/" data-analytics-category="Footer|Corporate" data-analytics-text="Cool Stuff Store">Cool Stuff Store</a></li>
+    <li><a href="https://www.redhat.com/en/summit" data-analytics-category="Footer|Corporate" data-analytics-text="Red Hat Summit">Red Hat Summit</a></li>
+  </ul>
+  <rh-footer-copyright slot="links-secondary">© 2021-2023 Red Hat, Inc.</rh-footer-copyright>
+  <h3 slot="links-secondary" data-analytics-text="Red Hat legal and privacy links" hidden="">Red Hat legal and privacy links</h3>
+  <ul slot="links-secondary" data-analytics-region="page-footer-bottom-secondary">
+    <li><a href="https://redhat.com/en/about/privacy-policy" data-analytics-category="Footer|Red Hat legal and privacy links" data-analytics-text="Privacy statement">Privacy statement</a></li>
+    <li><a href="https://redhat.com/en/about/terms-use" data-analytics-category="Footer|Red Hat legal and privacy links" data-analytics-text="Terms of use">Terms of use</a></li>
+    <li><a href="https://redhat.com/en/about/all-policies-guidelines" data-analytics-category="Footer|Red Hat legal and privacy links" data-analytics-text="All policies and guidelines">All policies and guidelines</a></li>
+    <li><a href="https://redhat.com/en/about/digital-accessibility" data-analytics-category="Footer|Red Hat legal and privacy links" data-analytics-text="Digital accessibility" class="active">Digital accessibility</a></li>
+  </ul>
+  
+</rh-footer-universal>
 
-                        <li class="mr-2 mb-1 mb-lg-0">
-                            <a class="text-gray-500 text-underline" href="//www.redhat.com/en/about/terms-use" title="Terms of use">Terms of use</a>
-                        </li>
+</footer>
 
-                        <li class="mr-2 mb-1 mb-lg-0">
-                            <a class="text-gray-500 text-underline" href="//www.redhat.com/en/about/all-policies-guidelines" title="All policies and guidelines">All policies and guidelines</a>
-                        </li>
 
-                        <li>
-                            <a class="text-gray-500 text-underline" href="//www.redhat.com/en/about/digital-accessibility" title="Digital accessibility">Digital accessibility</a>
-                        </li>
-                    </ul>
-                </div>
 
-                <div class="col-12 col-md-2 text-md-right">
-                    <img class="svg" src="//www.redhat.com/cms/managed-files/Logo-Red_Hat-Summit-A-Standard-RGB-02_0.svg" width="72" alt="Red Hat Summit logo">
-                </div>
-            </div>
-        </div>
-    </div>
-</footer> 
 
 
 <!-- HTML end -->
 
 <!-- SCRIPTS start -->
 
+        <!-- RH Components --> 
+        <script src="//www.redhat.com/modules/contrib/webrh/js/webrh.webcomponents.min.js"></script>
+        <script type="module">
+            import '//www.redhatstatic.com/dx/studio/rhds-elements/modules/rh-footer-entry.js';
+        </script>
         <!-- Vendors -->        
         <script src="//www.redhat.com/sites/all/libraries/webrh/dist/js/webrh.webcomponents.min.js"></script>        
         <script src="//www.redhat.com/ux/webdms/js/vendors/jquery.waypoints.min.js"></script>       
@@ -444,9 +447,9 @@
          <script src="//www.redhat.com/ux/webdms/js/scripts.min.js"></script>        
 
          <!-- Project -->       
-          <script src="/assets/js/design-redhat.min.js?t=1694614531700"></script>
-          <script src="/assets/js/design-principles.min.js?t=1694614531700"></script>
+          <script src="/assets/js/design-redhat.min.js?t=1697038481122"></script>
+          <script src="/assets/js/design-principles.min.js?t=1697038481122"></script>
 
-          <!-- SCRIPTS end -->    
+          
       </body>
       </html>
