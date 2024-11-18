@@ -41,7 +41,10 @@
         <link rel="stylesheet" href="https://static.redhat.com/libs/redhat/redhat-theme/6/advanced-theme.css">
 
         <!-- uviversal footer style -->
-        <link rel="stylesheet" href="https://www.redhat.com/modules/contrib/red_hat_shared_libs/dist/rhds-elements/modules/rh-footer-lightdom.css">    
+        <link
+            rel="stylesheet"
+            href="https://www.redhat.com/modules/contrib/red_hat_shared_libs/dist/rhds-elements/modules/rh-footer/rh-footer-lightdom.css"
+        />   
 
         <!-- FONTS -->
         <link rel="stylesheet" href="//static.redhat.com/libs/redhat/redhat-font/latest/webfonts/red-hat-font.css">
@@ -54,7 +57,7 @@
         <link rel="stylesheet" href="//www.redhat.com/ux/webdms/css/styles.min.css">
 
         <!-- Project -->
-        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1722874025912">
+        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1731955051104">
 
         <!-- SCRIPTS -->
         <!-- Libraries -->
@@ -399,7 +402,7 @@
 
 
 <footer class="design-footer">
-
+<rh-surface color-palette="dark">
 <rh-footer-universal color-palette="darker">
   <h3 slot="links-primary" data-analytics-text="Red Hat legal and privacy links" hidden="">Red Hat legal and privacy links</h3>
   <ul slot="links-primary" data-analytics-region="page-footer-bottom-primary">
@@ -423,7 +426,7 @@
   </ul>
   
 </rh-footer-universal>
-
+</rh-surface>
 </footer>
 
 
@@ -436,9 +439,11 @@
 
         <!-- RH Components --> 
         <script src="//www.redhat.com/modules/contrib/webrh/js/webrh.webcomponents.min.js"></script>
-        <script type="module">
+        <!--<script type="module">
             import '//www.redhatstatic.com/dx/studio/rhds-elements/modules/rh-footer-entry.js';
-        </script>
+        </script>-->
+        <script type="module"> import '//www.redhat.com/modules/contrib/red_hat_shared_libs/dist/rhds-elements/modules/rh-footer/rh-footer.js'></script>
+        <!--<script type="module" src="//www.redhat.com/modules/contrib/red_hat_shared_libs/dist/rhds-elements/modules/rh-global-footer/rh-global-footer.js"></script>-->
         <!-- Vendors -->        
         <script src="//www.redhat.com/sites/all/libraries/webrh/dist/js/webrh.webcomponents.min.js"></script>        
         <script src="//www.redhat.com/ux/webdms/js/vendors/jquery.waypoints.min.js"></script>       
@@ -447,8 +452,8 @@
          <script src="//www.redhat.com/ux/webdms/js/scripts.min.js"></script>        
 
          <!-- Project -->       
-          <script src="/assets/js/design-redhat.min.js?t=1722874025912"></script>
-          <script src="/assets/js/design-principles.min.js?t=1722874025912"></script>
+          <script src="/assets/js/design-redhat.min.js?t=1731955051104"></script>
+          <script src="/assets/js/design-principles.min.js?t=1731955051104"></script>
 
           
       </body>
