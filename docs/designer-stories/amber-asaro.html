@@ -1,73 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="cleartype" content="on">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
-        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <meta charset="utf-8" />
+        <meta http-equiv="cleartype" content="on" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- TITLE start -->
+        <!-- TITLE start -->
 
         <title>Design at Red Hat</title>
 
-<!-- TITLE end -->
+        <!-- TITLE end -->
 
-<!-- DESCRIPTION start -->
+        <!-- DESCRIPTION start -->
 
-        <meta name="description" content="Design at Red Hat is created in the same way we create our technology—using open source principles as the foundation. Learn how we design collaboratively to make better experiences for real people.">
+        <meta
+            name="description"
+            content="Design at Red Hat is created in the same way we create our technology—using open source principles as the foundation. Learn how we design collaboratively to make better experiences for real people."
+        />
 
-<!-- DESCRIPTION end -->
+        <!-- DESCRIPTION end -->
 
-<!-- SOCIAL start -->
+        <!-- SOCIAL start -->
 
-        <meta property="og:title" content="Design at Red Hat">
-        <meta property="og:site_name" content="Design at Red Hat">
-        <meta property="og:url" content="design.redhat.com">
-        <meta property="og:description" content="Design at Red Hat is created in the same way we create our technology—using open source principles as the foundation. Learn how we design collaboratively to make better experiences for real people.">
-        <meta property="og:type" content="Website">
-        <meta property="og:image" content="https://redhat-ux.github.io/red-hat-design-site/assets/img/global/social-og-design-dot-1200x675.png">
+        <meta property="og:title" content="Design at Red Hat" />
+        <meta property="og:site_name" content="Design at Red Hat" />
+        <meta property="og:url" content="design.redhat.com" />
+        <meta
+            property="og:description"
+            content="Design at Red Hat is created in the same way we create our technology—using open source principles as the foundation. Learn how we design collaboratively to make better experiences for real people."
+        />
+        <meta property="og:type" content="Website" />
+        <meta
+            property="og:image"
+            content="https://redhat-ux.github.io/red-hat-design-site/assets/img/global/social-og-design-dot-1200x675.png"
+        />
 
-<!-- SOCIAL end -->
+        <!-- SOCIAL end -->
 
-<!-- ICONS start -->
+        <!-- ICONS start -->
 
-        <link rel="shortcut icon" href="/assets/img/svg/logo-red-hat.svg">
+        <link rel="shortcut icon" href="/assets/img/svg/logo-red-hat.svg" />
 
-<!-- ICONS end -->
+        <!-- ICONS end -->
 
-<!-- ASSETS start -->
+        <!-- ASSETS start -->
 
-        <link rel="stylesheet" href="https://static.redhat.com/libs/redhat/redhat-font/4/webfonts/red-hat-font.min.css">
-        <link rel="stylesheet" href="https://static.redhat.com/libs/redhat/redhat-theme/6/advanced-theme.css">
+        <link
+            rel="stylesheet"
+            href="https://static.redhat.com/libs/redhat/redhat-font/4/webfonts/red-hat-font.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://static.redhat.com/libs/redhat/redhat-theme/6/advanced-theme.css"
+        />
 
         <!-- uviversal footer style -->
         <link
             rel="stylesheet"
             href="https://www.redhat.com/modules/contrib/red_hat_shared_libs/dist/rhds-elements/modules/rh-footer/rh-footer-lightdom.css"
-        />   
+        />
 
         <!-- FONTS -->
-        <link rel="stylesheet" href="//static.redhat.com/libs/redhat/redhat-font/latest/webfonts/red-hat-font.css">
+        <link
+            rel="stylesheet"
+            href="//static.redhat.com/libs/redhat/redhat-font/latest/webfonts/red-hat-font.css"
+        />
 
         <!-- CSS -->
         <!-- Vendors -->
-        <link rel="stylesheet" href="//static.redhat.com/libs/redhat/redhat-theme/6/advanced-theme.css">
+        <link rel="stylesheet" href="//static.redhat.com/libs/redhat/redhat-theme/6/advanced-theme.css" />
 
         <!-- Studio Web -->
-        <link rel="stylesheet" href="//www.redhat.com/ux/webdms/css/styles.min.css">
+        <link
+            rel="stylesheet"
+            href="//www.redhat.com/ux/webdms/css/styles.min.css"
+        />
 
         <!-- Project -->
-        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1732121064986">
+        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1732124880858" />
 
         <!-- SCRIPTS -->
         <!-- Libraries -->
         <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 
-<!-- ASSETS end -->
+        <!-- Imports -->
+        <script type="importmap">
+            {
+                "imports": {
+                    "@rhds/elements/": "https://www.redhatstatic.com/dx/v1-alpha/@rhds/elements@1.4.1/elements/",
+                    "@rhds/elements/lib/": "https://www.redhatstatic.com/dx/v1-alpha/@rhds/elements@1.4.1/lib/"
+                }
+            }
+        </script>
 
+        <!-- ASSETS end -->
     </head>
 
-    <body class="rh-design">
+    <body class="rh-design"></body>
+</html>
+
 
 <!-- HTML start -->
 
@@ -430,24 +462,24 @@
 
 <!-- SCRIPTS start -->
 
-        <!-- RH Components --> 
+        <!-- RH Components -->
         <script src="//www.redhat.com/modules/contrib/webrh/js/webrh.webcomponents.min.js"></script>
-        <!--<script type="module">
-            import '//www.redhatstatic.com/dx/studio/rhds-elements/modules/rh-footer-entry.js';
-        </script>-->
-        <script type="module"> import '//www.redhat.com/modules/contrib/red_hat_shared_libs/dist/rhds-elements/modules/rh-footer/rh-footer.js'></script>
-        <script type="module" src="//www.redhat.com/modules/contrib/red_hat_shared_libs/dist/rhds-elements/modules/rh-footer/rh-footer-universal.js"></script>
-        <!-- Vendors -->        
-        <script src="//www.redhat.com/sites/all/libraries/webrh/dist/js/webrh.webcomponents.min.js"></script>        
-        <script src="//www.redhat.com/ux/webdms/js/vendors/jquery.waypoints.min.js"></script>       
+        <script type="module">
+            import '@rhds/elements/rh-footer/rh-footer-universal.js';
+        </script>
 
-         <!-- Studio Web -->        
-         <script src="//www.redhat.com/ux/webdms/js/scripts.min.js"></script>        
+        <!-- Vendors -->
+        <script src="//www.redhat.com/sites/all/libraries/webrh/dist/js/webrh.webcomponents.min.js"></script>
+        <script src="//www.redhat.com/ux/webdms/js/vendors/jquery.waypoints.min.js"></script>
 
-         <!-- Project -->       
-          <script src="/assets/js/design-redhat.min.js?t=1732121064986"></script>
-          <script src="/assets/js/design-principles.min.js?t=1732121064986"></script>
+        <!-- Studio Web -->
+        <script src="//www.redhat.com/ux/webdms/js/scripts.min.js"></script>
 
-          
-      </body>
-      </html>
+        <!-- Project -->
+        <script src="/assets/js/design-redhat.min.js?t=1732124880858"></script>
+        <script src="/assets/js/design-principles.min.js?t=1732124880858"></script>
+
+<!-- SCRIPTS end -->
+
+    </body>
+</html>

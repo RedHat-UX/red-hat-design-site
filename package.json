@@ -45,8 +45,6 @@
         "gulp-plumber": "1.1.0",
         "gulp-rename": "2.0.0",
         "gulp-sass": "5.1.0",
-        "gulp-shell": "0.8.0",
-        "gulp-sourcemaps": "3.0.0",
         "gulp-strip-css-comments": "2.0.0",
         "gulp-strip-debug": "4.0.0",
         "gulp-uglify-es": "3.0.0",
