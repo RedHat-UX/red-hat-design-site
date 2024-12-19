@@ -50,7 +50,7 @@
         "mozjpeg": "^8.0.0",
         "optipng-bin": "9.0.0",
         "path": "0.12.7",
-        "sass": "1.53.0"
+        "sass": "^1.83.0"
     },
     "browserslist": [
         "last 2 versions"
