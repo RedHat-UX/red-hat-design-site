@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="cleartype" content="on" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- SEO start -->
+
+        <title>Design at Red Hat</title>
+        <meta
+            name="description"
+            content="Design at Red Hat is created in the same way we create our technology—using open source principles as the foundation. Learn how we design collaboratively to make better experiences for real people."
+        />
+
+        <!-- SEO end -->
+
+        <!-- SOCIAL start -->
+
+        <meta property="og:title" content="Design at Red Hat" />
+        <meta property="og:site_name" content="Design at Red Hat" />
+        <meta property="og:url" content="design.redhat.com" />
+        <meta
+            property="og:description"
+            content="Design at Red Hat is created in the same way we create our technology—using open source principles as the foundation. Learn how we design collaboratively to make better experiences for real people."
+        />
+        <meta property="og:type" content="Website" />
+        <meta
+            property="og:image"
+            content="https://redhat-ux.github.io/red-hat-design-site/assets/img/global/social-og-design-dot-1200x675.png"
+        />
+
+        <!-- SOCIAL end -->
+
+        <!-- ICONS start -->
+
+        <link rel="shortcut icon" href="/assets/img/svg/logo-red-hat.svg" />
+
+        <!-- ICONS end -->
+
+        <!-- ASSETS start -->
+
+        <!-- FONTS -->
+        <link
+            rel="stylesheet"
+            href="//static.redhat.com/libs/redhat/redhat-font/latest/webfonts/red-hat-font.css"
+        />
+
+        <!-- CSS -->
+        <!-- Red Hat -->
+        <link
+            rel="stylesheet"
+            href="//static.redhat.com/libs/redhat/redhat-theme/6/advanced-theme.css"
+        />
+
+        <!-- Vendors -->
+        <link rel="stylesheet" href="//static.redhat.com/libs/redhat/redhat-theme/6/advanced-theme.css" />
+
+        <!-- RH Components -->
+        <link
+            rel="stylesheet"
+            href="//www.redhat.com/modules/contrib/red_hat_shared_libs/dist/rhds-elements/modules/rh-footer/rh-footer-lightdom.css"
+        />
+
+        <!-- WebDMS -->
+        <link
+            rel="stylesheet"
+            href="//www.redhat.com/ux/webdms/css/styles.min.css"
+        />
+
+        <!-- Project -->
+        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1734643985191" />
+
+        <!-- SCRIPTS -->
+        <!-- Libraries -->
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+        <!-- Imports -->
+        <script type="importmap">
+            {
+                "imports": {
+                    "@rhds/elements/": "https://www.redhatstatic.com/dx/v1-alpha/@rhds/elements@1.4.1/elements/",
+                    "@rhds/elements/lib/": "https://www.redhatstatic.com/dx/v1-alpha/@rhds/elements@1.4.1/lib/"
+                }
+            }
+        </script>
+
+        <!-- ASSETS end -->
+    </head>
+
+    <body class="rh-design"></body>
+</html>
+
+
+<!-- HTML start -->
+
+<header id="top" class="dms-band rh-design-nav-top py-2 bg-black">
+    <div class="text-white">
+        <div class="row d-flex align-items-center">
+            <div class="col-6 pl-4">
+                <a href="/" title="Red Hat Design logo">
+                    <img class="svg" src="/assets/img/svg/logo-rh-design.svg" width="154" height="48" alt="Red Hat Design logo">
+                </a>
+            </div>
+
+            <div class="col-6 rh-design-nav-toggle-wrapper pr-4">
+                <a href="#" class="btn btn-toggle" data-toggle="nav-shelf">
+                    <div class="d-inline-block">
+                        <span class="menu-bar"></span>
+
+                        <span class="menu-bar"></span>
+
+                        <span class="menu-bar"></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="dms-band rh-design-nav-shelf py-0 border-right">
+    <div class="nav-container pb-4">
+        <div id="rhDesignNav" class="accordion pb-0">
+            <div class="nav-group-wrapper nav-button design-nav-item">
+                <a href="/" class="overview py-2 pl-4 d-block">
+                   Overview
+                </a>
+            </div>
+
+            <!-- <div class="nav-group-wrapper nav-button design-nav-item">
+                <a href="/designer-stories" class="py-2 pl-4 d-block">
+                    Designer stories
+                </a>
+            </div> -->
+            <div class="nav-group-wrapper">
+                <button id="stories-btn" class="nav-button accordion-toggle collapsed py-2 pl-4" data-toggle="collapse" data-target="#stories">
+                    <p>Designer stories</p>
+                </button>
+        
+                <div id="stories" class="accordion-panel collapse pr-0" data-parent="#rhDesignNav">
+                    <ul class="mb-0 pl-2 pb-0 list-unstyled">
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=all" title="All stories">All stories&nbsp;</a>
+                        </li>
+        
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=brand" title="Design at Red Hat" data-filter="brand">Brand</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=creative" title="Design at Red Hat">Creative direction</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=digital" title="Design at Red Hat">Digital</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=leadership" title="Design at Red Hat">Leadership</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=product" title="Design at Red Hat">Product</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=systems" title="Design at Red Hat">Systems</a>
+                        </li>
+                        <li class="story design-nav-item">
+                            <a class="py-1 pl-2 d-block" href="/designer-stories?category=ux" title="Design at Red Hat">UX</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-group-wrapper nav-button design-nav-item">
+                <a href="/design-principles" class="py-2 pl-4 d-block">
+                   Design principles
+                </a>
+            </div>
+            <div class="nav-group-wrapper nav-button design-nav-item">
+                <a class="py-2 pl-4 d-block" href="/release-notes" title="Release notes">Release&nbsp;notes</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mb-6">&nbsp;</div>
+
+
+<section class="hero dms-band pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-xl-10 offset-xl-2 px-0">
+                <img class="img-fluid hero-img" src="/assets/img/pages/designer-stories/matt-carrano/img-hero.png" alt="Matt Carrano's desk">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-9 offset-lg-2 offset-xl-3 mt-n9">
+                <div class="media align-items-center pt-4 pl-2">
+                    <img class="mr-3 designer-img rounded-circle border-white" src="/assets/img/pages/designer-stories/matt-carrano/img-avatar.png" alt="Matt Carrano photo">
+
+                    <div class="media-body pt-6">
+                        <h2 class="my-0 my-md-1 font-size-lg-36">Matt Carrano</h2>
+
+                        <p class="mb-1">Principal Operations Specialist, UXD Operations / Boston, MA</p>
+
+                        <p class="font-size-14"><a href="//www.linkedin.com/in/matt-carrano-9388451/" title="LinkedIn">LinkedIn</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="designer-content dms-band pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="text-red font-size-32 font-weight-light designer-question">Describe your core responsibilities at Red&nbsp;Hat.</h3>
+                    </div>
+                    <div class="col-md-7 offset-md-1">I look for ways to improve efficiency and enable designers and researchers on our team to work more effectively and raise the visibility of user experience design within Red&nbsp;Hat.</p>
+                    </div>
+                </div>
+                <div class="row pt-4 pt-md-8">
+                    <div class="col-md-4">
+                        <h3 class="text-red font-size-32 font-weight-light designer-question">How do you get inspired first thing in the morning?</h3>
+                    </div>
+                    <div class="col-md-7 offset-md-1">
+                        <p>I’ve never considered myself a morning person. My ideal morning routine is to sit with a cup of coffee and ease into my day. I often find inspiration from reading articles and posts on UX that come into my inbox or across my feed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="pt-4 pt-md-6 border-bottom border-red"></div>
+            </div>
+        </div>
+        <div class="row pt-8">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="row">
+                    <div class="col-md-8">
+                        <img class="img-fluid" src="/assets/img/pages/designer-stories/matt-carrano/img-patternfly.png" alt="PatternFly">
+                    </div>
+                    <div class="col-md-4 pt-2 pt-md-0">
+                        <p class="font-size-16"><strong>PatternFly</strong><br>PatternFly is an open source design system that enables teams to create consistent and scalable enterprise products. PatternFly is sponsored and maintained by Red Hat, but is open to all. This is the homepage and navigation for Patternfly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="pt-4 pt-md-8 border-bottom border-red"></div>
+            </div>
+        </div>
+        <div class="row pt-4 pt-md-8">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="text-red font-size-32 font-weight-light designer-question">What makes designing at Red Hat unique?</h3>
+                    </div>
+                    <div class="col-md-7 offset-md-1">
+                        <p>Prior to coming to Red&nbsp;Hat, I had worked for years in proprietary software companies. I was surprised and impressed with the transparency that I found at Red Hat. It’s not a culture for everyone, but it’s a great place to be a designer if you believe that optimal solutions will come from collaboration and a free and open sharing of ideas.</p>
+                    </div>
+                </div>
+                <div class="row pt-4 pt-md-8">
+                    <div class="col-md-4">
+                        <h3 class="text-red font-size-32 font-weight-light designer-question">How are you incorporating open source principles into your designs or design processes?</h3>
+                    </div>
+                    <div class="col-md-7 offset-md-1">
+                        <p>I’ve always felt like the best designs come out of the integration of different perspectives. I regularly seek out the input of other designers as well as non-designers in my process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="pt-4 pt-md-6 border-bottom border-red"></div>
+            </div>
+        </div>
+
+        <div class="row pt-8">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="row">
+                    <div class="col-md-2">
+                        <h4 class="font-size-16">Matt Carrano</h4>
+                    </div>
+                    <div class="col-md-9 offset-md-1">
+                        <img class="svg quote mb-3" src="/assets/img/svg/icon-quote.svg" alt="Quote icon">
+                        <h2 class="xl"> the best designs come out of the integration of different perspectives.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="pt-4 pt-md-6 border-bottom border-red"></div>
+            </div>
+        </div>
+
+        <div class="row pt-4 pt-md-8">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="text-red font-size-32 font-weight-light designer-question">How do you think diverse voices and perspectives make the design process stronger?</h3>
+                    </div>
+                    <div class="col-md-7 offset-md-1">
+                        <p>Everyone brings their own prior experiences and knowledge to the table when considering design. Developers bring knowledge about the underlying technologies that will help realize the design. Content designers are experts in the use of language. Researchers can deliver insights about those who will use the software. A support engineer will understand customer pain points.  A good design will integrate all of these perspectives into a cohesive solution that delivers value for the target user.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="pt-4 pt-md-6 border-bottom border-red"></div>
+            </div>
+        </div>
+
+        <div class="row pt-4 pt-md-8">
+            <div class="col-12 col-xl-10 offset-xl-2">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="text-red font-size-32 font-weight-light designer-question">How does your design work contribute to the creation of helpful and accessible experiences?</h3>
+                    </div>
+                    <div class="col-md-7 offset-md-1">
+                        <p>Most of my career at Red&nbsp;Hat has been focused on developing systems and processes that will enable other designers and developers to create quality experiences for our customers. This includes my work on PatternFly, our open source design system for Red&nbsp;Hat products, and more recently in my role as part of the UXD Operations team. Having these systems in place helps Red&nbsp;Hatters to more efficiently deliver value-added solutions that are consistent and attuned to user needs.</p>
+                    </div>
+                </div>
+                <div class="row pt-4 pt-md-8">
+                    <div class="col-md-4">
+                        <h3 class="text-red font-size-32 font-weight-light designer-question">What does open design mean to you?</h3>
+                    </div>
+                    <div class="col-md-7 offset-md-1">
+                        <p>As I stated earlier, I feel like open design is primarily about collaboration and inviting multiple voices and perspectives into the creative process.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<footer class="design-footer">
+<rh-surface color-palette="darker">
+<rh-footer-universal color-palette="darker">
+  <h3 slot="links-primary" data-analytics-text="Red Hat legal and privacy links" hidden="">Red Hat legal and privacy links</h3>
+  <ul slot="links-primary" data-analytics-region="page-footer-bottom-primary">
+    <li><a href="https://redhat.com/en/about/company" data-analytics-category="Footer|Corporate" data-analytics-text="About Red Hat">About Red Hat</a></li>
+    <li><a href="https://redhat.com/en/jobs" data-analytics-category="Footer|Corporate" data-analytics-text="Jobs">Jobs</a></li>
+    <li><a href="https://redhat.com/en/events" data-analytics-category="Footer|Corporate" data-analytics-text="Events">Events</a></li>
+    <li><a href="https://redhat.com/en/about/office-locations" data-analytics-category="Footer|Corporate" data-analytics-text="Locations">Locations</a></li>
+    <li><a href="https://redhat.com/en/contact" data-analytics-category="Footer|Corporate" data-analytics-text="Contact Red Hat">Contact Red Hat</a></li>
+    <li><a href="https://redhat.com/en/blog" data-analytics-category="Footer|Corporate" data-analytics-text="Red Hat Blog">Red Hat Blog</a></li>
+    <li><a href="https://redhat.com/en/about/our-culture/diversity-equity-inclusion" data-analytics-category="Footer|Corporate" data-analytics-text="Diversity equity and inclusion">Diversity, equity, and inclusion</a></li>
+    <li><a href="https://coolstuff.redhat.com/" data-analytics-category="Footer|Corporate" data-analytics-text="Cool Stuff Store">Cool Stuff Store</a></li>
+    <li><a href="https://www.redhat.com/en/summit" data-analytics-category="Footer|Corporate" data-analytics-text="Red Hat Summit">Red Hat Summit</a></li>
+  </ul>
+  <rh-footer-copyright slot="links-secondary">© 2024 Red Hat, Inc.</rh-footer-copyright>
+  <h3 slot="links-secondary" data-analytics-text="Red Hat legal and privacy links" hidden="">Red Hat legal and privacy links</h3>
+  <ul slot="links-secondary" data-analytics-region="page-footer-bottom-secondary">
+    <li><a href="https://redhat.com/en/about/privacy-policy" data-analytics-category="Footer|Red Hat legal and privacy links" data-analytics-text="Privacy statement">Privacy statement</a></li>
+    <li><a href="https://redhat.com/en/about/terms-use" data-analytics-category="Footer|Red Hat legal and privacy links" data-analytics-text="Terms of use">Terms of use</a></li>
+    <li><a href="https://redhat.com/en/about/all-policies-guidelines" data-analytics-category="Footer|Red Hat legal and privacy links" data-analytics-text="All policies and guidelines">All policies and guidelines</a></li>
+    <li><a href="https://redhat.com/en/about/digital-accessibility" data-analytics-category="Footer|Red Hat legal and privacy links" data-analytics-text="Digital accessibility" class="active">Digital accessibility</a></li>
+  </ul>
+  
+</rh-footer-universal>
+</rh-surface>
+</footer>
+
+
+
+
+
+<!-- HTML end -->
+
+<!-- SCRIPTS start -->
+
+        <!-- RH Components -->
+        <script src="//www.redhat.com/modules/contrib/webrh/js/webrh.webcomponents.min.js"></script>
+        <script type="module">
+            import '@rhds/elements/rh-footer/rh-footer-universal.js';
+        </script>
+
+        <!-- Vendors -->
+        <script src="//www.redhat.com/sites/all/libraries/webrh/dist/js/webrh.webcomponents.min.js"></script>
+        <script src="//www.redhat.com/ux/webdms/js/vendors/jquery.waypoints.min.js"></script>
+
+        <!-- Studio Web -->
+        <script src="//www.redhat.com/ux/webdms/js/scripts.min.js"></script>
+
+        <!-- Project -->
+        <script src="/assets/js/design-redhat.min.js?t=1734643985191"></script>
+        <script src="/assets/js/design-principles.min.js?t=1734643985191"></script>
+
+<!-- SCRIPTS end -->
+
+    </body>
+</html>
