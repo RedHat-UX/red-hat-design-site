@@ -56,7 +56,9 @@
         "sass": "^1.83.0"
     },
     "browserslist": [
-        "last 2 versions"
+        "last 2 versions",
+        "not dead",
+        "> 0.2%"
     ],
     "paths": {
         "repo": {
