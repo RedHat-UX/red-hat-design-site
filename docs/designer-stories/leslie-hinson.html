@@ -58,10 +58,8 @@
         <link rel="stylesheet" href="//static.redhat.com/libs/redhat/redhat-theme/6/advanced-theme.css" />
 
         <!-- RH Components -->
-        <link
-            rel="stylesheet"
-            href="//www.redhat.com/modules/contrib/red_hat_shared_libs/dist/rhds-elements/modules/rh-footer/rh-footer-lightdom.css"
-        />
+        <link rel="stylesheet"
+      href="https://www.redhatstatic.com/dssf-001/v2/@rhds/elements@3.0.4/rh-footer/rh-footer-lightdom.css">
 
         <!-- WebDMS -->
         <link
@@ -70,7 +68,7 @@
         />
 
         <!-- Project -->
-        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1750254247440" />
+        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1754402860025" />
 
         <!-- SCRIPTS -->
         <!-- Libraries -->
@@ -80,8 +78,8 @@
         <script type="importmap">
             {
                 "imports": {
-                    "@rhds/elements/": "https://www.redhatstatic.com/dx/v1-alpha/@rhds/elements@1.4.1/elements/",
-                    "@rhds/elements/lib/": "https://www.redhatstatic.com/dx/v1-alpha/@rhds/elements@1.4.1/lib/"
+                    "@rhds/elements/": "https://www.redhatstatic.com/dssf-001/v2/@rhds/elements@3.0.3/elements/",
+                    "@rhds/elements/lib/": "https://www.redhatstatic.com/dssf-001/v2/@rhds/elements@3.0.3/lib/"
                 }
             }
         </script>
@@ -336,9 +334,9 @@
 </section>
 
 
-<footer class="design-footer">
-<rh-surface color-palette="darker">
-<rh-footer-universal color-palette="darker">
+<rh-footer class="design-footer" color-palette="darker">
+<!-- <rh-surface color-palette="darkest"> -->
+<rh-footer-universal slot="universal">
   <h3 slot="links-primary" data-analytics-text="Red Hat legal and privacy links" hidden="">Red Hat legal and privacy links</h3>
   <ul slot="links-primary" data-analytics-region="page-footer-bottom-primary">
     <li><a href="https://redhat.com/en/about/company" data-analytics-category="Footer|Corporate" data-analytics-text="About Red Hat">About Red Hat</a></li>
@@ -361,8 +359,8 @@
   </ul>
   
 </rh-footer-universal>
-</rh-surface>
-</footer>
+<!-- </rh-surface> -->
+</rh-footer>
 
 
 
@@ -375,7 +373,7 @@
         <!-- RH Components -->
         <script src="//www.redhat.com/modules/contrib/webrh/js/webrh.webcomponents.min.js"></script>
         <script type="module">
-            import '@rhds/elements/rh-footer/rh-footer-universal.js';
+            import '@rhds/elements/rh-footer/rh-footer.js';
         </script>
 
         <!-- Vendors -->
@@ -386,8 +384,8 @@
         <script src="//www.redhat.com/ux/webdms/js/scripts.min.js"></script>
 
         <!-- Project -->
-        <script src="/assets/js/design-redhat.min.js?t=1750254247440"></script>
-        <script src="/assets/js/design-principles.min.js?t=1750254247440"></script>
+        <script src="/assets/js/design-redhat.min.js?t=1754402860025"></script>
+        <script src="/assets/js/design-principles.min.js?t=1754402860025"></script>
 
 <!-- SCRIPTS end -->
 
