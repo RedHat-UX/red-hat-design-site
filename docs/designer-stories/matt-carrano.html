@@ -59,7 +59,7 @@
 
         <!-- RH Components -->
         <link rel="stylesheet"
-      href="https://www.redhatstatic.com/dssf-001/v2/@rhds/elements@3.0.4/rh-footer/rh-footer-lightdom.css">
+      href="https://www.redhatstatic.com/dssf-001/v2/@rhds/elements@3.0.3/rh-footer/rh-footer-lightdom.css">
 
         <!-- WebDMS -->
         <link
@@ -68,7 +68,7 @@
         />
 
         <!-- Project -->
-        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1754402860037" />
+        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1754413039089" />
 
         <!-- SCRIPTS -->
         <!-- Libraries -->
@@ -76,13 +76,41 @@
 
         <!-- Imports -->
         <script type="importmap">
-            {
-                "imports": {
-                    "@rhds/elements/": "https://www.redhatstatic.com/dssf-001/v2/@rhds/elements@3.0.3/elements/",
-                    "@rhds/elements/lib/": "https://www.redhatstatic.com/dssf-001/v2/@rhds/elements@3.0.3/lib/"
-                }
-            }
-        </script>
+ {
+  "imports": {
+    "@rhds/elements/": "https://www.redhatstatic.com/dssf-001/v2/@rhds/elements@3.0.3/elements/",
+    "@patternfly/elements/": "https://www.redhatstatic.com/dssf-001/v2/@patternfly/elements@4.1.0/",
+    "@patternfly/icons/": "https://www.redhatstatic.com/dssf-001/v2/@patternfly/icons@1.0.3/",
+    "@patternfly/pfe-core/": "https://www.redhatstatic.com/dssf-001/v2/@patternfly/pfe-core@5.0.1/"
+  },
+  "scopes": {
+    "https://www.redhatstatic.com/dssf-001/v2/": {
+      "@floating-ui/core": "https://www.redhatstatic.com/dssf-001/v2/@floating-ui/core@1.6.9/dist/floating-ui.core.mjs",
+      "@floating-ui/dom": "https://www.redhatstatic.com/dssf-001/v2/@floating-ui/dom@1.6.13/dist/floating-ui.dom.mjs",
+      "@floating-ui/utils": "https://www.redhatstatic.com/dssf-001/v2/@floating-ui/utils@0.2.9/dist/floating-ui.utils.mjs",
+      "@floating-ui/utils/dom": "https://www.redhatstatic.com/dssf-001/v2/@floating-ui/utils@0.2.9/dist/floating-ui.utils.dom.mjs",
+      "@lit/context": "https://www.redhatstatic.com/dssf-001/v2/@lit/context@1.1.4/development/index.js",
+      "@lit/reactive-element": "https://www.redhatstatic.com/dssf-001/v2/@lit/reactive-element@2.0.4/reactive-element.js",
+      "@lit/reactive-element/decorators/": "https://www.redhatstatic.com/dssf-001/v2/@lit/reactive-element@2.0.4/decorators/",
+      "@patternfly/pfe-core": "https://www.redhatstatic.com/dssf-001/v2/@patternfly/pfe-core@5.0.1/core.js",
+      "@patternfly/pfe-core/": "https://www.redhatstatic.com/dssf-001/v2/@patternfly/pfe-core@5.0.1/",
+      "@patternfly/icons": "https://www.redhatstatic.com/dssf-001/v2/@patternfly/icons@1.0.3",
+      "@patternfly/icons/": "https://www.redhatstatic.com/dssf-001/v2/@patternfly/icons@1.0.3/",
+      "@rhds/elements/lib/": "https://www.redhatstatic.com/dssf-001/v2/@rhds/elements@3.0.3/lib/",
+      "@rhds/icons": "https://www.redhatstatic.com/dssf-001/v2/@rhds/icons@1.2.0/icons.js",
+      "@rhds/icons/": "https://www.redhatstatic.com/dssf-001/v2/@rhds/icons@1.2.0/",
+      "@rhds/tokens/media.js": "https://www.redhatstatic.com/dssf-001/v2/@rhds/tokens@3.0.1/js/media.js",
+      "@rhds/tokens/": "https://www.redhatstatic.com/dssf-001/v2/@rhds/tokens@3.0.1/",
+      "lit": "https://www.redhatstatic.com/dssf-001/v2/lit@3.2.1/index.js",
+      "lit/": "https://www.redhatstatic.com/dssf-001/v2/lit@3.2.1/",
+      "lit-element/lit-element.js": "https://www.redhatstatic.com/dssf-001/v2/lit-element@4.1.1/lit-element.js",
+      "lit-html": "https://www.redhatstatic.com/dssf-001/v2/lit-html@3.2.1/lit-html.js",
+      "lit-html/": "https://www.redhatstatic.com/dssf-001/v2/lit-html@3.2.1/",
+      "tslib": "https://www.redhatstatic.com/dssf-001/v2/tslib@2.8.1/tslib.es6.mjs"
+    }
+  }
+}
+</script>
 
         <!-- ASSETS end -->
     </head>
@@ -343,7 +371,7 @@
 
 <rh-footer class="design-footer" color-palette="darker">
 <!-- <rh-surface color-palette="darkest"> -->
-<rh-footer-universal slot="universal">
+<rh-footer-universal slot="universal" color-palette="darker">
   <h3 slot="links-primary" data-analytics-text="Red Hat legal and privacy links" hidden="">Red Hat legal and privacy links</h3>
   <ul slot="links-primary" data-analytics-region="page-footer-bottom-primary">
     <li><a href="https://redhat.com/en/about/company" data-analytics-category="Footer|Corporate" data-analytics-text="About Red Hat">About Red Hat</a></li>
@@ -380,6 +408,7 @@
         <!-- RH Components -->
         <script src="//www.redhat.com/modules/contrib/webrh/js/webrh.webcomponents.min.js"></script>
         <script type="module">
+            import '@rhds/elements/rh-cta/rh-cta.js';
             import '@rhds/elements/rh-footer/rh-footer.js';
         </script>
 
@@ -391,8 +420,8 @@
         <script src="//www.redhat.com/ux/webdms/js/scripts.min.js"></script>
 
         <!-- Project -->
-        <script src="/assets/js/design-redhat.min.js?t=1754402860037"></script>
-        <script src="/assets/js/design-principles.min.js?t=1754402860037"></script>
+        <script src="/assets/js/design-redhat.min.js?t=1754413039089"></script>
+        <script src="/assets/js/design-principles.min.js?t=1754413039089"></script>
 
 <!-- SCRIPTS end -->
 
