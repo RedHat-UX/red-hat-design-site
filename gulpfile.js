@@ -142,87 +142,88 @@ function css() {
 // ========================================================================== //
 
 // ========================================================================== //
-//  This task optimizes source image files, and places the files in the destination path.
+//  This task optimizes source image files, and places the files in the
+//  destination path.
 // ========================================================================== //
 
-function images() {
-    return src([pkg.paths.src.img + "**/*"], {
-        since: lastRun(images),
-    })
-        .pipe(
-            imagemin(
-                [
-                    imagemin.gifsicle({
-                        interlaced: true,
-                        optimizationLevel: 3,
-                    }),
-                    imagemin.mozjpeg({
-                        progressive: true,
-                    }),
-                    imagemin.optipng({}),
-                    // imagemin.svgo({
-                    //     plugins: [
-                    //         // { addAttributesToSVGElement: true },
-                    //         // { addClassesToSVGElement: true },
-                    //         { cleanupAttrs: true },
-                    //         { cleanupEnableBackground: true },
-                    //         { cleanupIDs: true },
-                    //         { cleanupListOfValues: true },
-                    //         { cleanupNumericValues: true },
-                    //         { collapseGroups: true },
-                    //         { convertColors: true },
-                    //         // { convertEllipseToCircle: true },
-                    //         { convertPathData: true },
-                    //         // { convertShapeToPath: true },
-                    //         { convertStyleToAttrs: true },
-                    //         { convertTransform: true },
-                    //         { inlineStyles: true },
-                    //         { mergePaths: true },
-                    //         // { minifyStyles: true },
-                    //         // { moveElemsAttrsToGroup: true },
-                    //         // { moveGroupAttrsToElems: true },
-                    //         // { prefixIDs: true },
-                    //         // { removeAttributesBySelector: true },
-                    //         // { removeAttrs: true },
-                    //         { removeComments: true },
-                    //         { removeDesc: true },
-                    //         // { removeDimensions: true },
-                    //         { removeDoctype: true },
-                    //         { removeEditorsNSData: true },
-                    //         // { removeElementsByAttr: true },
-                    //         { removeEmptyAttrs: true },
-                    //         { removeEmptyContainers: true },
-                    //         { removeEmptyText: true },
-                    //         { removeHiddenElems: true },
-                    //         { removeMetadata: true },
-                    //         { removeNonInheritableGroupAttrs: true },
-                    //         // { removeOffCanvasPaths: true },
-                    //         { removeRasterImages: true },
-                    //         { removeScriptElement: true },
-                    //         { removeStyleElement: true },
-                    //         { removeTitle: true },
-                    //         { removeUnknownsAndDefaults: true },
-                    //         { removeUnusedNS: true },
-                    //         { removeUselessDefs: true },
-                    //         { removeUselessStrokeAndFill: true },
-                    //         { removeViewBox: true },
-                    //         // { removeXMLNS: true },
-                    //         { removeXMLProcInst: true },
-                    //         // { reusePaths: true },
-                    //         { sortAttrs: true },
-                    //         // { sortDefsChildren: true }
-                    //     ]
-                    // })
-                ],
-                {
-                    verbose: true,
-                }
-            )
-        )
-        .pipe(dest([pkg.paths.src.img]))
-        .pipe(directorySync(pkg.paths.src.img, pkg.paths.docs.img))
-        .pipe(browserSync.stream());
-}
+// function images() {
+//     return src([pkg.paths.src.img + "**/*"], {
+//         since: lastRun(images),
+//     })
+//         .pipe(
+//             imagemin(
+//                 [
+//                     imagemin.gifsicle({
+//                         interlaced: true,
+//                         optimizationLevel: 3,
+//                     }),
+//                     imagemin.mozjpeg({
+//                         progressive: true,
+//                     }),
+//                     imagemin.optipng({}),
+//                     // imagemin.svgo({
+//                     //     plugins: [
+//                     //         // { addAttributesToSVGElement: true },
+//                     //         // { addClassesToSVGElement: true },
+//                     //         { cleanupAttrs: true },
+//                     //         { cleanupEnableBackground: true },
+//                     //         { cleanupIDs: true },
+//                     //         { cleanupListOfValues: true },
+//                     //         { cleanupNumericValues: true },
+//                     //         { collapseGroups: true },
+//                     //         { convertColors: true },
+//                     //         // { convertEllipseToCircle: true },
+//                     //         { convertPathData: true },
+//                     //         // { convertShapeToPath: true },
+//                     //         { convertStyleToAttrs: true },
+//                     //         { convertTransform: true },
+//                     //         { inlineStyles: true },
+//                     //         { mergePaths: true },
+//                     //         // { minifyStyles: true },
+//                     //         // { moveElemsAttrsToGroup: true },
+//                     //         // { moveGroupAttrsToElems: true },
+//                     //         // { prefixIDs: true },
+//                     //         // { removeAttributesBySelector: true },
+//                     //         // { removeAttrs: true },
+//                     //         { removeComments: true },
+//                     //         { removeDesc: true },
+//                     //         // { removeDimensions: true },
+//                     //         { removeDoctype: true },
+//                     //         { removeEditorsNSData: true },
+//                     //         // { removeElementsByAttr: true },
+//                     //         { removeEmptyAttrs: true },
+//                     //         { removeEmptyContainers: true },
+//                     //         { removeEmptyText: true },
+//                     //         { removeHiddenElems: true },
+//                     //         { removeMetadata: true },
+//                     //         { removeNonInheritableGroupAttrs: true },
+//                     //         // { removeOffCanvasPaths: true },
+//                     //         { removeRasterImages: true },
+//                     //         { removeScriptElement: true },
+//                     //         { removeStyleElement: true },
+//                     //         { removeTitle: true },
+//                     //         { removeUnknownsAndDefaults: true },
+//                     //         { removeUnusedNS: true },
+//                     //         { removeUselessDefs: true },
+//                     //         { removeUselessStrokeAndFill: true },
+//                     //         { removeViewBox: true },
+//                     //         // { removeXMLNS: true },
+//                     //         { removeXMLProcInst: true },
+//                     //         // { reusePaths: true },
+//                     //         { sortAttrs: true },
+//                     //         // { sortDefsChildren: true }
+//                     //     ]
+//                     // })
+//                 ],
+//                 {
+//                     verbose: true,
+//                 }
+//             )
+//         )
+//         .pipe(dest([pkg.paths.src.img]))
+//         .pipe(directorySync(pkg.paths.src.img, pkg.paths.docs.img))
+//         .pipe(browserSync.stream());
+// }
 
 // ========================================================================== //
 //  JS
@@ -300,7 +301,7 @@ function serve() {
     watch([pkg.paths.src.scss + "**/*.scss"], series(css));
 
     // Images
-    watch([pkg.paths.src.img + "**/*"], series(images));
+    // watch([pkg.paths.src.img + "**/*"], series(images));
 
     // JS
     watch([pkg.paths.src.js + "**/*.js"], series(js));
@@ -315,7 +316,7 @@ function serve() {
 //  server, watches for file changes, and reloads the page when changes are detected.
 // ========================================================================== //
 
-exports.default = series(html, css, images, js, serve);
+exports.default = series(html, css, js, serve);
 
 // ========================================================================== //
 //  BUILD
@@ -326,4 +327,4 @@ exports.default = series(html, css, images, js, serve);
 //  watching for file changes.
 // ========================================================================== //
 
-exports.build = series(html, css, images, js);
+exports.build = series(html, css, js);
