@@ -6,7 +6,7 @@
 const { src, dest, lastRun, watch, series } = require("gulp");
 const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
-const cacheBust = require("gulp-cache-bust");
+// const cacheBust = require("gulp-cache-bust");
 const cleanCss = require("gulp-clean-css");
 const del = require("del");
 const directorySync = require("gulp-directory-sync");
@@ -53,24 +53,26 @@ const banner = [
 // ========================================================================== //
 
 function html() {
-    return src([
-        pkg.paths.src.root + "**/*.html",
-        "!" + pkg.paths.src.root + "partials/**/*.html",
-        "!" + pkg.paths.src.root + "shared/*.html",
-    ])
-        .pipe(
-            fileInclude({
-                prefix: "@@",
-                basepath: "@file",
-            })
-        )
-        .pipe(
-            cacheBust({
-                type: "timestamp",
-            })
-        )
-        .pipe(dest([pkg.paths.docs.root]))
-        .pipe(browserSync.stream());
+    return (
+        src([
+            pkg.paths.src.root + "**/*.html",
+            "!" + pkg.paths.src.root + "partials/**/*.html",
+            "!" + pkg.paths.src.root + "shared/*.html",
+        ])
+            .pipe(
+                fileInclude({
+                    prefix: "@@",
+                    basepath: "@file",
+                })
+            )
+            // .pipe(
+            //     cacheBust({
+            //         type: "timestamp",
+            //     })
+            // )
+            .pipe(dest([pkg.paths.docs.root]))
+            .pipe(browserSync.stream())
+    );
 }
 
 // ========================================================================== //
@@ -147,7 +149,6 @@ function images() {
     return src([pkg.paths.src.img + "**/*"], {
         since: lastRun(images),
     })
-        .pipe(directorySync(pkg.paths.src.img, pkg.paths.docs.img))
         .pipe(
             imagemin(
                 [
@@ -218,7 +219,8 @@ function images() {
                 }
             )
         )
-        .pipe(dest([pkg.paths.docs.img]))
+        .pipe(dest([pkg.paths.src.img]))
+        .pipe(directorySync(pkg.paths.src.img, pkg.paths.docs.img))
         .pipe(browserSync.stream());
 }
 
