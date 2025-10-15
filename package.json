@@ -25,6 +25,7 @@
         "url": "git@github.com:RedHat-UX/red-hat-design-site.git"
     },
     "scripts": {
+        "build": "gulp build",
         "start": "gulp"
     },
     "dependencies": {
