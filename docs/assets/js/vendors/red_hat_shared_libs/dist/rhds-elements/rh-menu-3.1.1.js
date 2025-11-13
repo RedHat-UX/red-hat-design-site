@@ -1,0 +1,10 @@
+import{i as t,a as e,_ as s,c as o,t as r}from"./custom-element-3.1.1.js";import{x as i}from"./lit-html-3.1.1.js";import{e as n}from"./base-3.1.1.js";import{g as a}from"./random-3.1.1.js";import{R as m}from"./roving-tabindex-controller-3.1.1.js";import{t as l}from"./themable-3.1.1.js";
+/**
+ * @license
+ * Copyright 2021 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */function c(t){return(e,s)=>{const{slot:o,selector:r}=t??{},i="slot"+(o?`[name=${o}]`:":not([name])");return n(e,s,{get(){const e=this.renderRoot?.querySelector(i),s=e?.assignedElements(t)??[];return void 0===r?s:s.filter(t=>t.matches(r))}})}}var d,h,u;const p=t`:host{display:contents}slot{display:inline-flex;align-items:stretch;flex-direction:column;width:max-content}::slotted(a){padding:5px!important;color:var(--rh-color-interactive-primary-default)}::slotted(a:hover){color:var(--rh-color-interactive-primary-hover)!important}::slotted(a:visited){color:var(--rh-color-interactive-primary-visited-default)!important}::slotted(a:visited:hover){color:var(--rh-color-interactive-primary-visited-default)!important}`;class f extends Event{constructor(t,e){super("toggle",{bubbles:!0}),this.open=t,this.menu=e}}let v=class extends e{constructor(){super(...arguments),d.add(this),h.set(this,m.of(this,{getItems:()=>this.getItems(this._menuItems)}))}getItems(t){return t}get activeItem(){return o(this,h,"f").items.at(o(this,h,"f").atFocusedItemIndex)}connectedCallback(){super.connectedCallback(),this.id||(this.id=a("menu")),this.setAttribute("role","menu"),o(this,d,"m",u).call(this)}render(){return i`
+      
+      <slot part="menu"
+            @slotchange="${o(this,d,"m",u)}"></slot>
+    `}activateItem(t){o(this,h,"f").atFocusedItemIndex=o(this,h,"f").items.indexOf(t)}focus(){o(this,h,"f").items[o(this,h,"f").atFocusedItemIndex]?.focus()}};h=new WeakMap,d=new WeakSet,u=function(){for(const t of this._menuItems??[])t.setAttribute("role","menuitem")},v.styles=[p],v.shadowRootOptions={...e.shadowRootOptions,delegatesFocus:!0},s([c()],v.prototype,"_menuItems",void 0),v=s([r("rh-menu"),l],v);export{f as M,v as R,c as o};

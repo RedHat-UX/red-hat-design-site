@@ -1,0 +1,178 @@
+:is(rh-footer, rh-footer-universal) a {
+  color: var(--rh-color-interactive-primary-default);
+  text-decoration: none;
+}
+
+:is(rh-footer, rh-footer-universal) :is(rh-footer-block) a {
+  text-decoration: underline var(--rh-border-width-sm, 1px) dashed;
+  text-decoration-color: light-dark(var(--rh-color-gray-50), var(--rh-color-gray-40)) !important;
+  text-underline-offset: max(5px, 0.28em);
+  transition-timing-function: ease;
+  transition-property: text-underline-offset, color, text-decoration-color;
+  transition-duration: 0.3s;
+}
+
+rh-footer [slot^='links'] a {
+  gap: var(--rh-footer-links-gap, var(--rh-space-md, 8px));
+}
+
+:is(rh-footer, rh-footer-universal) [slot^='links'] a {
+  display: block;
+  color: var(--rh-color-text-primary) !important;
+  font-size: var(--rh-footer-link-font-size, var(--rh-font-size-body-text-sm, 0.875rem));
+  width: fit-content;
+}
+
+rh-footer-universal [slot^='links'] a {
+  font-size: inherit;
+}
+
+:is(rh-footer, rh-footer-universal) a:hover {
+  color: var(--rh-color-interactive-primary-hover);
+  text-decoration: underline var(--rh-border-width-sm, 1px) dashed;
+  text-decoration-color: inherit;
+  text-underline-offset: max(5px, 0.28em);
+  transition-timing-function: ease;
+  transition-property: text-underline-offset, color, text-decoration-color;
+  transition-duration: 0.3s;
+}
+
+:is(rh-footer, rh-footer-universal) a:is(:focus, :focus-within) {
+  color: var(--rh-color-interactive-primary-hover);
+  text-decoration: underline dashed var(--rh-border-width-sm, 1px);
+  text-decoration-color: inherit;
+  text-underline-offset: max(5px, 0.28em);
+  transition-timing-function: ease;
+  transition-property: text-underline-offset, color, text-decoration-color;
+  transition-duration: 0.3s;
+}
+
+:is(rh-footer, rh-footer-universal) a:visited {
+  color: var(--rh-color-interactive-primary-hover);
+  text-decoration: none;
+}
+
+/* adds underlines to inline links in rh-footer-block only */
+
+:is(rh-footer, rh-footer-universal) :is(rh-footer-block) a:hover {
+  text-decoration-color: inherit !important;
+  text-underline-offset: max(6px, 0.33em);
+}
+
+:is(rh-footer, rh-footer-universal) :is(rh-footer-block) a:is(:focus, :focus-within) {
+  text-decoration-color: inherit !important;
+  text-underline-offset: max(6px, 0.33em);
+}
+
+:is(rh-footer, rh-footer-universal) :is(rh-footer-block) a:visited {
+  text-decoration-color: inherit;
+}
+
+/* ensure links fully wrap img tags */
+:is(rh-footer, rh-footer-universal) a[slot^='logo'] {
+  display: block;
+}
+
+:is(rh-footer) a[slot^='logo'] > img {
+  display: block;
+  width: auto;
+  height: 100%;
+  height: var(--rh-size-icon-04, 40px);
+}
+
+:is(rh-footer, rh-footer-universal) :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--rh-color-text-primary);
+  font-family: var(--rh-font-family-heading, RedHatDisplay, 'Red Hat Display', Helvetica, Arial, sans-serif);
+  line-height: var(--rh-line-height-heading, 1.3);
+}
+
+rh-footer [slot='links']:is(h1, h2, h3, h4, h5):nth-of-type(n+5) {
+  --_link-header-margin: calc(var(--rh-space-2xl, 32px) - var(--rh-space-lg, 16px));
+}
+
+:is(rh-footer, rh-footer-universal) [slot^='links'] li {
+  margin: 0;
+  padding: 0;
+  display: contents;
+}
+
+/**
+ * Section side gap
+ */
+:is(rh-footer, rh-footer-universal) {
+  --rh-footer-section-side-gap: var(--rh-space-lg, 16px);
+
+  color-scheme: only dark;
+  overflow-y: auto;
+
+  & > :not([slot='logo'], rh-footer-universal) {
+    animation-name: var(--_fallback-animation, deopacitize-footer);
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    opacity: var(--_fallback-opacity);
+  }
+}
+
+/* (min-width: --rh-breakpoint-sm) */
+@media screen and (min-width: 768px) {
+  :is(rh-footer, rh-footer-universal) {
+    --rh-footer-section-side-gap: var(--rh-space-2xl, 32px);
+  }
+}
+
+/* (min-width: --rh-breakpoint-xl) */
+@media screen and (min-width: 1440px) {
+  :is(rh-footer, rh-footer-universal) {
+    --rh-footer-section-side-gap: var(--rh-space-4xl, 64px);
+  }
+}
+
+/**
+ * No JS Experience
+ */
+rh-footer:not(:defined) {
+  background-color: var(--rh-color-surface-darker, #1f1f1f);
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    'footer'
+    'global';
+  grid-template-rows: 1fr auto;
+  min-height: var(--rh-footer-nojs-min-height, 750px);
+}
+
+:is(rh-footer, rh-footer-universal):not(:defined) {
+  p {
+    color: var(--rh-color-text-secondary-on-dark, #c7c7c7);
+  }
+
+  & :is(h1, h2, h3, h4, h5, h6) {
+    &[slot='links'],
+    &[slot='header'] {
+      font-size: var(--rh-footer-link-header-font-size, var(--rh-font-size-body-text-sm, 0.875rem));
+      font-weight: var(--rh-font-weight-heading-medium, 500);
+    }
+  }
+}
+
+@keyframes deopacitize-footer {
+  0% { --_fallback-opacity: 0; }
+  99% { --_fallback-opacity: 0; }
+  100% { --_fallback-opacity: 1; }
+}
+
+rh-footer-universal:not(:defined) {
+  background-color: var(--rh-color-surface-darkest, #151515);
+  display: block;
+  width: 100%;
+  min-height: 176px;
+
+  &:before {
+    grid-area: global;
+  }
+}
+
+rh-footer-universal rh-footer-copyright {
+  grid-column: -1/1;
+}
