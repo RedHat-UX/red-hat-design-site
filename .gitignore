@@ -1,7 +1,7 @@
 ## Custom
 *.sublime-*
 .vagrant/
-.vscode/
+# .vscode/
 _design/
 dev/
 # dist/
