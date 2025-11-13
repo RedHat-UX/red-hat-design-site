@@ -3,26 +3,41 @@
 // ========================================================================== //
 
 // Dependencies
-const { src, dest, lastRun, watch, series } = require("gulp");
+const { dest, lastRun, series, src, watch } = require("gulp");
 const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
 // const cacheBust = require("gulp-cache-bust");
 const cleanCss = require("gulp-clean-css");
 const del = require("del");
-const directorySync = require("gulp-directory-sync");
+// const directorySync = require("gulp-directory-sync");
 const fileInclude = require("gulp-file-include");
 const flatten = require("gulp-flatten");
+const fs = require("fs");
 const groupCssMediaQueries = require("gulp-group-css-media-queries");
 const header = require("gulp-header");
-const imagemin = require("gulp-imagemin");
+// const imagemin = require("gulp-imagemin");
 const notify = require("gulp-notify");
 const path = require("path");
 const pkg = require("./package.json");
 const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass")(require("sass"));
+const semver = require("semver");
 const stripCssComments = require("gulp-strip-css-comments");
 const uglifyEs = require("gulp-uglify-es");
+
+// ========================================================================== //
+//  VARIABLES
+// ========================================================================== //
+
+const rhslPath = "red_hat_shared_libs/dist/rhds-elements/";
+const basePath = pkg.paths.repo.root + "node_modules/@rhdc-fed/" + rhslPath;
+const versionDirs = fs
+    .readdirSync(basePath, { withFileTypes: true })
+    .filter((dirent) => dirent.isDirectory())
+    .map((dirent) => dirent.name)
+    .filter((name) => semver.valid(name));
+const latestVersion = semver.maxSatisfying(versionDirs, "*");
 
 // ========================================================================== //
 //  BANNER
@@ -42,6 +57,23 @@ const banner = [
         "/*  <%= package.author.url %>\n" +
         "/* ================================================================================ */\n\n",
 ].join("\n");
+
+// ========================================================================== //
+//  COPY - RHDS ELEMENTS
+// ========================================================================== //
+
+// ========================================================================== //
+//  This task copies the latest RHDS Elements JS files from the
+//  "red_hat_shared_libs" package into the JS "vendors" folder.
+// ========================================================================== //
+
+function copyRhdsElements() {
+    del.sync([pkg.paths.docs.js + "vendors/" + rhslPath]);
+
+    return src([basePath + latestVersion + "/**/**/*"]).pipe(
+        dest([pkg.paths.docs.js + "vendors/" + rhslPath])
+    );
+}
 
 // ========================================================================== //
 //  HTML
@@ -238,9 +270,19 @@ function css() {
 
 function js() {
     return (
-        src([pkg.paths.src.js + "**/*.js"], {
-            since: lastRun(js),
-        })
+        src(
+            [
+                pkg.paths.src.js + "**/*.js",
+                "!" +
+                    pkg.paths.src.js +
+                    rhslPath +
+                    latestVersion +
+                    "/",
+            ],
+            {
+                since: lastRun(js),
+            }
+        )
             .pipe(
                 plumber({
                     errorHandler: notify.onError("Error: <%= error.message %>"),
@@ -316,7 +358,7 @@ function serve() {
 //  server, watches for file changes, and reloads the page when changes are detected.
 // ========================================================================== //
 
-exports.default = series(html, css, js, serve);
+exports.default = series(copyRhdsElements, html, css, js, serve);
 
 // ========================================================================== //
 //  BUILD
@@ -327,4 +369,4 @@ exports.default = series(html, css, js, serve);
 //  watching for file changes.
 // ========================================================================== //
 
-exports.build = series(html, css, js);
+exports.build = series(copyRhdsElements, html, css, js);
