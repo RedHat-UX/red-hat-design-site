@@ -25,12 +25,14 @@
         "url": "git@github.com:RedHat-UX/red-hat-design-site.git"
     },
     "scripts": {
+        "build": "gulp build",
         "start": "gulp"
     },
     "dependencies": {
         "bootstrap": "4.6.1"
     },
     "devDependencies": {
+        "@rhdc-fed/red_hat_shared_libs": "^6.1.4",
         "browser-sync": "2.27.10",
         "del": "6.1.1",
         "gulp": "4.0.2",
@@ -53,7 +55,8 @@
         "mozjpeg": "^8.0.0",
         "optipng-bin": "9.0.0",
         "path": "0.12.7",
-        "sass": "^1.83.0"
+        "sass": "^1.83.0",
+        "semver": "^7.7.3"
     },
     "browserslist": [
         "last 2 versions",
@@ -61,6 +64,12 @@
         "> 0.2%"
     ],
     "paths": {
+        "docs": {
+            "root": "docs/",
+            "css": "docs/assets/css/",
+            "img": "docs/assets/img/",
+            "js": "docs/assets/js/"
+        },
         "repo": {
             "root": "./"
         },
@@ -69,12 +78,6 @@
             "scss": "src/assets/scss/",
             "img": "src/assets/img/",
             "js": "src/assets/js/"
-        },
-        "docs": {
-            "root": "docs/",
-            "css": "docs/assets/css/",
-            "img": "docs/assets/img/",
-            "js": "docs/assets/js/"
         }
     }
 }

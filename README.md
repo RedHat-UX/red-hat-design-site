@@ -50,7 +50,7 @@ npm ci
 ## Local development
 
 ```
-$ gulp
+$ npm run start
 ```
 
 -   Builds the `src` files to the `docs` folder, launches a local [Browsersync](https://browsersync.io) server in a browser, watches for file changes, and reloads the page when changes are detected.
@@ -58,7 +58,7 @@ $ gulp
 ## Production
 
 ```
-$ gulp build
+$ npm run build
 ```
 
 -   Initiates the build stream, without launching a local server in a browser.

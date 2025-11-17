@@ -48,18 +48,11 @@
         />
 
         <!-- CSS -->
-        <!-- Red Hat -->
+        <!-- RHDS Elements -->
         <link
             rel="stylesheet"
-            href="//static.redhat.com/libs/redhat/redhat-theme/6/advanced-theme.css"
+            href="/assets/js/vendors/red_hat_shared_libs/dist/rhds-elements/rh-footer/rh-footer-lightdom.css"
         />
-
-        <!-- Vendors -->
-        <link rel="stylesheet" href="//static.redhat.com/libs/redhat/redhat-theme/6/advanced-theme.css" />
-
-        <!-- RH Components -->
-        <link rel="stylesheet"
-      href="https://www.redhatstatic.com/dssf-001/v2/@rhds/elements@3.0.3/rh-footer/rh-footer-lightdom.css">
 
         <!-- WebDMS -->
         <link
@@ -68,56 +61,16 @@
         />
 
         <!-- Project -->
-        <link rel="stylesheet" href="/assets/css/design-redhat.min.css?t=1754419244582" />
+        <link rel="stylesheet" href="/assets/css/design-redhat.min.css" />
 
         <!-- SCRIPTS -->
         <!-- Libraries -->
         <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 
-        <!-- Imports -->
-        <script type="importmap">
- {
-  "imports": {
-    "@rhds/elements/": "https://www.redhatstatic.com/dssf-001/v2/@rhds/elements@3.0.3/elements/",
-    "@patternfly/elements/": "https://www.redhatstatic.com/dssf-001/v2/@patternfly/elements@4.1.0/",
-    "@patternfly/icons/": "https://www.redhatstatic.com/dssf-001/v2/@patternfly/icons@1.0.3/",
-    "@patternfly/pfe-core/": "https://www.redhatstatic.com/dssf-001/v2/@patternfly/pfe-core@5.0.1/"
-  },
-  "scopes": {
-    "https://www.redhatstatic.com/dssf-001/v2/": {
-      "@floating-ui/core": "https://www.redhatstatic.com/dssf-001/v2/@floating-ui/core@1.6.9/dist/floating-ui.core.mjs",
-      "@floating-ui/dom": "https://www.redhatstatic.com/dssf-001/v2/@floating-ui/dom@1.6.13/dist/floating-ui.dom.mjs",
-      "@floating-ui/utils": "https://www.redhatstatic.com/dssf-001/v2/@floating-ui/utils@0.2.9/dist/floating-ui.utils.mjs",
-      "@floating-ui/utils/dom": "https://www.redhatstatic.com/dssf-001/v2/@floating-ui/utils@0.2.9/dist/floating-ui.utils.dom.mjs",
-      "@lit/context": "https://www.redhatstatic.com/dssf-001/v2/@lit/context@1.1.4/development/index.js",
-      "@lit/reactive-element": "https://www.redhatstatic.com/dssf-001/v2/@lit/reactive-element@2.0.4/reactive-element.js",
-      "@lit/reactive-element/decorators/": "https://www.redhatstatic.com/dssf-001/v2/@lit/reactive-element@2.0.4/decorators/",
-      "@patternfly/pfe-core": "https://www.redhatstatic.com/dssf-001/v2/@patternfly/pfe-core@5.0.1/core.js",
-      "@patternfly/pfe-core/": "https://www.redhatstatic.com/dssf-001/v2/@patternfly/pfe-core@5.0.1/",
-      "@patternfly/icons": "https://www.redhatstatic.com/dssf-001/v2/@patternfly/icons@1.0.3",
-      "@patternfly/icons/": "https://www.redhatstatic.com/dssf-001/v2/@patternfly/icons@1.0.3/",
-      "@rhds/elements/lib/": "https://www.redhatstatic.com/dssf-001/v2/@rhds/elements@3.0.3/lib/",
-      "@rhds/icons": "https://www.redhatstatic.com/dssf-001/v2/@rhds/icons@1.2.0/icons.js",
-      "@rhds/icons/": "https://www.redhatstatic.com/dssf-001/v2/@rhds/icons@1.2.0/",
-      "@rhds/tokens/media.js": "https://www.redhatstatic.com/dssf-001/v2/@rhds/tokens@3.0.1/js/media.js",
-      "@rhds/tokens/": "https://www.redhatstatic.com/dssf-001/v2/@rhds/tokens@3.0.1/",
-      "lit": "https://www.redhatstatic.com/dssf-001/v2/lit@3.2.1/index.js",
-      "lit/": "https://www.redhatstatic.com/dssf-001/v2/lit@3.2.1/",
-      "lit-element/lit-element.js": "https://www.redhatstatic.com/dssf-001/v2/lit-element@4.1.1/lit-element.js",
-      "lit-html": "https://www.redhatstatic.com/dssf-001/v2/lit-html@3.2.1/lit-html.js",
-      "lit-html/": "https://www.redhatstatic.com/dssf-001/v2/lit-html@3.2.1/",
-      "tslib": "https://www.redhatstatic.com/dssf-001/v2/tslib@2.8.1/tslib.es6.mjs"
-    }
-  }
-}
-</script>
-
         <!-- ASSETS end -->
     </head>
 
-    <body class="rh-design"></body>
-</html>
-
+    <body class="rh-design">
 
 <!-- HTML start -->
 
@@ -131,7 +84,7 @@
             </div>
 
             <div class="col-6 rh-design-nav-toggle-wrapper pr-4">
-                <a href="#" class="btn btn-toggle" data-toggle="nav-shelf">
+                <a href="#" class="btn btn-toggle" data-toggle="nav-shelf" aria-label="Toggle navigation menu">
                     <div class="d-inline-block">
                         <span class="menu-bar"></span>
 
@@ -230,24 +183,24 @@
         <div class="row">
             <div class="col-12 col-xl-11 offset-xxl-2 pl-xxl-0 position-static">
                 <div class="dp-blocks">
-                    <button 
+                    <button
                     aria-controls="start-intentionally--expanded"
-                    aria-expanded="false" 
+                    aria-expanded="false"
                     class="dp-blocks__block bg-light-red position-relative start-intentionally d-flex align-items-center justify-content-lg-center px-3 px-lg-0">
-                        <img 
-                        src="/assets/img/pages/design-principles/expand-icon.svg" 
-                        class="expand-icon position-absolute" 
+                        <img
+                        src="/assets/img/pages/design-principles/expand-icon.svg"
+                        class="expand-icon position-absolute"
                         alt="expand icon">
                         <div class="start-intentionally__headline">
                             <h2 class="font-family-monospace text-red mb-0">Start <br>intentionally<span class="d-none d-lg-inline-block bg-red"></span></h2>
                         </div>
                     </button>
-                    <button 
+                    <button
                     aria-controls="lean-on-research--expanded"
                     aria-expanded="false"
                     class="dp-blocks__block border bg-white border-width-2 border-red position-relative d-flex align-items-end justify-content-center lean-on-research">
-                        <img 
-                        src="/assets/img/pages/design-principles/expand-icon.svg" 
+                        <img
+                        src="/assets/img/pages/design-principles/expand-icon.svg"
                         class="expand-icon position-absolute"
                         alt="expand icon">
                         <div class="lean-on-research__headline d-inline-flex align-items-center bg-light-red py-1 px-2 mb-2">
@@ -256,12 +209,12 @@
                         </div>
                         <p class="lean-on-research__sub position-absolute text-center font-family-text text-red font-size-24">10,311,994 results</p>
                     </button>
-                    <button 
+                    <button
                     aria-controls="be-honest--expanded"
                     aria-expanded="false"
                     class="dp-blocks__block bg-white border border-width-2 border-red position-relative be-honest d-flex align-items-lg-center justify-content-lg-center">
-                        <img 
-                        src="/assets/img/pages/design-principles/expand-icon.svg" 
+                        <img
+                        src="/assets/img/pages/design-principles/expand-icon.svg"
                         class="expand-icon position-absolute"
                         alt="expand icon">
                         <div class="be-honest__headline mt-lg-12 position-relative pt-3 pt-lg-0">
@@ -278,50 +231,53 @@
                     aria-controls="embrace-collab--expanded"
                     aria-expanded="false"
                     class="dp-blocks__block bg-light-red position-relative embrace-collab d-flex align-items-center">
-                        <img 
-                        src="/assets/img/pages/design-principles/expand-icon.svg" 
+                        <img
+                        src="/assets/img/pages/design-principles/expand-icon.svg"
                         class="expand-icon position-absolute"
                         alt="expand icon">
                         <div class="embrace-collab__headline d-flex flex-column w-100 px-3">
                             <h2 class="text-red font-family-display mb-0 d-flex flex-column">
-                                <span class="font-weight-light" id="embrace">Embrace</span> 
-                                <span class="text-red font-family-display font-weight-bold ml-auto" id="collab" aria-label="collaboration">
-                                    <span aria-hidden="true" id="collab-c">c</span>
-                                    <span aria-hidden="true" id="collab-o1">o</span>
-                                    <span aria-hidden="true" id="collab-l1">l</span>
-                                    <span aria-hidden="true" id="collab-l2">l</span>
-                                    <span aria-hidden="true" id="collab-a1">a</span>
-                                    <span aria-hidden="true" id="collab-b">b</span>
-                                    <span aria-hidden="true" id="collab-o2">o</span>
-                                    <span aria-hidden="true" id="collab-r">r</span>
-                                    <span aria-hidden="true" id="collab-a2">a</span>
-                                    <span aria-hidden="true" id="collab-t">t</span>
-                                    <span aria-hidden="true" id="collab-i">i</span>
-                                    <span aria-hidden="true" id="collab-o3">o</span>
-                                    <span aria-hidden="true" id="collab-n">n</span>
+                                <span class="font-weight-light" id="embrace">Embrace</span>
+                                <span class="text-red font-family-display font-weight-bold ml-auto" id="collab">
+                                    <span class="sr-only">collaboration</span>
+                                    <span aria-hidden="true">
+                                        <span id="collab-c">c</span>
+                                        <span id="collab-o1">o</span>
+                                        <span id="collab-l1">l</span>
+                                        <span id="collab-l2">l</span>
+                                        <span id="collab-a1">a</span>
+                                        <span id="collab-b">b</span>
+                                        <span id="collab-o2">o</span>
+                                        <span id="collab-r">r</span>
+                                        <span id="collab-a2">a</span>
+                                        <span id="collab-t">t</span>
+                                        <span id="collab-i">i</span>
+                                        <span id="collab-o3">o</span>
+                                        <span id="collab-n">n</span>
+                                    </span>
                                 </span>
                             </h2>
                         </div>
                     </button>
-                    <button 
+                    <button
                     aria-controls="design-brave--expanded"
                     aria-expanded="false"
                     class="dp-blocks__block position-relative design-brave">
-                        <img 
-                        src="/assets/img/pages/design-principles/expand-icon.svg" 
+                        <img
+                        src="/assets/img/pages/design-principles/expand-icon.svg"
                         class="expand-icon position-absolute"
                         alt="expand icon" >
                         <div class="design-brave__headline">
                             <h2 class="font-family-display font-size-40 font-size-lg-42 p-3">Design <br>with <br><span>bravery</span></h2>
                         </div>
                     </button>
-                    <button 
+                    <button
                     aria-controls="prioritize-form-func--expanded"
                     aria-expanded="false"
                     class="dp-blocks__block border border-width-2 border-red position-relative prioritize-form-func bg-white">
-                        <img 
-                        src="/assets/img/pages/design-principles/expand-icon.svg" 
-                        class="expand-icon position-absolute z-1" 
+                        <img
+                        src="/assets/img/pages/design-principles/expand-icon.svg"
+                        class="expand-icon position-absolute z-1"
                         alt="expand icon" >
                         <div class="prioritize-form-func__bg bg-light-red position-absolute top-0 left-0 w-100"></div>
                         <div class="prioritize-form-func__headline h-100 position-relative overflow-hidden">
@@ -335,22 +291,22 @@
                     aria-controls="share-early--expanded"
                     aria-expanded="false"
                     class="dp-blocks__block bg-light-red position-relative share-early overflow-hidden">
-                        <img 
-                        src="/assets/img/pages/design-principles/expand-icon.svg" 
-                        class="expand-icon position-absolute" 
+                        <img
+                        src="/assets/img/pages/design-principles/expand-icon.svg"
+                        class="expand-icon position-absolute"
                         alt="expand icon">
                         <div class="share-early__headline position-absolute">
                             <h2 class="font-family-display text-red font-size-30 font-size-lg-34">Share early and often</h2>
                             <p id="share-early-text" class="text-red font-family-text font-size-22 font-size-lg-24">Lorem <span>ipsum</span> dolor sit amet, <span>consectetur adipisicing</span> elit. Quasi numquam magni tenetur cumque <span>deleniti incidunt</span>, dolorum sequi, velit odio, aliquid consequuntur ad <span>ratione eveniet</span> soluta nemo minus illum dolore maiores! Recusandae impedit minus architecto quasi numquam magni soluta.</p>
                         </div>
                     </button>
-                    <button 
+                    <button
                     aria-controls="nurture--expanded"
                     aria-expanded="false"
                     class="dp-blocks__block border bg-white border-width-2 border-red position-relative nurture">
-                        <img 
-                        src="/assets/img/pages/design-principles/expand-icon.svg" 
-                        class="expand-icon position-absolute" 
+                        <img
+                        src="/assets/img/pages/design-principles/expand-icon.svg"
+                        class="expand-icon position-absolute"
                         alt="expand icon" >
                         <div class="nurture__headline pt-5 pt-lg-0 pl-3 pl-md-6 position-relative position-lg-absolute top-0 d-inline-flex h-100 d-flex flex-column">
                             <h2 class="font-family-display font-size-32 font-size-lg-36 text-red mb-0">Nurture the <br class="d-md-none">system
@@ -370,12 +326,12 @@
 <!-- !!!!!!!!!!!!!!! -->
 <!-- Expanded blocks -->
 <!-- !!!!!!!!!!!!!!! -->
-<div 
+<div
 id="start-intentionally--expanded"
-class="bg-light-red expanded-block position-relative d-none py-8" 
+class="bg-light-red expanded-block position-relative d-none py-8"
 aria-hidden="true">
     <div class="expanded-block__content">
-        <button 
+        <button
         aria-controls="start-intentionally--expanded"
         class="shrink-icon position-absolute z-1">
             <img src="/assets/img/pages/design-principles/shrink-icon.svg" class="img-fluid" alt="shrink icon" />
@@ -391,8 +347,8 @@ aria-hidden="true">
                     </div>
                     <div class="row mb-2 mb-lg-8 mb-xl-10 position-relative">
                         <div class="col-12 col-xl-10">
-                            <img 
-                            src="/assets/img/pages/design-principles/start-RHEL-key-art.png" 
+                            <img
+                            src="/assets/img/pages/design-principles/start-RHEL-key-art.png"
                             class="img-fluid"
                             alt="abstract illustration with text 'Your trusted foundation for relentless innovation'">
                         </div>
@@ -407,37 +363,37 @@ aria-hidden="true">
                             <p class="mb-4 mb-lg-0 font-size-14 font-size-md-16">The goal of this RHEL product art direction is to show that our customers landscapes are complicated and that RHEL can be the common layer enabling innovation, regardless of workload or environment. The possibilities are endless for our customers to build up and out on RHEL.</p>
                         </div>
                         <div class="col-12 col-lg-8">
-                            <img 
-                            src="/assets/img/pages/design-principles/start-rhel-exploration-3.png" 
+                            <img
+                            src="/assets/img/pages/design-principles/start-rhel-exploration-3.png"
                             class="img-fluid"
                             alt="illustration of layers">
                         </div>
                     </div>
                     <div class="row mb-6 mb-lg-8 mb-xl-10">
                         <div class="col-12 col-lg-6 mb-2 mb-lg-0">
-                            <img 
-                            src="/assets/img/pages/design-principles/start-rhel-exploration-1.png" 
+                            <img
+                            src="/assets/img/pages/design-principles/start-rhel-exploration-1.png"
                             class="img-fluid"
                             alt="illustration of blocks with lorem ipsum placeholder text">
                         </div>
                         <div class="col-12 col-lg-6">
-                            <img 
-                            src="/assets/img/pages/design-principles/start-rhel-exploration-2.png" 
+                            <img
+                            src="/assets/img/pages/design-principles/start-rhel-exploration-2.png"
                             class="img-fluid"
                             alt="illustration of polygon towers with lorem ipsum placeholder text">
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
-    </div> 
+    </div>
 </div>
-<div 
+<div
 id="lean-on-research--expanded"
 aria-hidden="true"
 class="expanded-block position-relative d-none pb-8">
     <div class="expanded-block__content">
-        <button 
+        <button
         aria-controls="lean-on-research--expanded"
         class="shrink-icon position-absolute z-1">
             <img src="/assets/img/pages/design-principles/shrink-icon.svg" class="img-fluid" alt="shrink icon" />
@@ -451,16 +407,16 @@ class="expanded-block position-relative d-none pb-8">
                             <p class="mb-0 font-size-16 font-size-xl-20 pr-xl-6">Know who you're designing for and what they need; talk to them if you can. When you understand their motivations, you're able to demonstrate real empathy for the user, and the most impactful choices become clear.</p>
                         </div>
                         <div class="d-none d-xl-block col-xl-4" id="research-top-photo">
-                            <img 
-                            src="/assets/img/pages/design-principles/research-top-img.png" 
-                            class="img-fluid" 
+                            <img
+                            src="/assets/img/pages/design-principles/research-top-img.png"
+                            class="img-fluid"
                             alt="man looking at large screen with a list of choices for a Red Hat software product" />
                         </div>
                     </div>
                     <div class="row mb-2 mb-lg-8 mb-xl-10">
                         <div class="col-12 col-xl-7 mb-8 mb-xl-0" id="research-rosa-screenshot">
-                            <img 
-                            src="/assets/img/pages/design-principles/lean-on-research.jpg" 
+                            <img
+                            src="/assets/img/pages/design-principles/lean-on-research.jpg"
                             class="img-fluid m-auto d-block"
                             alt="Red Hat OpenShift Service on AWS (ROSA) survey screenshot" />
                         </div>
@@ -470,8 +426,8 @@ class="expanded-block position-relative d-none pb-8">
                     </div>
                     <div class="row mb-8 mb-lg-10 position-relative">
                         <div class="col-12 col-md-6 col-xl-5 pl-lg-0 mb-2 mb-md-0">
-                            <img 
-                            src="/assets/img/pages/design-principles/research-left-img.png" 
+                            <img
+                            src="/assets/img/pages/design-principles/research-left-img.png"
                             class="img-fluid w-100"
                             alt="Three Red Hat Summit participants sitting in chairs having a conversation" />
                         </div>
@@ -479,10 +435,10 @@ class="expanded-block position-relative d-none pb-8">
                         <svg xmlns="http://www.w3.org/2000/svg" width="590.145" height="234.499" viewBox="0 0 590.145 234.499" id="research-dotted-red-line"
                         class="d-none d-md-inline-block position-absolute dots-animated">
                             <path id="Path_1733" data-name="Path 1733" d="M12040.346,15153.408v47.819H11452.2v-232.5" transform="translate(-11451.201 -14967.729)" fill="none" stroke="#e00" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="4 9"/>
-                        </svg>                          
+                        </svg>
                         <div class="col-12 col-md-6 col-xl-5 mt-xl-8">
-                            <img 
-                            src="/assets/img/pages/design-principles/research-right-img.png" 
+                            <img
+                            src="/assets/img/pages/design-principles/research-right-img.png"
                             class="img-fluid w-100"
                             alt="Two Red Hat Summit participants sitting in chairs talking with each other" />
                         </div>
@@ -490,14 +446,14 @@ class="expanded-block position-relative d-none pb-8">
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 </div>
-<div 
+<div
 id="be-honest--expanded"
 aria-hidden="true"
 class="py-8 expanded-block position-relative d-none">
     <div class="expanded-block__content">
-        <button 
+        <button
         aria-controls="be-honest--expanded"
         class="shrink-icon position-absolute z-1">
             <img src="/assets/img/pages/design-principles/shrink-icon.svg" class="img-fluid" alt="shrink icon" />
@@ -515,8 +471,8 @@ class="py-8 expanded-block position-relative d-none">
                     </div>
                     <div class="row mb-2 mb-md-6 mb-lg-10">
                         <div class="col-12 col-xl-8 mb-2 mb-md-8 mb-xl-0 px-0" id="honest-open-culture-guide">
-                            <img 
-                            src="/assets/img/pages/design-principles/honest-open-culture-guide.png" 
+                            <img
+                            src="/assets/img/pages/design-principles/honest-open-culture-guide.png"
                             class="img-fluid m-auto d-block"
                             alt="Red Hat OpenShift Service on AWS (ROSA) survey screenshot" />
                         </div>
@@ -536,14 +492,14 @@ class="py-8 expanded-block position-relative d-none">
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 </div>
-<div 
+<div
 id="embrace-collab--expanded"
 aria-hidden="true"
 class="py-8 bg-light-red expanded-block position-relative d-none">
     <div class="expanded-block__content">
-        <button 
+        <button
         aria-controls="embrace-collab--expanded"
         class="shrink-icon position-absolute z-1">
             <img src="/assets/img/pages/design-principles/shrink-icon.svg" class="img-fluid" alt="shrink icon" />
@@ -575,7 +531,7 @@ class="py-8 bg-light-red expanded-block position-relative d-none">
                         id="collab-dots-bottom"
                         class="d-none d-xl-inline-block position-absolute dots-animated">
                             <path id="Path_1753" data-name="Path 1753" d="M11872.335,16245.286h-196.66l-.167,31.106-1.205,224.773" transform="translate(-11673.298 -16244.286)" fill="none" stroke="#e00" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="4 9"/>
-                        </svg>                      
+                        </svg>
                         <div class="col-12 col-xl-7 z-1">
                             <img src="/assets/img/pages/design-principles/collab-whiteboard.jpg" class="img-fluid w-100" alt="Two people in an office setting in front of a whiteboard, one man is speaking to someone else">
                         </div>
@@ -583,14 +539,14 @@ class="py-8 bg-light-red expanded-block position-relative d-none">
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 </div>
-<div 
+<div
 id="design-brave--expanded"
 aria-hidden="true"
 class="py-8 bg-light-red expanded-block position-relative d-none">
     <div class="expanded-block__content">
-        <button 
+        <button
         aria-controls="design-brave--expanded"
         class="shrink-icon position-absolute z-1">
             <img src="/assets/img/pages/design-principles/shrink-icon.svg" class="img-fluid" alt="shrink icon" />
@@ -605,7 +561,7 @@ class="py-8 bg-light-red expanded-block position-relative d-none">
                         <div class="col-12 col-xl-8">
                             <p class="mb-0 font-size-16 font-size-xl-20 pr-xl-6">Take risks, even when it's scary or difficult. Suggest something unexpected, remove something unnecessary, or even know when to try again — facing the challenge results in the best work possible.</p>
                         </div>
-                    </div>  
+                    </div>
                     <div class="row">
                         <div class="col-12 col-xl-11 mb-2 mb-lg-4 mb-xl-10">
                             <img src="/assets/img/pages/design-principles/bravery-same-soul-new-hat.png" class="img-fluid w-100" alt="Same soul. New Hat. Red Hat graphic">
@@ -625,12 +581,12 @@ class="py-8 bg-light-red expanded-block position-relative d-none">
         </div>
     </div>
 </div>
-<div 
+<div
 id="share-early--expanded"
 aria-hidden="true"
 class="py-8 expanded-block position-relative d-none">
     <div class="expanded-block__content">
-        <button 
+        <button
         aria-controls="share-early--expanded"
         class="shrink-icon position-absolute z-1">
             <img src="/assets/img/pages/design-principles/shrink-icon.svg" class="img-fluid" alt="shrink icon" />
@@ -672,14 +628,14 @@ class="py-8 expanded-block position-relative d-none">
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 </div>
-<div 
+<div
 id="prioritize-form-func--expanded"
 aria-hidden="true"
 class="py-8 bg-light-red expanded-block position-relative d-none">
     <div class="expanded-block__content">
-        <button 
+        <button
         aria-controls="prioritize-form-func--expanded"
         class="shrink-icon position-absolute z-1">
             <img src="/assets/img/pages/design-principles/shrink-icon.svg" class="img-fluid" alt="shrink icon" />
@@ -694,11 +650,11 @@ class="py-8 bg-light-red expanded-block position-relative d-none">
                         <div class="col-12 col-xl-8">
                             <p class="mb-0 font-size-16 font-size-xl-20 pr-xl-6">The right solution does not sacrifice quality of craftsmanship. The hard work to achieve well-crafted solutions is how we improve Red Hat design as a whole.</p>
                         </div>
-                    </div>  
+                    </div>
                     <div class="row mb-2 mb-xl-6">
                         <div class="col-12 col-xl-8 mb-2 mb-xl-0">
-                            <img 
-                            src="/assets/img/pages/design-principles/prioritize-red-hat.png" 
+                            <img
+                            src="/assets/img/pages/design-principles/prioritize-red-hat.png"
                             class="img-fluid w-100"
                             alt="Red Hat Logo design process" />
                         </div>
@@ -712,22 +668,22 @@ class="py-8 bg-light-red expanded-block position-relative d-none">
                             <p class="font-size-16">When creating new icons, we use 12&#xb0; angles because they match the angle of the ascenders and descenders in our font. This helps to build continuity in our visual system.</p>
                         </div>
                         <div class="col-8 col-xl-3 offset-2 offset-xl-0 d-lg-none d-xl-block mb-2 mb-xl-0">
-                            <img 
-                            src="/assets/img/pages/design-principles/prioritize_angle_0.png" 
+                            <img
+                            src="/assets/img/pages/design-principles/prioritize_angle_0.png"
                             class="img-fluid w-100 mx-auto d-block"
                             alt="Illustration of 45 degree angle on books" />
                         </div>
                         <div class="col-12 col-lg-9 col-xl-6 offset-lg-3 offset-xl-0 mt-lg-4 mt-xl-0">
-                            <img 
-                            src="/assets/img/pages/design-principles/prioritize-text-angle_0.png" 
+                            <img
+                            src="/assets/img/pages/design-principles/prioritize-text-angle_0.png"
                             class="img-fluid w-100"
                             alt="Illustration of 12 degree angle on text" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 mt-4 mt-xl-6">
-                            <img 
-                            src="/assets/img/pages/design-principles/prioritize-text-spacing.png" 
+                            <img
+                            src="/assets/img/pages/design-principles/prioritize-text-spacing.png"
                             class="img-fluid w-100"
                             alt="Showcasing the spacing on headlines and paragraph copy" />
                         </div>
@@ -737,12 +693,12 @@ class="py-8 bg-light-red expanded-block position-relative d-none">
         </div>
     </div>
 </div>
-<div 
+<div
 id="nurture--expanded"
 aria-hidden="true"
 class="py-8 expanded-block position-relative d-none">
     <div class="expanded-block__content">
-        <button 
+        <button
         aria-controls="nurture--expanded"
         class="shrink-icon position-absolute z-1">
             <img src="/assets/img/pages/design-principles/shrink-icon.svg" class="img-fluid" alt="shrink icon" />
@@ -779,7 +735,7 @@ class="py-8 expanded-block position-relative d-none">
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 </div>
 
 
@@ -818,24 +774,19 @@ class="py-8 expanded-block position-relative d-none">
 <!-- HTML end -->
 
 <!-- SCRIPTS start -->
-
-        <!-- RH Components -->
-        <script src="//www.redhat.com/modules/contrib/webrh/js/webrh.webcomponents.min.js"></script>
+        <!-- RHDS Elements -->
         <script type="module">
-            import '@rhds/elements/rh-cta/rh-cta.js';
-            import '@rhds/elements/rh-footer/rh-footer.js';
+            import "/assets/js/vendors/red_hat_shared_libs/dist/rhds-elements/rh-cta/rh-cta.js";
+            import "/assets/js/vendors/red_hat_shared_libs/dist/rhds-elements/rh-footer/rh-footer-universal.js";
         </script>
 
-        <!-- Vendors -->
-        <script src="//www.redhat.com/sites/all/libraries/webrh/dist/js/webrh.webcomponents.min.js"></script>
+        <!-- WebDMS -->
         <script src="//www.redhat.com/ux/webdms/js/vendors/jquery.waypoints.min.js"></script>
-
-        <!-- Studio Web -->
         <script src="//www.redhat.com/ux/webdms/js/scripts.min.js"></script>
 
         <!-- Project -->
-        <script src="/assets/js/design-redhat.min.js?t=1754419244582"></script>
-        <script src="/assets/js/design-principles.min.js?t=1754419244582"></script>
+        <script src="/assets/js/design-redhat.min.js"></script>
+        <script src="/assets/js/design-principles.min.js"></script>
 
 <!-- SCRIPTS end -->
 

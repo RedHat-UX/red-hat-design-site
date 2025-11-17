@@ -1,0 +1,1 @@
+const e=!0;function t(t,n,o){if("function"!=typeof o?.value)throw new TypeError(`Only methods can be decorated with @bound. <${n??t.name}> is not a method!`);return{configurable:e,get(){const t=o.value.bind(this);return Object.defineProperty(this,n,{value:t,configurable:e,writable:!0}),t}}}export{t as b};

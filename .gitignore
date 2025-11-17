@@ -1,19 +1,16 @@
 ## Custom
-
 *.sublime-*
 .vagrant/
-.vscode/
+# .vscode/
 _design/
 dev/
-dist/
+# dist/
 # docs/
 images/
 temp/
 video/
 
-
 ## NodeJS
-
 *.log
 *.pid
 *.seed
@@ -26,21 +23,15 @@ node_modules
 npm-debug.log
 pids
 
-
 ## Bower
-
 bower
 bower_components
 
-
 ## CSS/SCSS
-
 *.css.map
 .sass-cache
 
-
 ## macOS
-
 ._*
 .apdisk
 .AppleDB
@@ -54,9 +45,7 @@ Icon
 Network Trash Folder
 Temporary Items
 
-
 ## Windows
-
 *.cab
 *.msi
 *.msm

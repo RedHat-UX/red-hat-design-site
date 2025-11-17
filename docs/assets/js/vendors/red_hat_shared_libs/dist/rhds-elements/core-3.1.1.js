@@ -1,0 +1,1 @@
+const t=(s=t=>parseInt(t?.trim(),10),{fromAttribute:t=>"string"!=typeof t?null:t.split(",").map(s),toAttribute:t=>t.join(",")});var s;class e extends Event{constructor(t,s){super(t,{bubbles:!0,composed:!0,...s})}}export{e as C,t as N};
