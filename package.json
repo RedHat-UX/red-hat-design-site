@@ -34,7 +34,7 @@
     "devDependencies": {
         "@rhdc-fed/red_hat_shared_libs": "^6.1.4",
         "browser-sync": "^3.0.4",
-        "del": "6.1.1",
+        "del": "^8.0.1",
         "gulp": "4.0.2",
         "gulp-autoprefixer": "8.0.0",
         "gulp-cache-bust": "1.4.1",
