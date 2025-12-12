@@ -55,7 +55,7 @@
         "mozjpeg": "^8.0.0",
         "optipng-bin": "9.0.0",
         "path": "0.12.7",
-        "sass": "^1.83.0",
+        "sass": "^1.96.0",
         "semver": "^7.7.3"
     },
     "browserslist": [
