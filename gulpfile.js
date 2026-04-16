@@ -6,16 +6,13 @@
 const { dest, lastRun, series, src, watch } = require("gulp");
 const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
-// const cacheBust = require("gulp-cache-bust");
 const cleanCss = require("gulp-clean-css");
 const del = require("del");
-// const directorySync = require("gulp-directory-sync");
 const fileInclude = require("gulp-file-include");
 const flatten = require("gulp-flatten");
 const fs = require("fs");
 const groupCssMediaQueries = require("gulp-group-css-media-queries");
 const header = require("gulp-header");
-// const imagemin = require("gulp-imagemin");
 const notify = require("gulp-notify");
 const path = require("path");
 const pkg = require("./package.json");
@@ -168,94 +165,6 @@ function css() {
             .pipe(browserSync.stream())
     );
 }
-
-// ========================================================================== //
-//  IMAGES
-// ========================================================================== //
-
-// ========================================================================== //
-//  This task optimizes source image files, and places the files in the
-//  destination path.
-// ========================================================================== //
-
-// function images() {
-//     return src([pkg.paths.src.img + "**/*"], {
-//         since: lastRun(images),
-//     })
-//         .pipe(
-//             imagemin(
-//                 [
-//                     imagemin.gifsicle({
-//                         interlaced: true,
-//                         optimizationLevel: 3,
-//                     }),
-//                     imagemin.mozjpeg({
-//                         progressive: true,
-//                     }),
-//                     imagemin.optipng({}),
-//                     // imagemin.svgo({
-//                     //     plugins: [
-//                     //         // { addAttributesToSVGElement: true },
-//                     //         // { addClassesToSVGElement: true },
-//                     //         { cleanupAttrs: true },
-//                     //         { cleanupEnableBackground: true },
-//                     //         { cleanupIDs: true },
-//                     //         { cleanupListOfValues: true },
-//                     //         { cleanupNumericValues: true },
-//                     //         { collapseGroups: true },
-//                     //         { convertColors: true },
-//                     //         // { convertEllipseToCircle: true },
-//                     //         { convertPathData: true },
-//                     //         // { convertShapeToPath: true },
-//                     //         { convertStyleToAttrs: true },
-//                     //         { convertTransform: true },
-//                     //         { inlineStyles: true },
-//                     //         { mergePaths: true },
-//                     //         // { minifyStyles: true },
-//                     //         // { moveElemsAttrsToGroup: true },
-//                     //         // { moveGroupAttrsToElems: true },
-//                     //         // { prefixIDs: true },
-//                     //         // { removeAttributesBySelector: true },
-//                     //         // { removeAttrs: true },
-//                     //         { removeComments: true },
-//                     //         { removeDesc: true },
-//                     //         // { removeDimensions: true },
-//                     //         { removeDoctype: true },
-//                     //         { removeEditorsNSData: true },
-//                     //         // { removeElementsByAttr: true },
-//                     //         { removeEmptyAttrs: true },
-//                     //         { removeEmptyContainers: true },
-//                     //         { removeEmptyText: true },
-//                     //         { removeHiddenElems: true },
-//                     //         { removeMetadata: true },
-//                     //         { removeNonInheritableGroupAttrs: true },
-//                     //         // { removeOffCanvasPaths: true },
-//                     //         { removeRasterImages: true },
-//                     //         { removeScriptElement: true },
-//                     //         { removeStyleElement: true },
-//                     //         { removeTitle: true },
-//                     //         { removeUnknownsAndDefaults: true },
-//                     //         { removeUnusedNS: true },
-//                     //         { removeUselessDefs: true },
-//                     //         { removeUselessStrokeAndFill: true },
-//                     //         { removeViewBox: true },
-//                     //         // { removeXMLNS: true },
-//                     //         { removeXMLProcInst: true },
-//                     //         // { reusePaths: true },
-//                     //         { sortAttrs: true },
-//                     //         // { sortDefsChildren: true }
-//                     //     ]
-//                     // })
-//                 ],
-//                 {
-//                     verbose: true,
-//                 }
-//             )
-//         )
-//         .pipe(dest([pkg.paths.src.img]))
-//         .pipe(directorySync(pkg.paths.src.img, pkg.paths.docs.img))
-//         .pipe(browserSync.stream());
-// }
 
 // ========================================================================== //
 //  JS

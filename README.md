@@ -44,8 +44,10 @@ $ npm install -g gulp-cli
 ## Install dependencies
 
 ```
-npm ci
+npm run setup
 ```
+
+-   Installs all the defined packages for this repo and runs only the approved postinstall scripts.
 
 ## Local development
 
