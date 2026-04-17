@@ -202,7 +202,6 @@ function js() {
                     includeParents: 0,
                 })
             )
-            // .pipe(stripDebug())
             .pipe(uglifyEs.default())
             .pipe(
                 rename({
