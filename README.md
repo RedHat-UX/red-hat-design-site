@@ -1,11 +1,11 @@
--   [Minimum requirements](#minimum-requirements)
--   [Getting started](#getting-started)
-    -   [Install NVM](#install-nvm)
-    -   [Install Node](#install-node)
-    -   [Install Gulp (CLI)](#install-gulp-cli)
-    -   [Install dependencies](#install-dependencies)
-    -   [Local development](#local-development)
-    -   [Production](#production)
+- [Minimum requirements](#minimum-requirements)
+- [Getting started](#getting-started)
+  - [Install NVM](#install-nvm)
+  - [Install Node](#install-node)
+  - [Install Gulp (CLI)](#install-gulp-cli)
+  - [Install dependencies](#install-dependencies)
+  - [Local development](#local-development)
+  - [Production](#production)
 
 # Minimum requirements
 
@@ -44,8 +44,10 @@ $ npm install -g gulp-cli
 ## Install dependencies
 
 ```
-npm ci
+npm run setup
 ```
+
+> **Note:** `npm run setup` uses `--ignore-scripts` to protect against malicious postinstall lifecycle attacks, then selectively runs only approved scripts. See the [Repository Security Audit](https://redhat.atlassian.net/wiki/spaces/DUX/pages/402685263/Repository+Security+Audit) for context on this work.
 
 ## Local development
 

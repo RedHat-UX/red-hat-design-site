@@ -26,37 +26,39 @@
     },
     "scripts": {
         "build": "gulp build",
+        "setup": "npm ci --ignore-scripts && npx --no-install allow-scripts run",
         "start": "gulp"
     },
     "dependencies": {
         "bootstrap": "4.6.1"
     },
     "devDependencies": {
+        "@lavamoat/allow-scripts": "^2.5.1",
+        "@lavamoat/preinstall-always-fail": "^1.0.3",
         "@rhdc-fed/red_hat_shared_libs": "^6.1.4",
         "browser-sync": "^3.0.4",
         "del": "6.1.1",
         "gulp": "^5.0.1",
         "gulp-autoprefixer": "8.0.0",
-        "gulp-cache-bust": "1.4.1",
         "gulp-clean-css": "4.3.0",
-        "gulp-directory-sync": "1.2.4",
         "gulp-file-include": "2.3.0",
         "gulp-flatten": "0.4.0",
         "gulp-group-css-media-queries": "^1.2.2",
         "gulp-header": "2.0.9",
-        "gulp-imagemin": "7.1.0",
         "gulp-notify": "^5.0.0",
         "gulp-plumber": "^1.2.1",
         "gulp-rename": "^2.1.0",
         "gulp-sass": "5.1.0",
         "gulp-strip-css-comments": "2.0.0",
-        "gulp-strip-debug": "4.0.0",
         "gulp-uglify-es": "3.0.0",
-        "mozjpeg": "^8.0.0",
-        "optipng-bin": "9.0.0",
-        "path": "0.12.7",
         "sass": "^1.96.0",
         "semver": "^7.7.3"
+    },
+    "lavamoat": {
+        "allowScripts": {
+            "@lavamoat/preinstall-always-fail": false,
+            "sass>@parcel/watcher": true
+        }
     },
     "browserslist": [
         "last 2 versions",
